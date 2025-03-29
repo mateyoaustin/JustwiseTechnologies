@@ -1,74 +1,31 @@
-// Mobile Menu Toggle
-const menuToggle = document.querySelector('.menu-toggle');
-const navLinks = document.querySelector('.nav-links');
+document.addEventListener('DOMContentLoaded', function() {
+    const backToTopButton = document.createElement('button');
+    backToTopButton.innerHTML = '<i class="fas fa-arrow-up"></i>';
+    backToTopButton.classList.add('back-to-top');
+    document.body.appendChild(backToTopButton);
 
-menuToggle.addEventListener('click', () => {
-    navLinks.classList.toggle('active');
-});
-
-// Smooth Scroll
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function(e) {
-        e.preventDefault();
-        document.querySelector(this.getAttribute('href')).scrollIntoView({
-            behavior: 'smooth'
-        });
+    backToTopButton.addEventListener('click', () => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
     });
-});
 
-// Copyright Year
-document.getElementById('year').textContent = new Date().getFullYear();
-
-// Form Submission
-document.querySelector('.contact-form').addEventListener('submit', (e) => {
-    e.preventDefault();
-    alert('Thank you for your message! We will respond shortly.');
-    e.target.reset();
-});
-
-// Navbar Scroll Effect
-window.addEventListener('scroll', () => {
-    const navbar = document.querySelector('.navbar');
-    if (window.scrollY > 50) {
-        navbar.style.boxShadow = '0 2px 5px rgba(0,0,0,0.1)';
-    } else {
-        navbar.style.boxShadow = 'none';
-    }
-});
-// Mobile Menu Toggle
-const menuToggle = document.querySelector('.menu-toggle');
-const navLinks = document.querySelector('.nav-links');
-
-menuToggle.addEventListener('click', () => {
-    navLinks.classList.toggle('active');
-});
-
-// Smooth Scroll
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function(e) {
-        e.preventDefault();
-        document.querySelector(this.getAttribute('href')).scrollIntoView({
-            behavior: 'smooth'
-        });
+    window.addEventListener('scroll', () => {
+        if (window.scrollY > 300) {
+            backToTopButton.style.display = 'block';
+        } else {
+            backToTopButton.style.display = 'none';
+        }
     });
-});
 
-// Copyright Year
-document.getElementById('year').textContent = new Date().getFullYear();
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry, index) => {
+            if (entry.isIntersecting) {
+                setTimeout(() => {
+                    entry.target.style.transform = 'translateY(0)';
+                    entry.target.style.opacity = 1;
+                }, index * 150);
+            }
+        });
+    }, { threshold: 0.1 });
 
-// Form Submission
-document.querySelector('.contact-form').addEventListener('submit', (e) => {
-    e.preventDefault();
-    alert('Thank you for your message! We will respond shortly.');
-    e.target.reset();
-});
-
-// Navbar Scroll Effect
-window.addEventListener('scroll', () => {
-    const navbar = document.querySelector('.navbar');
-    if (window.scrollY > 50) {
-        navbar.style.boxShadow = '0 2px 5px rgba(0,0,0,0.1)';
-    } else {
-        navbar.style.boxShadow = 'none';
-    }
+    document.querySelectorAll('.service-card, .product-card').forEach((el) => observer.observe(el));
 });
