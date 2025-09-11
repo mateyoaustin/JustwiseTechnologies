@@ -1260,10 +1260,6 @@
                 overflow-x: visible;
             }
 
-            .stats-container {
-                grid-template-columns: repeat(2, 1fr);
-            }
-
             .contact-details a {
                 width: 60px;
                 height: 60px;
@@ -1280,10 +1276,6 @@
                 width: 55px;
                 height: 55px;
                 font-size: 1.2rem;
-            }
-            
-            .stats-container {
-                grid-template-columns: 1fr;
             }
         }
 
@@ -1320,7 +1312,6 @@
         <div class="header-right">
             <div class="nav-items">
                 <a href="#services">Services</a>
-                <a href="#products">Products</a>
                 <a href="#stats">Stats</a>
                 <a href="#contact">Contact</a>
             </div>
@@ -1333,7 +1324,6 @@
             <div id="dropdownMenu" class="dropdown-menu">
                 <a href="#hero" class="dropdown-link"><i class="fas fa-home fa-fw"></i> Home</a>
                 <a href="#services" class="dropdown-link"><i class="fas fa-list fa-fw"></i> Services</a>
-                <a href="#products" class="dropdown-link"><i class="fas fa-box fa-fw"></i> Products</a>
                 <a href="#stats" class="dropdown-link"><i class="fas fa-chart-line fa-fw"></i> Stats</a>
                 <a href="#contact" class="dropdown-link"><i class="fas fa-envelope fa-fw"></i> Contact</a>
                 <a href="https://wa.me/263777747150"><i class="fab fa-whatsapp fa-fw"></i> Chat Now</a>
@@ -1376,129 +1366,56 @@
                 <div class="stat-number" id="clients-count">0</div>
                 <div class="stat-label">Happy Clients</div>
             </div>
-            
-            <div class="stat-card animate-on-scroll">
-                <div class="stat-number" id="projects-count">0</div>
-                <div class="stat-label">Projects Completed</div>
-            </div>
-            
+
             <div class="stat-card animate-on-scroll">
                 <div class="stat-number" id="devices-count">0</div>
                 <div class="stat-label">Devices Repaired</div>
             </div>
-            
+
             <div class="stat-card animate-on-scroll">
-                <div class="stat-number" id="support-count">24/7</div>
-                <div class="stat-label">Support Available</div>
+                <div class="stat-number" id="projects-count">0</div>
+                <div class="stat-label">Projects Completed</div>
             </div>
         </div>
     </section>
 
     <section id="services" class="services-grid">
-        <h2 class="section-title">Our Services</h2>
-        <p class="section-subtitle">We offer a comprehensive range of technology services to help your business thrive in the digital era.</p>
-        
-        <div class="service-card animate-on-scroll card-3d">
-            <i class="fas fa-mobile-alt"></i>
-            <h3>Device Sales</h3>
-            <p>Premium devices with extended warranties and flexible trade-in options. We offer the latest technology from leading brands.</p>
-            <a href="#contact" class="btn btn-secondary">Learn More</a>
-        </div>
-        
-        <div class="service-card animate-on-scroll card-3d">
-            <i class="fas fa-tools"></i>
-            <h3>Device Repairs</h3>
-            <p>Expert repairs for phones and computers, using genuine parts and offering fast turnaround. Our technicians are certified professionals.</p>
-            <a href="#contact" class="btn btn-secondary">Learn More</a>
-        </div>
-        
-        <div class="service-card animate-on-scroll card-3d">
-            <i class="fas fa-wifi"></i>
-            <h3>Connectivity</h3>
-            <p>High-speed internet access and a comfortable workspace for your connectivity needs. We ensure seamless connectivity solutions.</p>
-            <a href="#contact" class="btn btn-secondary">Learn More</a>
-        </div>
-        
-        <div class="service-card animate-on-scroll card-3d">
-            <i class="fas fa-certificate"></i>
-            <h3>Software Licensing</h3>
-            <p>Genuine software licenses and professional upgrade services. We help you stay compliant and up-to-date with the latest software.</p>
-            <a href="#contact" class="btn btn-secondary">Learn More</a>
-        </div>
+        <h2 class="section-title">Our Core Services</h2>
+        <p class="section-subtitle">We deliver a full spectrum of technology services, from hardware solutions to bespoke software, tailored to your unique needs.</p>
         
         <div class="service-card animate-on-scroll card-3d">
             <i class="fab fa-android"></i>
-            <h3>Android Solutions</h3>
-            <p>Custom Android applications and solutions tailored to your business. We create intuitive and powerful Android experiences.</p>
-            <a href="#contact" class="btn btn-secondary">Learn More</a>
+            <h3>Android Automation (Tasker)</h3>
+            <p>Unleash the full potential of your Android device. We create advanced Tasker projects to automate everything from simple daily routines to complex, customized workflows, making your phone smarter.</p>
+            <a href="#contact" class="btn btn-secondary">Automate Now</a>
+        </div>
+
+        <div class="service-card animate-on-scroll card-3d">
+            <i class="fas fa-store"></i>
+            <h3>Device Sales & Repairs</h3>
+            <p>Explore our curated selection of new and pre-owned laptops, smartphones, and accessories. Our certified technicians also provide fast, reliable repair services to get your devices running like new.</p>
+            <a href="#contact" class="btn btn-secondary">Inquire Now</a>
         </div>
         
         <div class="service-card animate-on-scroll card-3d">
-            <i class="fas fa-code"></i>
-            <h3>Software Development</h3>
-            <p>Bespoke software development to streamline your operations. We build scalable and efficient software solutions.</p>
-            <a href="#contact" class="btn btn-secondary">Learn More</a>
-        </div>
-        
-        <div class="service-card animate-on-scroll card-3d">
-            <i class="fas fa-mobile-screen"></i>
-            <h3>Mobile App Development</h3>
-            <p>Native and cross-platform mobile applications to reach your customers. We create engaging and user-friendly mobile apps.</p>
+            <i class="fas fa-code-branch"></i>
+            <h3>Custom Software Solutions</h3>
+            <p>We design and develop bespoke software applications for web, desktop, and mobile (iOS & Android) that solve unique business challenges, improve efficiency, and drive growth.</p>
             <a href="#contact" class="btn btn-secondary">Learn More</a>
         </div>
         
         <div class="service-card animate-on-scroll card-3d">
             <i class="fas fa-robot"></i>
-            <h3>AI Integration</h3>
-            <p>Implementation of Artificial Intelligence solutions to automate processes and gain valuable insights. We harness the power of AI for your business.</p>
+            <h3>AI & Automation</h3>
+            <p>Leverage the power of Artificial Intelligence. We integrate intelligent solutions to automate your business processes, provide valuable data insights, and enhance operational productivity.</p>
             <a href="#contact" class="btn btn-secondary">Learn More</a>
         </div>
-    </section>
-
-    <section id="products" class="products-grid">
-        <h2 class="section-title">Our Products</h2>
-        <p class="section-subtitle">Discover our range of high-quality technology products designed to enhance productivity and innovation.</p>
         
-        <div class="product-card animate-on-scroll card-3d">
-            <i class="fas fa-laptop"></i>
-            <h3>Premium Laptops</h3>
-            <p>High-performance laptops for professionals and creators. Featuring the latest processors, stunning displays, and exceptional build quality.</p>
-            <a href="#contact" class="btn btn-secondary">Inquire Now</a>
-        </div>
-        
-        <div class="product-card animate-on-scroll card-3d">
-            <i class="fas fa-tablet-alt"></i>
-            <h3>Tablets</h3>
-            <p>Versatile tablets for productivity and entertainment. Perfect for both work and play with long battery life and brilliant displays.</p>
-            <a href="#contact" class="btn btn-secondary">Inquire Now</a>
-        </div>
-
-        <div class="product-card animate-on-scroll card-3d">
-            <i class="fas fa-mobile-alt"></i>
-            <h3>Smartphones</h3>
-            <p>The latest smartphones from leading brands. Featuring powerful cameras, stunning displays, and cutting-edge technology.</p>
-            <a href="#contact" class="btn btn-secondary">Inquire Now</a>
-        </div>
-
-        <div class="product-card animate-on-scroll card-3d">
-            <i class="fas fa-headphones"></i>
-            <h3>Audio Devices</h3>
-            <p>High-quality headphones and speakers for immersive sound. Experience crystal clear audio with noise-cancellation technology.</p>
-            <a href="#contact" class="btn btn-secondary">Inquire Now</a>
-        </div>
-        
-        <div class="product-card animate-on-scroll card-3d">
-            <i class="fas fa-camera"></i>
-            <h3>Imaging Tech</h3>
-            <p>Professional cameras and accessories for photography and videography. Capture stunning images and videos with our premium equipment.</p>
-            <a href="#contact" class="btn btn-secondary">Inquire Now</a>
-        </div>
-        
-        <div class="product-card animate-on-scroll card-3d">
-            <i class="fas fa-network-wired"></i>
-            <h3>Networking Gear</h3>
-            <p>Reliable networking equipment to keep you connected. From routers to switches, we have everything for your networking needs.</p>
-            <a href="#contact" class="btn btn-secondary">Inquire Now</a>
+        <div class="service-card animate-on-scroll card-3d">
+            <i class="fas fa-headset"></i>
+            <h3>IT Support & Connectivity</h3>
+            <p>From genuine Windows installations and software upgrades to high-speed internet access at our café, we provide the essential IT support and services to keep you productive and connected.</p>
+            <a href="#contact" class="btn btn-secondary">Get Support</a>
         </div>
     </section>
 
@@ -1524,7 +1441,7 @@
         
         <div class="form-container animate-on-scroll">
             <h3 class="form-title">Send us a message</h3>
-            <form id="contactForm">
+            <form id="contactForm" action="process_form.php" method="POST">
                 <div class="form-group">
                     <label for="name">Full Name</label>
                     <input type="text" id="name" name="name" required>
@@ -1541,21 +1458,18 @@
                     <label for="service">Service Interest</label>
                     <select id="service" name="service">
                         <option value="">Select a service</option>
-                        <option value="device-sales">Device Sales</option>
-                        <option value="device-repairs">Device Repairs</option>
-                        <option value="connectivity">Connectivity</option>
-                        <option value="software-licensing">Software Licensing</option>
-                        <option value="android-solutions">Android Solutions</option>
-                        <option value="software-development">Software Development</option>
-                        <option value="mobile-app-development">Mobile App Development</option>
-                        <option value="ai-integration">AI Integration</option>
+                        <option value="tasker-automation">Android Automation (Tasker)</option>
+                        <option value="device-sales-repairs">Device Sales & Repairs</option>
+                        <option value="custom-software">Custom Software Solutions</option>
+                        <option value="ai-automation">AI & Automation</option>
+                        <option value="it-support">IT Support & Connectivity</option>
                     </select>
                 </div>
                 <div class="form-group">
                     <label for="message">Message</label>
                     <textarea id="message" name="message" required></textarea>
                 </div>
-                <button type="submit" class="submit-button">
+                <button type="submit" class="submit-button" id="submitBtn">
                     <i class="fas fa-paper-plane"></i> Send Message
                 </button>
                 <div id="form-status" class="form-status" style="display: none;"></div>
@@ -1675,30 +1589,41 @@
         // Form submission
         const form = document.getElementById('contactForm');
         const formStatus = document.getElementById('form-status');
+        const submitBtn = document.getElementById('submitBtn');
 
         if (form && formStatus) {
             form.addEventListener('submit', async (e) => {
                 e.preventDefault();
-                formStatus.textContent = 'Please wait...';
+                submitBtn.disabled = true;
+                formStatus.textContent = 'Sending...';
                 formStatus.style.display = 'block';
                 formStatus.className = 'form-status';
 
+                const formData = new FormData(form);
+
                 try {
-                    // Simulate form submission (replace with actual form submission)
-                    await new Promise(resolve => setTimeout(resolve, 1500));
-                    
-                    // Simulate successful submission
-                    formStatus.textContent = 'Thank you! Your message has been sent. We will get back to you soon.';
-                    formStatus.classList.add('success');
-                    form.reset();
-                    
-                    // Hide status message after 5 seconds
+                    const response = await fetch(form.action, {
+                        method: 'POST',
+                        body: formData
+                    });
+
+                    const result = await response.json();
+
+                    if (response.ok) {
+                        formStatus.textContent = result.message;
+                        formStatus.classList.add('success');
+                        form.reset();
+                    } else {
+                        throw new Error(result.message || 'An unexpected error occurred.');
+                    }
+                } catch (error) {
+                    formStatus.textContent = `Error: ${error.message}`;
+                    formStatus.classList.add('error');
+                } finally {
+                    submitBtn.disabled = false;
                     setTimeout(() => {
                         formStatus.style.display = 'none';
                     }, 5000);
-                } catch (error) {
-                    formStatus.textContent = `Oops! Error: ${error.message || 'Please try again.'}`;
-                    formStatus.classList.add('error');
                 }
             });
         }
@@ -1766,19 +1691,38 @@
                     element.textContent = Math.floor(start);
                     requestAnimationFrame(updateCounter);
                 } else {
-                    element.textContent = target;
+                    element.textContent = target.toLocaleString();
                 }
             };
             updateCounter();
         }
 
+        // --- Dynamic Counter Logic ---
+        const startDate = new Date('2023-01-01');
+        const today = new Date();
+        const timeDiff = today.getTime() - startDate.getTime();
+        const weeksPassed = Math.floor(timeDiff / (1000 * 3600 * 24 * 7));
+
+        // Base numbers and average weekly growth rates
+        const baseClients = 10;
+        const weeklyClients = 2; // ~2 new clients per week
+        const targetClients = baseClients + (weeksPassed * weeklyClients);
+
+        const baseDevices = 20;
+        const weeklyDevices = 5; // ~5 devices repaired per week
+        const targetDevices = baseDevices + (weeksPassed * weeklyDevices);
+
+        const baseProjects = 5;
+        const weeklyProjects = 1; // ~1 project completed per week
+        const targetProjects = baseProjects + (weeksPassed * weeklyProjects);
+        
         // Start counter animation when stats section is in view
         const statsObserver = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
-                    animateCounter(document.getElementById('clients-count'), 250, 2000);
-                    animateCounter(document.getElementById('projects-count'), 500, 2000);
-                    animateCounter(document.getElementById('devices-count'), 1200, 2000);
+                    animateCounter(document.getElementById('clients-count'), targetClients, 2000);
+                    animateCounter(document.getElementById('devices-count'), targetDevices, 2000);
+                    animateCounter(document.getElementById('projects-count'), targetProjects, 2000);
                     statsObserver.unobserve(entry.target);
                 }
             });
