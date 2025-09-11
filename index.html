@@ -53,51 +53,91 @@
             cursor: auto;
         }
 
-        [data-theme="dark"] body {
-            background: var(--bg-dark);
-            color: var(--light);
-        }
-
         /* Premium animations */
         @keyframes float {
-            0%, 100% { transform: translateY(0); }
-            50% { transform: translateY(-15px); }
+            0%, 100% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(-15px);
+            }
         }
 
         @keyframes pulse {
-            0%, 100% { opacity: 1; }
-            50% { opacity: 0.7; }
+            0%, 100% {
+                opacity: 1;
+            }
+
+            50% {
+                opacity: 0.7;
+            }
         }
 
         @keyframes gradient {
-            0% { background-position: 0% 50%; }
-            50% { background-position: 100% 50%; }
-            100% { background-position: 0% 50%; }
+            0% {
+                background-position: 0% 50%;
+            }
+
+            50% {
+                background-position: 100% 50%;
+            }
+
+            100% {
+                background-position: 0% 50%;
+            }
         }
 
         @keyframes slideIn {
-            from { transform: translateY(50px); opacity: 0; }
-            to { transform: translateY(0); opacity: 1; }
+            from {
+                transform: translateY(50px);
+                opacity: 0;
+            }
+
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
         }
 
         @keyframes fadeIn {
-            from { opacity: 0; }
-            to { opacity: 1; }
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
         }
 
         @keyframes shimmer {
-            0% { background-position: -1000px 0; }
-            100% { background-position: 1000px 0; }
+            0% {
+                background-position: -1000px 0;
+            }
+
+            100% {
+                background-position: 1000px 0;
+            }
         }
 
         @keyframes typing {
-            from { width: 0; }
-            to { width: 100%; }
+            from {
+                width: 0;
+            }
+
+            to {
+                width: 100%;
+            }
         }
 
         @keyframes blink {
-            0%, 100% { border-color: transparent; }
-            50% { border-color: var(--accent); }
+            0%, 100% {
+                border-color: transparent;
+            }
+
+            50% {
+                border-color: var(--accent);
+            }
         }
 
         .animate-float {
@@ -123,11 +163,6 @@
             box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.15);
         }
 
-        [data-theme="dark"] .glass {
-            background: rgba(0, 0, 0, 0.1);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-        }
-
         /* Premium scrollbar */
         ::-webkit-scrollbar {
             width: 10px;
@@ -135,10 +170,6 @@
 
         ::-webkit-scrollbar-track {
             background: var(--bg-light);
-        }
-
-        [data-theme="dark"] ::-webkit-scrollbar-track {
-            background: var(--bg-dark);
         }
 
         ::-webkit-scrollbar-thumb {
@@ -166,20 +197,10 @@
             transition: var(--transition);
         }
 
-        [data-theme="dark"] .sticky-nav {
-            background: rgba(17, 24, 39, 0.9);
-            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-        }
-
         .sticky-nav.scrolled {
             padding: 0.75rem 2rem;
             background: rgba(255, 255, 255, 0.95);
             box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
-        }
-
-        [data-theme="dark"] .sticky-nav.scrolled {
-            background: rgba(17, 24, 39, 0.95);
-            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
         }
 
         .brand {
@@ -227,38 +248,10 @@
             width: 100%;
         }
 
-        [data-theme="dark"] .nav-items a {
-            color: var(--light);
-        }
-
         .header-right {
             display: flex;
             align-items: center;
             gap: 1.5rem;
-        }
-
-        .theme-toggle {
-            background: var(--bg-light);
-            border: var(--border);
-            border-radius: 50%;
-            width: 45px;
-            height: 45px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            cursor: pointer;
-            transition: var(--transition);
-            box-shadow: var(--shadow);
-        }
-
-        .theme-toggle:hover {
-            transform: translateY(-3px);
-            box-shadow: var(--shadow-hover);
-        }
-
-        [data-theme="dark"] .theme-toggle {
-            background: var(--bg-dark-secondary);
-            border: var(--border-dark);
         }
 
         .dropdown-toggle {
@@ -270,10 +263,6 @@
             cursor: pointer;
             padding: 0.5rem;
             transition: var(--transition);
-        }
-
-        [data-theme="dark"] .dropdown-toggle {
-            color: var(--light);
         }
 
         .dropdown-menu {
@@ -297,11 +286,6 @@
             animation: slideIn 0.3s ease forwards;
         }
 
-        [data-theme="dark"] .dropdown-menu {
-            background: var(--bg-dark-secondary);
-            border: var(--border-dark);
-        }
-
         .dropdown-menu a {
             display: flex;
             align-items: center;
@@ -317,14 +301,6 @@
             background: rgba(67, 56, 202, 0.1);
             color: var(--secondary);
             transform: translateX(5px);
-        }
-
-        [data-theme="dark"] .dropdown-menu a {
-            color: var(--light);
-        }
-
-        [data-theme="dark"] .dropdown-menu a:hover {
-            background: rgba(67, 56, 202, 0.2);
         }
 
         .hero {
@@ -517,10 +493,6 @@
             background: var(--bg-light);
         }
 
-        [data-theme="dark"] .services-grid {
-            background: var(--bg-dark);
-        }
-
         .section-title {
             font-size: 2.5rem;
             font-weight: 800;
@@ -529,10 +501,6 @@
             color: var(--primary);
             position: relative;
             grid-column: 1 / -1;
-        }
-
-        [data-theme="dark"] .section-title {
-            color: var(--light);
         }
 
         .section-subtitle {
@@ -544,10 +512,6 @@
             max-width: 700px;
             margin-left: auto;
             margin-right: auto;
-        }
-
-        [data-theme="dark"] .section-subtitle {
-            color: var(--light);
         }
 
         .service-card {
@@ -635,18 +599,9 @@
             flex-grow: 1;
         }
 
-        [data-theme="dark"] .service-card p {
-            color: var(--light);
-        }
-
         .service-card .btn {
             align-self: flex-start;
             margin-top: auto;
-        }
-
-        [data-theme="dark"] .service-card {
-            background: var(--bg-dark-secondary);
-            border: var(--border-dark);
         }
 
         .products-grid {
@@ -655,10 +610,6 @@
             gap: 2rem;
             padding: 6rem 2rem;
             background: var(--bg-light);
-        }
-
-        [data-theme="dark"] .products-grid {
-            background: var(--bg-dark);
         }
 
         .product-card {
@@ -736,17 +687,8 @@
             flex-grow: 1;
         }
 
-        [data-theme="dark"] .product-card p {
-            color: var(--light);
-        }
-
         .product-card .btn {
             margin-top: auto;
-        }
-
-        [data-theme="dark"] .product-card {
-            background: var(--bg-dark-secondary);
-            border: var(--border-dark);
         }
 
         .contact-section {
@@ -754,10 +696,6 @@
             text-align: center;
             background: var(--bg-light);
             position: relative;
-        }
-
-        [data-theme="dark"] .contact-section {
-            background: var(--bg-dark);
         }
 
         .contact-details {
@@ -811,11 +749,6 @@
             opacity: 1;
         }
 
-        [data-theme="dark"] .contact-details a {
-            background: var(--bg-dark-secondary);
-            color: var(--light);
-        }
-
         .form-container {
             max-width: 700px;
             margin: 0 auto;
@@ -839,21 +772,12 @@
             background: var(--gradient);
         }
 
-        [data-theme="dark"] .form-container {
-            background: var(--bg-dark-secondary);
-            border: var(--border-dark);
-        }
-
         .form-title {
             font-size: 1.8rem;
             margin-bottom: 2rem;
             text-align: center;
             color: var(--primary);
             font-weight: 700;
-        }
-
-        [data-theme="dark"] .form-title {
-            color: var(--light);
         }
 
         .form-group {
@@ -866,10 +790,6 @@
             margin-bottom: 0.5rem;
             font-weight: 500;
             color: var(--dark);
-        }
-
-        [data-theme="dark"] .form-group label {
-            color: var(--light);
         }
 
         .form-group input,
@@ -891,14 +811,6 @@
             outline: none;
             border-color: var(--secondary);
             box-shadow: 0 0 0 3px rgba(67, 56, 202, 0.1);
-        }
-
-        [data-theme="dark"] .form-group input,
-        [data-theme="dark"] .form-group select,
-        [data-theme="dark"] .form-group textarea {
-            background: var(--bg-dark);
-            border: var(--border-dark);
-            color: var(--light);
         }
 
         .form-group textarea {
@@ -1137,10 +1049,6 @@
             text-align: center;
         }
 
-        [data-theme="dark"] .stats-section {
-            background: var(--bg-dark);
-        }
-
         .stats-container {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -1164,11 +1072,6 @@
             box-shadow: var(--shadow-hover);
         }
 
-        [data-theme="dark"] .stat-card {
-            background: var(--bg-dark-secondary);
-            border: var(--border-dark);
-        }
-
         .stat-number {
             font-size: 2.5rem;
             font-weight: 800;
@@ -1185,25 +1088,21 @@
             font-weight: 500;
         }
 
-        [data-theme="dark"] .stat-label {
-            color: var(--light);
-        }
-
         @media (max-width: 968px) {
             .hero h1 {
                 font-size: 2.8rem;
             }
-            
+
             .services-grid,
             .products-grid {
                 grid-template-columns: 1fr;
                 padding: 4rem 1.5rem;
             }
-            
+
             .form-container {
                 padding: 2rem;
             }
-            
+
             .contact-details {
                 flex-wrap: nowrap;
                 overflow-x: auto;
@@ -1211,7 +1110,7 @@
                 padding-bottom: 1rem;
                 max-width: 100%;
             }
-            
+
             .contact-details a {
                 flex-shrink: 0;
             }
@@ -1221,39 +1120,39 @@
             .hero h1 {
                 font-size: 2.3rem;
             }
-            
+
             .section-title {
                 font-size: 2rem;
             }
-            
+
             .nav-items {
                 display: none;
             }
-            
+
             .dropdown-toggle {
                 display: block;
             }
-            
+
             .hero-buttons {
                 flex-direction: column;
                 align-items: center;
             }
-            
+
             .btn {
                 width: 100%;
                 justify-content: center;
             }
-            
+
             .footer-content {
                 grid-template-columns: 1fr;
                 text-align: center;
             }
-            
+
             .footer-heading::after {
                 left: 50%;
                 transform: translateX(-50%);
             }
-            
+
             .contact-details {
                 flex-wrap: wrap;
                 justify-content: center;
@@ -1271,7 +1170,7 @@
             .contact-details {
                 gap: 1rem;
             }
-            
+
             .contact-details a {
                 width: 55px;
                 height: 55px;
@@ -1315,9 +1214,6 @@
                 <a href="#stats">Stats</a>
                 <a href="#contact">Contact</a>
             </div>
-            <div class="theme-toggle" id="themeToggle">
-                <i class="fas fa-sun"></i>
-            </div>
             <button id="dropdownToggle" class="dropdown-toggle">
                 <i class="fas fa-bars"></i>
             </button>
@@ -1327,7 +1223,6 @@
                 <a href="#stats" class="dropdown-link"><i class="fas fa-chart-line fa-fw"></i> Stats</a>
                 <a href="#contact" class="dropdown-link"><i class="fas fa-envelope fa-fw"></i> Contact</a>
                 <a href="https://wa.me/263777747150"><i class="fab fa-whatsapp fa-fw"></i> Chat Now</a>
-                <a href="#" id="themeToggleDropdown" class="dropdown-link"><i class="fas fa-sun fa-fw"></i> Toggle Theme</a>
             </div>
         </div>
     </nav>
@@ -1360,7 +1255,7 @@
     <section id="stats" class="stats-section">
         <h2 class="section-title">Our Impact</h2>
         <p class="section-subtitle">Numbers that speak about our commitment to excellence and customer satisfaction</p>
-        
+
         <div class="stats-container">
             <div class="stat-card animate-on-scroll">
                 <div class="stat-number" id="clients-count">0</div>
@@ -1382,7 +1277,7 @@
     <section id="services" class="services-grid">
         <h2 class="section-title">Our Core Services</h2>
         <p class="section-subtitle">We deliver a full spectrum of technology services, from hardware solutions to bespoke software, tailored to your unique needs.</p>
-        
+
         <div class="service-card animate-on-scroll card-3d">
             <i class="fab fa-android"></i>
             <h3>Android Automation (Tasker)</h3>
@@ -1396,21 +1291,21 @@
             <p>Explore our curated selection of new and pre-owned laptops, smartphones, and accessories. Our certified technicians also provide fast, reliable repair services to get your devices running like new.</p>
             <a href="#contact" class="btn btn-secondary">Inquire Now</a>
         </div>
-        
+
         <div class="service-card animate-on-scroll card-3d">
             <i class="fas fa-code-branch"></i>
             <h3>Custom Software Solutions</h3>
             <p>We design and develop bespoke software applications for web, desktop, and mobile (iOS & Android) that solve unique business challenges, improve efficiency, and drive growth.</p>
             <a href="#contact" class="btn btn-secondary">Learn More</a>
         </div>
-        
+
         <div class="service-card animate-on-scroll card-3d">
             <i class="fas fa-robot"></i>
             <h3>AI & Automation</h3>
             <p>Leverage the power of Artificial Intelligence. We integrate intelligent solutions to automate your business processes, provide valuable data insights, and enhance operational productivity.</p>
             <a href="#contact" class="btn btn-secondary">Learn More</a>
         </div>
-        
+
         <div class="service-card animate-on-scroll card-3d">
             <i class="fas fa-headset"></i>
             <h3>IT Support & Connectivity</h3>
@@ -1423,7 +1318,7 @@
         <div class="particles-container" id="particles-js"></div>
         <h2 class="section-title">Contact Us</h2>
         <p class="section-subtitle">Get in touch with us for inquiries, quotes, or to discuss your technology needs.</p>
-        
+
         <div class="contact-details">
             <a href="https://wa.me/263777747150" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp" title="WhatsApp">
                 <i class="fab fa-whatsapp"></i>
@@ -1438,7 +1333,7 @@
                 <i class="fas fa-envelope"></i>
             </a>
         </div>
-        
+
         <div class="form-container animate-on-scroll">
             <h3 class="form-title">Send us a message</h3>
             <form id="contactForm">
@@ -1483,8 +1378,8 @@
                 <div class="footer-logo">Justwise Technologies </div>
                 <p class="footer-description">Providing cutting-edge technology solutions for businesses and individuals since 2023.</p>
             </div>
-            
-            
+
+
             <div class="footer-bottom">
                 <p>© <span id="currentYear"></span> Justwise Technologies. All rights reserved.</p>
             </div>
@@ -1500,45 +1395,8 @@
     </a>
 
     <script>
-        // Set current year
         document.getElementById('currentYear').textContent = new Date().getFullYear();
-        
-        // Theme toggle functionality
-        const themeToggle = document.getElementById('themeToggle');
-        const themeToggleDropdown = document.getElementById('themeToggleDropdown');
-        const themeIconLarge = themeToggle.querySelector('i');
-        const themeIconDropdown = themeToggleDropdown.querySelector('i');
-        const htmlElement = document.documentElement;
 
-        function applyTheme(theme) {
-            htmlElement.setAttribute('data-theme', theme);
-            if (theme === 'dark') {
-                themeIconLarge.className = 'fas fa-moon';
-                themeIconDropdown.className = 'fas fa-moon fa-fw';
-            } else {
-                themeIconLarge.className = 'fas fa-sun';
-                themeIconDropdown.className = 'fas fa-sun fa-fw';
-            }
-            localStorage.setItem('theme', theme);
-        }
-
-        const savedTheme = localStorage.getItem('theme') || 'light';
-        applyTheme(savedTheme);
-
-        function toggleTheme() {
-            const currentTheme = htmlElement.getAttribute('data-theme');
-            const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
-            applyTheme(newTheme);
-        }
-
-        themeToggle.addEventListener('click', toggleTheme);
-        themeToggleDropdown.addEventListener('click', (e) => {
-             e.preventDefault();
-             toggleTheme();
-             dropdownMenu.classList.remove('open');
-        });
-
-        // Navbar scroll effect
         const navbar = document.querySelector('.sticky-nav');
         window.addEventListener('scroll', () => {
             if (window.scrollY > 50) {
@@ -1548,7 +1406,6 @@
             }
         });
 
-        // Scroll animations
         const observer = new IntersectionObserver((entries) => {
             entries.forEach((entry) => {
                 if (entry.isIntersecting) {
@@ -1564,10 +1421,9 @@
             observer.observe(el);
         });
 
-        // Dropdown menu functionality
         const dropdownToggle = document.getElementById('dropdownToggle');
         const dropdownMenu = document.getElementById('dropdownMenu');
-        const dropdownLinks = document.querySelectorAll('.dropdown-menu a:not(#themeToggleDropdown)');
+        const dropdownLinks = document.querySelectorAll('.dropdown-menu a');
 
         dropdownToggle.addEventListener('click', (e) => {
             e.stopPropagation();
@@ -1586,7 +1442,6 @@
             }
         });
 
-        // Form submission
         const form = document.getElementById('contactForm');
         const formStatus = document.getElementById('form-status');
 
@@ -1598,15 +1453,12 @@
                 formStatus.className = 'form-status';
 
                 try {
-                    // Simulate form submission (replace with actual form submission)
                     await new Promise(resolve => setTimeout(resolve, 1500));
-                    
-                    // Simulate successful submission
+
                     formStatus.textContent = 'Thank you! Your message has been sent. We will get back to you soon.';
                     formStatus.classList.add('success');
                     form.reset();
-                    
-                    // Hide status message after 5 seconds
+
                     setTimeout(() => {
                         formStatus.style.display = 'none';
                     }, 5000);
@@ -1617,15 +1469,30 @@
             });
         }
 
-        // Initialize particles.js if available
         if (typeof particlesJS !== 'undefined') {
             particlesJS('particles-js', {
                 particles: {
-                    number: { value: 80, density: { enable: true, value_area: 800 } },
-                    color: { value: "#f59e0b" },
-                    shape: { type: "circle" },
-                    opacity: { value: 0.5, random: true },
-                    size: { value: 3, random: true },
+                    number: {
+                        value: 80,
+                        density: {
+                            enable: true,
+                            value_area: 800
+                        }
+                    },
+                    color: {
+                        value: "#f59e0b"
+                    },
+                    shape: {
+                        type: "circle"
+                    },
+                    opacity: {
+                        value: 0.5,
+                        random: true
+                    },
+                    size: {
+                        value: 3,
+                        random: true
+                    },
                     line_linked: {
                         enable: true,
                         distance: 150,
@@ -1646,8 +1513,14 @@
                 interactivity: {
                     detect_on: "canvas",
                     events: {
-                        onhover: { enable: true, mode: "grab" },
-                        onclick: { enable: true, mode: "push" },
+                        onhover: {
+                            enable: true,
+                            mode: "grab"
+                        },
+                        onclick: {
+                            enable: true,
+                            mode: "push"
+                        },
                         resize: true
                     }
                 },
@@ -1655,7 +1528,6 @@
             });
         }
 
-        // Back to top button
         const backToTop = document.getElementById('backToTop');
         window.addEventListener('scroll', () => {
             if (window.scrollY > 500) {
@@ -1667,10 +1539,12 @@
 
         backToTop.addEventListener('click', (e) => {
             e.preventDefault();
-            window.scrollTo({ top: 0, behavior: 'smooth' });
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
         });
 
-        // Animated counter for stats
         function animateCounter(element, target, duration) {
             let start = 0;
             const increment = target / (duration / 16);
@@ -1686,27 +1560,23 @@
             updateCounter();
         }
 
-        // --- Dynamic Counter Logic ---
         const startDate = new Date('2023-01-01');
         const today = new Date();
         const timeDiff = today.getTime() - startDate.getTime();
         const weeksPassed = Math.floor(timeDiff / (1000 * 3600 * 24 * 7));
 
-        // Base numbers and weekly growth rates for work completed
         const baseDevices = 20;
-        const weeklyDevices = 5; // ~5 devices repaired per week
+        const weeklyDevices = 5;
         const targetDevices = baseDevices + (weeksPassed * weeklyDevices);
 
         const baseProjects = 5;
-        const weeklyProjects = 1; // ~1 project completed per week
+        const weeklyProjects = 1;
         const targetProjects = baseProjects + (weeksPassed * weeklyProjects);
 
-        // Calculate Happy Clients based on total work, ensuring it's at least 85%
         const totalWorkDone = targetDevices + targetProjects;
-        const satisfactionRate = 0.92; // Using a 92% rate, which is > 85%
+        const satisfactionRate = 0.92;
         const targetClients = Math.floor(totalWorkDone * satisfactionRate);
-        
-        // Start counter animation when stats section is in view
+
         const statsObserver = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
@@ -1716,7 +1586,9 @@
                     statsObserver.unobserve(entry.target);
                 }
             });
-        }, { threshold: 0.5 });
+        }, {
+            threshold: 0.5
+        });
 
         const statsSection = document.getElementById('stats');
         if (statsSection) {
