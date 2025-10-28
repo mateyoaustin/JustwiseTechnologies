@@ -1,271 +1,1435 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="light">
+<html lang="en" class=""> <!-- Default to light mode, JS will add 'dark' if needed -->
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Justwise Technologies - Premium Tech Solutions</title>
     <meta name="description" content="Justwise Technologies provides cutting-edge technology solutions including Android automation, device sales and repairs, custom software development, AI and automation, and IT support.">
+    
+    <!-- Favicon -->
     <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🚀</text></svg>">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Fonts & Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <script>
+        // Setup Tailwind CSS
+        tailwind.config = {
+            darkMode: 'class', // Enable class-based dark mode
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Plus Jakarta Sans', 'system-ui', 'sans-serif'],
+                        display: ['Space Grotesk', 'system-ui', 'sans-serif'],
+                    },
+                    colors: {
+                        // Modern Technology Color Palette
+                        primary: {
+                            DEFAULT: '#0066FF', // Vibrant Blue
+                            hover: '#0052CC',
+                            50: '#E6F0FF',
+                            100: '#CCE0FF',
+                            200: '#99C2FF',
+                            300: '#66A3FF',
+                            400: '#3385FF',
+                            500: '#0066FF',
+                            600: '#0052CC',
+                            700: '#003D99',
+                            800: '#002966',
+                            900: '#001433',
+                        },
+                        secondary: {
+                            DEFAULT: '#7C3AED', // Rich Purple
+                            hover: '#6D28D9',
+                            50: '#F5F3FF',
+                            100: '#EDE9FE',
+                            200: '#DDD6FE',
+                            300: '#C4B5FD',
+                            400: '#A78BFA',
+                            500: '#8B5CF6',
+                            600: '#7C3AED',
+                            700: '#6D28D9',
+                            800: '#5B21B6',
+                            900: '#4C1D95',
+                        },
+                        accent: {
+                            DEFAULT: '#00D4FF', // Bright Cyan
+                            hover: '#00BFEB',
+                            50: '#E6FBFF',
+                            100: '#CCF7FF',
+                            200: '#99EFFF',
+                            300: '#66E7FF',
+                            400: '#33DFFF',
+                            500: '#00D4FF',
+                            600: '#00BFEB',
+                            700: '#0099BF',
+                            800: '#007399',
+                            900: '#004D66',
+                        },
+                        neutral: {
+                            50: '#F8FAFC',
+                            100: '#F1F5F9',
+                            200: '#E2E8F0',
+                            300: '#CBD5E1',
+                            400: '#94A3B8',
+                            500: '#64748B',
+                            600: '#475569',
+                            700: '#334155',
+                            800: '#1E293B',
+                            900: '#0F172A',
+                        },
+                        'dark-bg': '#040B14', // Darker background
+                        'dark-card': '#0A1422', // Darker card background
+                        'dark-border': '#1E293B', // Darker border
+                    },
+                    animation: {
+                        'gradient-bg': 'gradient-bg 15s ease infinite',
+                        'float': 'float 3s ease-in-out infinite',
+                        'blink': 'blink 0.7s step-end infinite',
+                        'pulse-soft': 'pulse-soft 2s ease-in-out infinite',
+                        'bounce-soft': 'bounce-soft 2s ease-in-out infinite',
+                        'fade-in-up': 'fade-in-up 0.8s ease-out forwards',
+                        'fade-in-down': 'fade-in-down 0.8s ease-out forwards',
+                        'fade-in-left': 'fade-in-left 0.8s ease-out forwards',
+                        'fade-in-right': 'fade-in-right 0.8s ease-out forwards',
+                        'scale-in': 'scale-in 0.8s ease-out forwards',
+                        'slide-in-bottom': 'slide-in-bottom 0.8s ease-out forwards',
+                        'slide-in-top': 'slide-in-top 0.8s ease-out forwards',
+                        'morph': 'morph 8s ease-in-out infinite',
+                        'shimmer': 'shimmer 3s ease-in-out infinite',
+                        'orbit': 'orbit 20s linear infinite',
+                        'wave': 'wave 1.5s ease-in-out infinite',
+                    },
+                    keyframes: {
+                        'gradient-bg': {
+                            '0%, 100%': { 'background-position': '0% 50%' },
+                            '50%': { 'background-position': '100% 50%' },
+                        },
+                        'float': {
+                            '0%, 100%': { transform: 'translateY(0)' },
+                            '50%': { transform: 'translateY(-10px)' },
+                        },
+                        'blink': {
+                            'from, to': { color: 'transparent' },
+                            '50%': { color: 'var(--tw-clr-accent, #F59E0B)' },
+                        },
+                        'pulse-soft': {
+                            '0%, 100%': { opacity: '1', transform: 'scale(1)' },
+                            '50%': { opacity: '0.8', transform: 'scale(1.05)' },
+                        },
+                        'bounce-soft': {
+                            '0%, 100%': { transform: 'translateY(0)' },
+                            '50%': { transform: 'translateY(-8px)' },
+                        },
+                        'fade-in-up': {
+                            '0%': { opacity: '0', transform: 'translateY(30px)' },
+                            '100%': { opacity: '1', transform: 'translateY(0)' },
+                        },
+                        'fade-in-down': {
+                            '0%': { opacity: '0', transform: 'translateY(-30px)' },
+                            '100%': { opacity: '1', transform: 'translateY(0)' },
+                        },
+                        'fade-in-left': {
+                            '0%': { opacity: '0', transform: 'translateX(-30px)' },
+                            '100%': { opacity: '1', transform: 'translateX(0)' },
+                        },
+                        'fade-in-right': {
+                            '0%': { opacity: '0', transform: 'translateX(30px)' },
+                            '100%': { opacity: '1', transform: 'translateX(0)' },
+                        },
+                        'scale-in': {
+                            '0%': { opacity: '0', transform: 'scale(0.9)' },
+                            '100%': { opacity: '1', transform: 'scale(1)' },
+                        },
+                        'slide-in-bottom': {
+                            '0%': { transform: 'translateY(100%)' },
+                            '100%': { transform: 'translateY(0)' },
+                        },
+                        'slide-in-top': {
+                            '0%': { transform: 'translateY(-100%)' },
+                            '100%': { transform: 'translateY(0)' },
+                        },
+                        'morph': {
+                            '0%, 100%': { 'border-radius': '60% 40% 30% 70% / 60% 30% 70% 40%' },
+                            '50%': { 'border-radius': '30% 60% 70% 40% / 50% 60% 30% 60%' },
+                        },
+                        'shimmer': {
+                            '0%': { 'background-position': '-200% 0' },
+                            '100%': { 'background-position': '200% 0' },
+                        },
+                        'orbit': {
+                            '0%': { transform: 'rotate(0deg) translateX(80px) rotate(0deg)' },
+                            '100%': { transform: 'rotate(360deg) translateX(80px) rotate(-360deg)' },
+                        },
+                        'wave': {
+                            '0%, 60%, 100%': { transform: 'translateY(0)' },
+                            '30%': { transform: 'translateY(-15px)' },
+                        },
+                    },
+                    borderRadius: {
+                        'xl': '0.75rem',
+                        '2xl': '1rem',
+                        '3xl': '1.5rem',
+                    },
+                    boxShadow: {
+                        'soft': '0 2px 15px -3px rgba(0, 0, 0, 0.07), 0 10px 20px -2px rgba(0, 0, 0, 0.04)',
+                        'medium': '0 4px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 20px -5px rgba(0, 0, 0, 0.04)',
+                        'large': '0 10px 40px -10px rgba(0, 0, 0, 0.1), 0 10px 30px -5px rgba(0, 0, 0, 0.05)',
+                        'xl-soft': '0 20px 50px -12px rgba(0, 0, 0, 0.1)',
+                    },
+                    // Dynamic container sizes
+                    maxWidth: {
+                        '8xl': '88rem',
+                        '9xl': '96rem',
+                        '10xl': '104rem',
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        /* Custom non-Tailwind styles */
+        body {
+            /* Hide default cursor - REMOVED FOR DESKTOP */
+            /* cursor: none; */
+        }
+
+        /* Premium Scrollbar */
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: #e2e8f0; }
+        .dark ::-webkit-scrollbar-track { background: #1e293b; }
+        ::-webkit-scrollbar-thumb { background: #4F46E5; border-radius: 4px; }
+        ::-webkit-scrollbar-thumb:hover { background: #4338CA; }
+
+        /* Premium Preloader */
+        .preloader {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle at center, #0f172a, #040B14);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 9999;
+            transition: opacity 0.8s cubic-bezier(0.4, 0, 0.2, 1), visibility 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .preloader::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11 18c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm48 25c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm-43-7c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm63 31c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM34 90c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm56-76c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM12 86c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm28-65c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm23-11c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-6 60c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm29 22c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zM32 63c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm57-13c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-9-21c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM60 91c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM35 41c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2z' fill='%234F46E5' fill-opacity='0.03' fill-rule='evenodd'/%3E%3C/svg%3E");
+            opacity: 0.5;
+            pointer-events: none;
+        }
+
+        .preloader-content {
+            text-align: center;
+            color: white;
+            position: relative;
+            transform: translateY(20px);
+            opacity: 0;
+            animation: slideUpFade 1s cubic-bezier(0.4, 0, 0.2, 1) forwards 0.5s;
+        }
+
+        @keyframes slideUpFade {
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        .loader-container {
+            position: relative;
+            width: 120px;
+            height: 120px;
+            margin: 0 auto 2rem;
+        }
+
+        .orbital-loader {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            perspective: 800px;
+        }
+
+        .orbital-inner {
+            position: absolute;
+            box-sizing: border-box;
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+        }
+
+        .orbital-inner.one {
+            left: 0%;
+            top: 0%;
+            animation: orbit 3s linear infinite;
+            border-bottom: 3px solid #4F46E5;
+        }
+
+        .orbital-inner.two {
+            right: 0%;
+            top: 0%;
+            animation: orbit 3s linear infinite -1s;
+            border-right: 3px solid #EC4899;
+        }
+
+        .orbital-inner.three {
+            right: 0%;
+            bottom: 0%;
+            animation: orbit 3s linear infinite -2s;
+            border-top: 3px solid #F59E0B;
+        }
+
+        .pulse-dot {
+            width: 16px;
+            height: 16px;
+            border-radius: 50%;
+            background: #4F46E5;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            animation: pulse-soft 2s ease-in-out infinite;
+        }
+
+        .loading-text,
+        .service-card:hover h3 {
+            font-size: 1.125rem;
+            font-weight: 500;
+            margin-top: 1.5rem;
+            background: linear-gradient(90deg, #4F46E5, #EC4899, #F59E0B);
+            background-size: 200% 100%;
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            animation: shimmer 3s ease-in-out infinite;
+        }
+        
+        .service-card h3 {
+            transition: all 0.5s ease-out;
+        }
+
+        .loading-dots {
+            display: inline-flex;
+            margin-left: 0.25rem;
+        }
+
+        .loading-dots span {
+            animation: wave 1.5s ease-in-out infinite;
+        }
+
+        .loading-dots span:nth-child(2) {
+            animation-delay: 0.2s;
+        }
+
+        .loading-dots span:nth-child(3) {
+            animation-delay: 0.4s;
+        }
+
+        /* Typing Cursor */
+        .typing-cursor {
+            color: #F59E0B; /* Amber */
+            animation: blink 0.7s step-end infinite;
+        }
+
+        /* Animate on Scroll */
+        .animate-on-scroll {
+            opacity: 0;
+            transform: translateY(40px);
+            transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+        }
+        .animate-on-scroll.animated {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Enhanced Animation Classes */
+        .animate-fade-in-up {
+            opacity: 0;
+            transform: translateY(30px);
+            animation: fade-in-up 0.8s ease-out forwards;
+        }
+
+        .animate-fade-in-down {
+            opacity: 0;
+            transform: translateY(-30px);
+            animation: fade-in-down 0.8s ease-out forwards;
+        }
+
+        .animate-fade-in-left {
+            opacity: 0;
+            transform: translateX(-30px);
+            animation: fade-in-left 0.8s ease-out forwards;
+        }
+
+        .animate-fade-in-right {
+            opacity: 0;
+            transform: translateX(30px);
+            animation: fade-in-right 0.8s ease-out forwards;
+        }
+
+        .animate-scale-in {
+            opacity: 0;
+            transform: scale(0.9);
+            animation: scale-in 0.8s ease-out forwards;
+        }
+
+        .animate-slide-in-bottom {
+            transform: translateY(100%);
+            animation: slide-in-bottom 0.8s ease-out forwards;
+        }
+
+        .animate-slide-in-top {
+            transform: translateY(-100%);
+            animation: slide-in-top 0.8s ease-out forwards;
+        }
+
+        /* Premium Card Effects */
+        .premium-card {
+            position: relative;
+            transform-style: preserve-3d;
+            transition: all 0.8s cubic-bezier(0.23, 1, 0.32, 1);
+        }
+
+        .premium-card::before,
+        .premium-card::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            border-radius: inherit;
+            transition: all 0.8s cubic-bezier(0.23, 1, 0.32, 1);
+            opacity: 0;
+        }
+
+        .premium-card::before {
+            background: radial-gradient(
+                800px circle at var(--mouse-x) var(--mouse-y),
+                rgba(79, 70, 229, 0.1),
+                transparent 40%
+            );
+            z-index: 1;
+        }
+
+        .premium-card::after {
+            background: radial-gradient(
+                600px circle at var(--mouse-x) var(--mouse-y),
+                rgba(79, 70, 229, 0.4),
+                transparent 40%
+            );
+            z-index: 0;
+            filter: blur(30px);
+        }
+
+        .premium-card:hover::before,
+        .premium-card:hover::after {
+            opacity: 1;
+        }
+
+        .premium-card:hover {
+            transform: translateY(-5px) rotateX(var(--rotate-x)) rotateY(var(--rotate-y));
+            box-shadow: 
+                0 20px 40px -15px rgba(0, 0, 0, 0.1),
+                0 0 20px -5px rgba(79, 70, 229, 0.15);
+        }
+
+        /* Ensure smooth scroll padding for nav */
+        html {
+            scroll-padding-top: 80px;
+            scroll-behavior: smooth;
+        }
+
+        /* Dynamic container styles for all screen sizes */
+        .dynamic-container {
+            width: 100%;
+            margin-left: auto;
+            margin-right: auto;
+            padding-left: clamp(1rem, 3vw, 2rem);
+            padding-right: clamp(1rem, 3vw, 2rem);
+            max-width: min(100%, 90rem); /* 1440px */
+            box-sizing: border-box;
+        }
+
+        /* Small Mobile */
+        @media (max-width: 479px) {
+            .dynamic-container {
+                padding-left: 0.875rem;
+                padding-right: 0.875rem;
+            }
+        }
+
+        /* Mobile */
+        @media (min-width: 480px) {
+            .dynamic-container {
+                padding-left: clamp(1rem, 4vw, 1.5rem);
+                padding-right: clamp(1rem, 4vw, 1.5rem);
+            }
+        }
+
+        /* Tablet */
+        @media (min-width: 768px) {
+            .dynamic-container {
+                padding-left: clamp(1.5rem, 5vw, 2.5rem);
+                padding-right: clamp(1.5rem, 5vw, 2.5rem);
+                width: 90%;
+            }
+        }
+
+        /* Laptop */
+        @media (min-width: 1024px) {
+            .dynamic-container {
+                padding-left: clamp(2rem, 6vw, 3rem);
+                padding-right: clamp(2rem, 6vw, 3rem);
+                width: 85%;
+            }
+        }
+
+        /* Desktop */
+        @media (min-width: 1280px) {
+            .dynamic-container {
+                padding-left: clamp(2.5rem, 7vw, 4rem);
+                padding-right: clamp(2.5rem, 7vw, 4rem);
+                width: 80%;
+            }
+        }
+
+        /* Large Desktop */
+        @media (min-width: 1536px) {
+            .dynamic-container {
+                padding-left: clamp(3rem, 8vw, 5rem);
+                padding-right: clamp(3rem, 8vw, 5rem);
+                width: 75%;
+            }
+        }
+
+        /* Extra Large Screens */
+        @media (min-width: 1920px) {
+            .dynamic-container {
+                max-width: 1800px; /* Cap the maximum width */
+                padding-left: max(4rem, calc((100vw - 1800px) / 2));
+                padding-right: max(4rem, calc((100vw - 1800px) / 2));
+            }
+        }
+
+
+
+        /* Refined container styles */
+        .refined-container {
+            border-radius: 0.75rem;
+            box-shadow: 0 4px 20px -5px rgba(0, 0, 0, 0.08), 0 12px 25px -3px rgba(0, 0, 0, 0.06);
+            border: 1px solid rgba(0, 0, 0, 0.05);
+            backdrop-filter: blur(8px);
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .refined-container:hover {
+            box-shadow: 0 6px 25px -4px rgba(0, 0, 0, 0.1), 0 15px 30px -4px rgba(0, 0, 0, 0.08);
+            transform: translateY(-2px);
+        }
+
+        .dark .refined-container {
+            box-shadow: 0 4px 20px -5px rgba(0, 0, 0, 0.25), 0 12px 25px -3px rgba(0, 0, 0, 0.15);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            background: linear-gradient(to bottom right, rgba(30, 41, 59, 0.9), rgba(15, 23, 42, 0.9));
+        }
+
+        .dark .refined-container:hover {
+            box-shadow: 0 6px 25px -4px rgba(0, 0, 0, 0.3), 0 15px 30px -4px rgba(0, 0, 0, 0.2);
+        }
+
+        .refined-card {
+            border-radius: 0.75rem;
+            box-shadow: 0 4px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 20px -5px rgba(0, 0, 0, 0.04);
+            border: 1px solid rgba(0, 0, 0, 0.08);
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            background: linear-gradient(to bottom right, rgba(255, 255, 255, 1), rgba(249, 250, 251, 0.9));
+            backdrop-filter: blur(8px);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .refined-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(to right, #4F46E5, #EC4899);
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .dark .refined-card {
+            box-shadow: 0 4px 25px -5px rgba(0, 0, 0, 0.25), 0 10px 20px -5px rgba(0, 0, 0, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            background: linear-gradient(to bottom right, rgba(30, 41, 59, 0.95), rgba(15, 23, 42, 0.95));
+        }
+
+        .refined-card:hover {
+            transform: translateY(-4px) scale(1.02);
+            box-shadow: 0 12px 45px -10px rgba(0, 0, 0, 0.15), 0 12px 35px -5px rgba(0, 0, 0, 0.1),
+                        0 0 0 2px rgba(79, 70, 229, 0.1);
+        }
+
+        .refined-card:hover::before {
+            transform: scaleX(1);
+        }
+
+        .dark .refined-card:hover {
+            box-shadow: 0 12px 45px -10px rgba(0, 0, 0, 0.4), 0 12px 35px -5px rgba(0, 0, 0, 0.2);
+        }
+
+        .refined-section {
+            border-radius: 1.25rem;
+            box-shadow: 0 6px 30px -6px rgba(0, 0, 0, 0.05), 0 15px 25px -6px rgba(0, 0, 0, 0.02);
+            border: 1px solid rgba(0, 0, 0, 0.03);
+            background: linear-gradient(120deg, rgba(255, 255, 255, 0.9), rgba(249, 250, 251, 0.95));
+            backdrop-filter: blur(12px);
+            position: relative;
+            transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .refined-section::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            border-radius: 1.25rem;
+            padding: 2px;
+            background: linear-gradient(120deg, rgba(79, 70, 229, 0.2), rgba(236, 72, 153, 0.2));
+            -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+            mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+            -webkit-mask-composite: xor;
+            mask-composite: exclude;
+            pointer-events: none;
+            opacity: 0;
+            transition: opacity 0.5s ease;
+        }
+
+        .refined-section:hover::after {
+            opacity: 1;
+        }
+
+        .dark .refined-section {
+            box-shadow: 0 6px 30px -6px rgba(0, 0, 0, 0.2), 0 15px 25px -6px rgba(0, 0, 0, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.03);
+            background: linear-gradient(120deg, rgba(30, 41, 59, 0.95), rgba(15, 23, 42, 0.98));
+        }
+
+        .dark .refined-section::after {
+            background: linear-gradient(120deg, rgba(79, 70, 229, 0.15), rgba(236, 72, 153, 0.15));
+        }
+
+        .refined-button {
+            border-radius: 0.5rem;
+            box-shadow: 0 2px 10px -3px rgba(0, 0, 0, 0.1);
+            border: 1px solid rgba(0, 0, 0, 0.05);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .dark .refined-button {
+            box-shadow: 0 2px 10px -3px rgba(0, 0, 0, 0.3);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .refined-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 15px -3px rgba(0, 0, 0, 0.15);
+        }
+
+        .dark .refined-button:hover {
+            box-shadow: 0 4px 15px -3px rgba(0, 0, 0, 0.4);
+        }
+
+        /* Tech background video optimization */
+        .tech-video {
+            object-fit: cover;
+            width: 100%;
+            height: 100%;
+            filter: brightness(0.7);
+        }
+
+        /* Fallback gradient for when video doesn't load */
+        .tech-fallback {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+
+        /* Responsive social media icons - Single line for all screens */
+        .social-icons-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: nowrap;
+            gap: clamp(0.75rem, 2vw, 1.25rem);
+            width: 100%;
+            max-width: min(100%, 450px);
+            margin: 0 auto;
+            padding: 0.5rem;
+            overflow-x: auto;
+            scrollbar-width: none; /* Firefox */
+            -ms-overflow-style: none; /* IE and Edge */
+        }
+
+        .social-icons-container::-webkit-scrollbar {
+            display: none; /* Chrome, Safari, Opera */
+        }
+
+        .social-icon {
+            flex-shrink: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: clamp(2.5rem, 4vw, 3rem);
+            height: clamp(2.5rem, 4vw, 3rem);
+            border-radius: 50%;
+            background: rgba(30, 41, 59, 0.5);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            position: relative;
+            overflow: hidden;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .social-icon::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: radial-gradient(circle at center, rgba(255,255,255,0.15), rgba(255,255,255,0));
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .social-icon:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+        }
+
+        .social-icon:hover::before {
+            opacity: 1;
+        }
+
+        @media (max-width: 480px) {
+            .social-icon:hover {
+                transform: translateY(-2px);
+                box-shadow: 0 3px 8px rgba(0, 0, 0, 0.12);
+            }
+        }
+
+        .social-icon i {
+            position: relative;
+            z-index: 1;
+            font-size: clamp(1rem, 2vw, 1.25rem);
+            transition: transform 0.3s ease;
+        }
+
+        .social-icon:hover i {
+            transform: scale(1.15);
+        }
+
+        /* Custom animation for the back to top button */
+        #backToTop.show {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        @media (max-width: 380px) {
+            .social-icon {
+                width: 2.25rem;
+                height: 2.25rem;
+            }
+            .social-icon i {
+                font-size: 0.875rem;
+            }
+        }
+    </style>
 </head>
 
-<body>
-    <div class="cursor-dot"></div>
-    <div class="cursor-outline"></div>
+<body class="bg-white dark:bg-dark-bg text-slate-700 dark:text-slate-300 font-sans antialiased selection:bg-primary/20">
 
-    <div class="preloader" id="preloader">
-        <div class="loader">
-            <div class="bar"></div>
-            <div class="bar"></div>
-            <div class="bar"></div>
-            <div class="bar"></div>
-            <div class="bar"></div>
+    <!-- Modern Preloader -->
+    <div id="preloader" class="preloader">
+        <div class="preloader-content">
+            <div class="loader-container">
+                <div class="orbital-loader">
+                    <div class="orbital-inner one"></div>
+                    <div class="orbital-inner two"></div>
+                    <div class="orbital-inner three"></div>
+                    <div class="pulse-dot"></div>
+                </div>
+            </div>
+            <div class="loading-text">
+                Justwise Technologies
+                <div class="loading-dots">
+                    <span>.</span><span>.</span><span>.</span>
+                </div>
+            </div>
         </div>
     </div>
 
-    <nav class="sticky-nav">
-        <a href="#hero" class="brand">
-            <i class="fas fa-microchip"></i>
-            Justwise
-        </a>
-        <div class="header-right">
-            <div class="nav-items">
-                <a href="#services">Services</a>
-                <a href="#stats">Stats</a>
-                <a href="#testimonials">Testimonials</a>
-                <a href="#contact">Contact</a>
-            </div>
-            <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">
-                <i class="fas fa-moon"></i>
-            </button>
-            <button id="dropdownToggle" class="dropdown-toggle" aria-label="Toggle menu">
-                <i class="fas fa-bars"></i>
-            </button>
-            <div id="dropdownMenu" class="dropdown-menu">
-                <a href="#hero" class="dropdown-link"><i class="fas fa-home fa-fw"></i> Home</a>
-                <a href="#services" class="dropdown-link"><i class="fas fa-list fa-fw"></i> Services</a>
-                <a href="#stats" class="dropdown-link"><i class="fas fa-chart-line fa-fw"></i> Stats</a>
-                <a href="#testimonials" class="dropdown-link"><i class="fas fa-star fa-fw"></i> Testimonials</a>
-                <a href="#contact" class="dropdown-link"><i class="fas fa-envelope fa-fw"></i> Contact</a>
-                <a href="https://wa.me/263777747150" class="dropdown-link"><i class="fab fa-whatsapp fa-fw"></i> Chat Now</a>
+    <!-- Header & Navigation -->
+    <nav class="sticky-nav fixed top-0 left-0 right-0 z-50 transition-all duration-500">
+        <div class="absolute inset-0 w-full h-full bg-white/95 dark:bg-dark-bg/95 backdrop-blur-xl border-b border-neutral-200/20 dark:border-neutral-700/20 shadow-sm transition-all duration-500"></div>
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="relative flex justify-between items-center h-20">
+                
+                <!-- Brand Logo -->
+                <a href="#hero" class="brand group flex items-center gap-3 z-10 animate-fade-in-left">
+                    <div class="relative w-10 h-10 flex items-center justify-center">
+                        <div class="absolute inset-0 bg-gradient-to-r from-primary-500 to-secondary-500 rounded-xl rotate-0 group-hover:rotate-180 transition-transform duration-700 shadow-lg"></div>
+                        <i class="fas fa-microchip text-white text-2xl relative z-10 group-hover:scale-110 transition-transform duration-500"></i>
+                    </div>
+                    <span class="text-2xl font-display font-bold text-neutral-800 dark:text-white transition-colors duration-300">Justwise</span>
+                </a>
+                
+                <!-- Desktop Nav -->
+                <div class="header-right hidden md:flex items-center gap-8 z-10">
+                    <div class="nav-items flex items-center gap-8 animate-fade-in-down">
+                        <a href="#services" class="group relative font-medium text-neutral-800 dark:text-white/90">
+                            <span class="relative z-10 transition-colors duration-300 group-hover:text-primary-500">Services</span>
+                            <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-primary-500 to-primary-400 group-hover:w-full transition-all duration-300"></span>
+                        </a>
+                        <a href="#stats" class="group relative font-medium text-neutral-800 dark:text-white/90">
+                            <span class="relative z-10 transition-colors duration-300 group-hover:text-primary-500">Stats</span>
+                            <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-primary-500 to-primary-400 group-hover:w-full transition-all duration-300"></span>
+                        </a>
+                        <a href="#footer" class="group relative font-medium text-neutral-800 dark:text-white/90">
+                            <span class="relative z-10 transition-colors duration-300 group-hover:text-primary-500">Inquire</span>
+                            <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-primary-500 to-primary-400 group-hover:w-full transition-all duration-300"></span>
+                        </a>
+                    </div>
+                    
+                    <!-- Theme Toggle -->
+                    <button id="themeToggle" class="theme-toggle group relative w-10 h-10 flex items-center justify-center rounded-xl bg-white dark:bg-neutral-800 shadow-md hover:shadow-lg dark:shadow-neutral-900/50 transition-all duration-300 animate-fade-in-right overflow-hidden border border-neutral-200/50 dark:border-neutral-700/50" aria-label="Toggle dark mode">
+                        <div class="absolute inset-0 bg-gradient-to-br from-primary-500/10 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                        <i class="fas fa-moon text-lg text-neutral-700 dark:text-white/90 group-hover:text-primary-500 transition-colors duration-300 group-hover:rotate-[360deg] transition-transform duration-500"></i>
+                    </button>
+                </div>
+                
+                <!-- Mobile Menu Toggle -->
+                <button id="dropdownToggle" class="dropdown-toggle md:hidden refined-button h-10 w-10 flex items-center justify-center bg-slate-200/50 dark:bg-dark-card text-slate-600 dark:text-slate-300 z-50 animate-fade-in-right" aria-label="Toggle menu">
+                    <i class="fas fa-bars text-lg"></i>
+                </button>
+
+                <!-- Mobile Dropdown Menu -->
+                <div id="dropdownMenu" class="dropdown-menu md:hidden fixed top-0 right-0 bottom-0 left-1/4 bg-white dark:bg-dark-card refined-container p-6 transform translate-x-full transition-transform duration-300 ease-in-out z-40">
+                    <div class="mt-20 space-y-4">
+                        <a href="#hero" class="dropdown-link flex items-center gap-3 p-3 rounded-lg text-lg font-medium text-slate-700 dark:text-slate-200 hover:bg-slate-100 dark:hover:bg-dark-border"><i class="fas fa-home fa-fw w-5"></i> Home</a>
+                        <a href="#services" class="dropdown-link flex items-center gap-3 p-3 rounded-lg text-lg font-medium text-slate-700 dark:text-slate-200 hover:bg-slate-100 dark:hover:bg-dark-border"><i class="fas fa-list fa-fw w-5"></i> Services</a>
+                        <a href="#stats" class="dropdown-link flex items-center gap-3 p-3 rounded-lg text-lg font-medium text-slate-700 dark:text-slate-200 hover:bg-slate-100 dark:hover:bg-dark-border"><i class="fas fa-chart-line fa-fw w-5"></i> Stats</a>
+                        <!-- Updated link to point to the footer -->
+                        <a href="#footer" class="dropdown-link flex items-center gap-3 p-3 rounded-lg text-lg font-medium text-slate-700 dark:text-slate-200 hover:bg-slate-100 dark:hover:bg-dark-border"><i class="fas fa-envelope fa-fw w-5"></i> Inquire</a>
+                        <a href="https://wa.me/263777747150" class="dropdown-link flex items-center gap-3 p-3 rounded-lg text-lg font-medium text-slate-700 dark:text-slate-200 hover:bg-slate-100 dark:hover:bg-dark-border"><i class="fab fa-whatsapp fa-fw w-5"></i> Chat Now</a>
+                    </div>
+                </div>
             </div>
         </div>
     </nav>
 
     <main>
-        <section id="hero" class="hero">
-            <div id="hero-particles"></div>
-            <div class="hero-content">
-                <h1>Digital Solutions for <span class="gradient-text" id="typing-effect"></span><span class="typing-cursor">|</span></h1>
-                <p>We provide cutting-edge technology solutions to transform your business and drive growth in the digital age.</p>
-                <div class="cta-container">
-                    <div class="hero-buttons">
-                        <a href="#contact" class="btn btn-primary">
-                            <i class="fas fa-paper-plane"></i> Get Started
-                        </a>
-                        <a href="#services" class="btn btn-secondary">
-                            <i class="fas fa-search"></i> Explore Services
-                        </a>
-                    </div>
-                </div>
+        <!-- Hero Section with Parallax -->
+        <section id="hero" class="hero relative min-h-screen flex items-center justify-center text-center overflow-hidden px-4" data-parallax="scroll">
+            <!-- Modern Tech Video Background with Parallax -->
+            <div id="hero-background" class="absolute inset-0 z-0 overflow-hidden tech-fallback transform transition-transform duration-1000" style="transform: translateY(0px);">
+                <video autoplay loop muted playsinline class="tech-video" id="hero-video">
+                    <!-- High-quality tech video background -->
+                    <source src="https://videos.pexels.com/video-files/3192829/3192829-uhd_3840_2160_25fps.mp4" type="video/mp4">
+                    <!-- Fallback static image for browsers that don't support video -->
+                    <!-- This will be shown if video fails to load -->
+                </video>
+                <!-- Static fallback image -->
+                <div class="absolute inset-0 z-0 bg-cover bg-center hidden" id="fallback-image" style="background-image: url('https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=2072&q=80');"></div>
             </div>
-            <div class="scroll-indicator">
-                <i class="fas fa-chevron-down animate-float"></i>
-            </div>
-        </section>
-
-        <section id="stats" class="stats-section">
-            <h2 class="section-title">Our Impact in Numbers</h2>
-            <p class="section-subtitle">Quantifiable results that highlight our dedication to excellence and client success.</p>
-
-            <div class="stats-container">
-                <div class="stat-card animate-on-scroll">
-                    <div class="stat-number" id="clients-stat" data-target="0">0</div>
-                    <div class="stat-label">Happy Clients</div>
-                </div>
-                <div class="stat-card animate-on-scroll">
-                    <div class="stat-number" id="devices-stat" data-target="0">0</div>
-                    <div class="stat-label">Devices Repaired</div>
-                </div>
-                <div class="stat-card animate-on-scroll">
-                    <div class="stat-number" id="projects-stat" data-target="0">0</div>
-                    <div class="stat-label">Projects Completed</div>
-                </div>
-                <div class="stat-card animate-on-scroll">
-                    <div class="stat-number" id="support-stat" data-target="0">0</div>
-                    <div class="stat-label">Support Cases</div>
-                </div>
-            </div>
-        </section>
-
-        <section id="services" class="services-grid">
-            <h2 class="section-title">Our Core Services</h2>
-            <p class="section-subtitle">We deliver a full spectrum of technology services, from hardware solutions to bespoke software, tailored to your unique needs.</p>
-
-            <div class="service-card animate-on-scroll card-3d">
-                <i class="fab fa-android"></i>
-                <h3>Android Automation (Tasker)</h3>
-                <p>Unleash the full potential of your Android device. We create advanced Tasker projects to automate everything from simple daily routines to complex, customized workflows.</p>
-                <a href="#contact" class="btn btn-secondary">Automate Now</a>
-            </div>
-            <div class="service-card animate-on-scroll card-3d">
-                <i class="fas fa-store"></i>
-                <h3>Device Sales & Repairs</h3>
-                <p>Explore our curated selection of new and pre-owned devices. Our certified technicians also provide fast, reliable repair services to get your tech running like new.</p>
-                <a href="#contact" class="btn btn-secondary">Inquire Now</a>
-            </div>
-            <div class="service-card animate-on-scroll card-3d">
-                <i class="fas fa-code-branch"></i>
-                <h3>Custom Software Solutions</h3>
-                <p>We design and develop bespoke software applications for web, desktop, and mobile that solve unique business challenges, improve efficiency, and drive growth.</p>
-                <a href="#contact" class="btn btn-secondary">Learn More</a>
-            </div>
-            <div class="service-card animate-on-scroll card-3d">
-                <i class="fas fa-robot"></i>
-                <h3>AI & Automation</h3>
-                <p>Leverage the power of Artificial Intelligence. We integrate intelligent solutions to automate your business processes, provide valuable data insights, and enhance productivity.</p>
-                <a href="#contact" class="btn btn-secondary">Learn More</a>
-            </div>
-            <div class="service-card animate-on-scroll card-3d">
-                <i class="fas fa-headset"></i>
-                <h3>IT Support & Connectivity</h3>
-                <p>From genuine Windows installations and software upgrades to high-speed internet access, we provide the essential IT support to keep you productive and connected.</p>
-                <a href="#contact" class="btn btn-secondary">Get Support</a>
-            </div>
-        </section>
-
-        <section id="testimonials" class="testimonials-section">
-            <h2 class="section-title">What Our Clients Say</h2>
-            <p class="section-subtitle">Real feedback from partners who have experienced our commitment and expertise firsthand.</p>
-            <div class="testimonial-slider-container">
-                <div class="testimonial-slider">
-                    <div class="testimonial-slide active">
-                        <p class="testimonial-quote">"Justwise Technologies transformed our workflow with their automation solutions. Incredibly efficient and professional service."</p>
-                        <div class="testimonial-author">
-                            <span class="author-name">John Doe</span>
-                            <span class="author-title">CEO, Tech Innovators</span>
-                        </div>
-                    </div>
-                    <div class="testimonial-slide">
-                        <p class="testimonial-quote">"The custom software they developed for us was a game-changer. It perfectly fit our needs and has significantly boosted our productivity."</p>
-                        <div class="testimonial-author">
-                            <span class="author-name">Jane Smith</span>
-                            <span class="author-title">Operations Manager, Creative Minds</span>
-                        </div>
-                    </div>
-                    <div class="testimonial-slide">
-                        <p class="testimonial-quote">"Fast, reliable, and affordable device repair. My laptop runs better than it did when it was new. Highly recommended!"</p>
-                        <div class="testimonial-author">
-                            <span class="author-name">Alex Johnson</span>
-                            <span class="author-title">Freelance Designer</span>
+            <!-- Premium Overlay for Readability -->
+            <div class="absolute inset-0 z-1 bg-black/50"></div>
+            
+            <div class="hero-content relative z-10 w-full text-white max-w-6xl mx-auto px-4">
+                <div class="text-center backdrop-blur-sm bg-black/20 rounded-3xl p-8 lg:p-12 border border-white/10">
+                    <h1 class="font-display text-4xl sm:text-5xl lg:text-7xl font-bold leading-tight mb-8 animate-fade-in-up bg-gradient-to-r from-white via-white to-white/70 bg-clip-text text-transparent">
+                        Digital Solutions for <br>
+                        <span class="bg-gradient-to-r from-accent-400 via-primary-400 to-secondary-400 bg-clip-text text-transparent" id="typing-effect"></span><span class="typing-cursor text-accent-400">|</span>
+                    </h1>
+                    <p class="font-sans text-lg lg:text-2xl text-white/80 max-w-3xl mx-auto mb-12 animate-fade-in-up leading-relaxed" style="animation-delay: 300ms;">
+                        We provide cutting-edge technology solutions to transform your business and drive growth in the digital age.
+                    </p>
+                    <div class="cta-container animate-fade-in-up" style="animation-delay: 600ms;">
+                        <div class="hero-buttons flex flex-col sm:flex-row gap-6 justify-center">
+                            <a href="#footer" 
+                               class="group relative inline-flex items-center justify-center gap-2 px-8 py-4 text-lg font-semibold overflow-hidden rounded-2xl bg-gradient-to-r from-primary-500 via-primary-400 to-accent-500 text-white transition-all duration-300 hover:scale-105 hover:shadow-[0_0_40px_rgba(0,102,255,0.3)]">
+                                <div class="absolute inset-0 bg-gradient-to-r from-primary-600 via-primary-500 to-accent-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                                <i class="fas fa-paper-plane relative z-10"></i>
+                                <span class="relative z-10">Get Started</span>
+                            </a>
+                            <a href="#services" 
+                               class="group relative inline-flex items-center justify-center gap-2 px-8 py-4 text-lg font-semibold overflow-hidden rounded-2xl bg-white/10 backdrop-blur-md border border-white/20 text-white transition-all duration-300 hover:scale-105 hover:bg-white/20">
+                                <i class="fas fa-search group-hover:transform group-hover:translate-x-1 transition-transform duration-300"></i>
+                                <span>Explore Services</span>
+                            </a>
                         </div>
                     </div>
                 </div>
-                <button class="slider-btn prev-btn" aria-label="Previous testimonial"><i class="fas fa-chevron-left"></i></button>
-                <button class="slider-btn next-btn" aria-label="Next testimonial"><i class="fas fa-chevron-right"></i></button>
+            </div>
+            
+            <!-- Scroll Indicator -->
+            <div class="scroll-indicator absolute bottom-10 left-1/2 -translate-x-1/2 z-10 text-white animate-bounce-soft">
+                <i class="fas fa-chevron-down text-3xl"></i>
             </div>
         </section>
 
-        <section id="contact" class="contact-section">
-            <h2 class="section-title">Get in Touch</h2>
-            <p class="section-subtitle">Ready to start a project or have a question? We're here to help you achieve your technology goals.</p>
+        <!-- Stats Section -->
+        <section id="stats" class="stats-section py-20 lg:py-32 bg-gradient-to-b from-white to-slate-50 dark:from-dark-bg dark:to-dark-bg/80">
+            <div class="max-w-7xl mx-auto px-4">
+                <div class="relative rounded-3xl bg-white/40 dark:bg-dark-card/40 backdrop-blur-xl p-8 lg:p-12 animate-fade-in-up border border-neutral-200/50 dark:border-neutral-700/30">
+                    <div class="absolute inset-0 bg-gradient-to-b from-primary-500/5 to-transparent dark:from-primary-500/10 rounded-3xl"></div>
+                    <h2 class="relative font-display text-4xl lg:text-5xl font-bold text-center mb-6 text-neutral-900 dark:text-white animate-fade-in-down bg-gradient-to-r from-neutral-900 via-neutral-800 to-neutral-900 dark:from-white dark:via-neutral-200 dark:to-white bg-clip-text text-transparent">Our Impact in Numbers</h2>
+                    <p class="relative font-sans text-lg lg:text-xl text-center max-w-2xl mx-auto mb-16 text-neutral-600 dark:text-neutral-300 animate-fade-in-down leading-relaxed" style="animation-delay: 150ms;">Quantifiable results that highlight our dedication to excellence and client success.</p>
 
-            <div class="contact-details">
-                <a href="https://wa.me/263777747150" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp" title="WhatsApp">
-                    <i class="fab fa-whatsapp"></i>
-                </a>
-                <a href="https://t.me/0777747150" target="_blank" rel="noopener noreferrer" aria-label="Telegram" title="Telegram">
-                    <i class="fab fa-telegram"></i>
-                </a>
-                <a href="tel:+263882932022" aria-label="Phone" title="Phone">
-                    <i class="fas fa-phone"></i>
-                </a>
-                <a href="mailto:info@justwisetechnologies.com" aria-label="Email" title="Email">
-                    <i class="fas fa-envelope"></i>
-                </a>
-            </div>
-
-            <div class="form-container animate-on-scroll">
-                <h3 class="form-title">Send a Direct Message</h3>
-                <form id="contactForm" novalidate>
-                    <div class="form-group">
-                        <label for="name">Full Name</label>
-                        <input type="text" id="name" name="name" required>
+                    <div class="relative stats-container grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-6 xl:gap-8 2xl:gap-10 max-w-7xl mx-auto">
+                        <!-- Stat Card -->
+                        <div class="group stat-card text-center relative rounded-2xl bg-white/60 dark:bg-dark-card/60 backdrop-blur-lg p-6 lg:p-8 transition-all duration-500 hover:scale-105 animate-fade-in-up border border-neutral-200/50 dark:border-neutral-700/30 hover:border-primary-500/50 dark:hover:border-primary-500/50">
+                            <div class="absolute inset-0 bg-gradient-to-br from-primary-500/10 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-2xl"></div>
+                            <div class="stat-number font-display text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold mb-4 bg-gradient-to-r from-primary-500 to-primary-600 bg-clip-text text-transparent" id="clients-stat" data-target="0">0</div>
+                            <div class="stat-label text-base sm:text-lg font-medium text-neutral-600 dark:text-neutral-300">Happy Clients</div>
+                        </div>
+                        <!-- Stat Card -->
+                        <div class="stat-card text-center refined-card bg-white dark:bg-dark-card p-6 lg:p-8 transition-all duration-300 animate-fade-in-up" style="animation-delay: 150ms;">
+                            <div class="stat-number text-4xl lg:text-6xl font-extrabold mb-2 text-primary" id="devices-stat" data-target="0">0</div>
+                            <div class="stat-label text-base lg:text-lg font-medium text-slate-600 dark:text-slate-300">Devices Repaired</div>
+                        </div>
+                        <!-- Stat Card -->
+                        <div class="stat-card text-center refined-card bg-white dark:bg-dark-card p-6 lg:p-8 transition-all duration-300 animate-fade-in-up" style="animation-delay: 300ms;">
+                            <div class="stat-number text-4xl lg:text-6xl font-extrabold mb-2 text-primary" id="projects-stat" data-target="0">0</div>
+                            <div class="stat-label text-base lg:text-lg font-medium text-slate-600 dark:text-slate-300">Projects Completed</div>
+                        </div>
+                        <!-- Stat Card -->
+                        <div class="stat-card text-center refined-card bg-white dark:bg-dark-card p-6 lg:p-8 transition-all duration-300 animate-fade-in-up" style="animation-delay: 450ms;">
+                            <div class="stat-number text-4xl lg:text-6xl font-extrabold mb-2 text-primary" id="support-stat" data-target="0">0</div>
+                            <div class="stat-label text-base lg:text-lg font-medium text-slate-600 dark:text-slate-300">Support Cases</div>
+                        </div>
                     </div>
-                    <div class="form-group">
-                        <label for="email">Email Address</label>
-                        <input type="email" id="email" name="email" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="service">Service of Interest</label>
-                        <select id="service" name="service">
-                            <option value="">-- Select a service --</option>
-                            <option value="Android Automation">Android Automation (Tasker)</option>
-                            <option value="Device Sales & Repairs">Device Sales & Repairs</option>
-                            <option value="Custom Software">Custom Software Solutions</option>
-                            <option value="AI & Automation">AI & Automation</option>
-                            <option value="IT Support">IT Support & Connectivity</option>
-                        </select>
-                    </div>
-                    <div class="form-group">
-                        <label for="message">Message</label>
-                        <textarea id="message" name="message" required></textarea>
-                    </div>
-                    <button type="submit" class="submit-button">
-                        <i class="fas fa-paper-plane"></i> Send Message
-                    </button>
-                    <div id="form-status" class="form-status" style="display: none;" aria-live="polite"></div>
-                </form>
+                </div>
             </div>
         </section>
+
+        <!-- Services Section -->
+        <section id="services" class="services-grid py-20 lg:py-32 bg-gradient-to-b from-slate-50 to-white dark:from-dark-bg/80 dark:to-dark-bg">
+            <div class="max-w-7xl mx-auto px-4">
+                <div class="relative rounded-3xl bg-white/60 dark:bg-dark-card/40 backdrop-blur-xl p-8 lg:p-12 animate-fade-in-up border border-neutral-200/50 dark:border-neutral-700/30">
+                    <div class="absolute inset-0 bg-gradient-to-b from-secondary-500/5 to-transparent dark:from-secondary-500/10 rounded-3xl"></div>
+                    <h2 class="relative font-display text-4xl lg:text-5xl font-bold text-center mb-6 bg-gradient-to-r from-secondary-500 via-secondary-600 to-secondary-700 bg-clip-text text-transparent animate-fade-in-down">Our Core Services</h2>
+                    <p class="relative font-sans text-lg lg:text-xl text-center max-w-3xl mx-auto mb-16 text-neutral-600 dark:text-neutral-300 animate-fade-in-down leading-relaxed" style="animation-delay: 150ms;">We deliver a full spectrum of technology services, from hardware solutions to bespoke software, tailored to your unique needs.</p>
+
+                    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 lg:gap-8 2xl:gap-10">
+                        <!-- Service Card 1 -->
+                        <div class="service-card flex flex-col refined-card bg-white dark:bg-dark-card p-4 sm:p-6 lg:p-8 transition-all duration-300 animate-fade-in-up">
+                            <div class="flex-shrink-0 w-16 h-16 flex items-center justify-center rounded-xl bg-primary/10 text-primary mb-6">
+                                <i class="fab fa-android text-3xl"></i>
+                            </div>
+                            <h3 class="text-2xl font-bold mb-3 text-slate-800 dark:text-white">Android Automation (Tasker)</h3>
+                            <p class="text-base text-slate-600 dark:text-slate-300 mb-6 flex-grow">Unleash the full potential of your Android device. We create advanced Tasker projects to automate everything from simple daily routines to complex workflows.</p>
+                            <!-- Updated CTA to point to the footer -->
+                            <a href="#footer" class="btn btn-secondary mt-auto inline-block text-left font-semibold text-primary-DEFAULT dark:text-primary-DEFAULT/80 hover:text-primary-hover dark:hover:text-primary-DEFAULT transition-colors duration-300 group">
+                                Automate Now <i class="fas fa-arrow-right ml-1 transform group-hover:translate-x-1 transition-transform"></i>
+                            </a>
+                        </div>
+                        
+                        <!-- Service Card 2 -->
+                        <div class="service-card flex flex-col refined-card bg-white dark:bg-dark-card p-8 transition-all duration-300 animate-fade-in-up" style="animation-delay: 150ms;">
+                            <div class="flex-shrink-0 w-16 h-16 flex items-center justify-center rounded-xl bg-primary/10 text-primary mb-6">
+                                <i class="fas fa-store text-3xl"></i>
+                            </div>
+                            <h3 class="text-2xl font-bold mb-3 text-slate-800 dark:text-white">Device Sales & Repairs</h3>
+                            <p class="text-base text-slate-600 dark:text-slate-300 mb-6 flex-grow">Explore our curated selection of new and pre-owned devices. Our certified technicians also provide fast, reliable repair services.</p>
+                            <!-- Updated CTA to point to the footer -->
+                            <a href="#footer" class="btn btn-secondary mt-auto inline-block text-left font-semibold text-primary-DEFAULT dark:text-primary-DEFAULT/80 hover:text-primary-hover dark:hover:text-primary-DEFAULT transition-colors duration-300 group">
+                                Inquire Now <i class="fas fa-arrow-right ml-1 transform group-hover:translate-x-1 transition-transform"></i>
+                            </a>
+                        </div>
+
+                        <!-- Service Card 3 -->
+                        <div class="service-card flex flex-col refined-card bg-white dark:bg-dark-card p-8 transition-all duration-300 animate-fade-in-up" style="animation-delay: 300ms;">
+                            <div class="flex-shrink-0 w-16 h-16 flex items-center justify-center rounded-xl bg-primary/10 text-primary mb-6">
+                                <i class="fas fa-code-branch text-3xl"></i>
+                            </div>
+                            <h3 class="text-2xl font-bold mb-3 text-slate-800 dark:text-white">Custom Software Solutions</h3>
+                            <p class="text-base text-slate-600 dark:text-slate-300 mb-6 flex-grow">We design and develop bespoke software applications for web, desktop, and mobile that solve unique business challenges and drive growth.</p>
+                            <!-- Updated CTA to point to the footer -->
+                            <a href="#footer" class="btn btn-secondary mt-auto inline-block text-left font-semibold text-primary-DEFAULT dark:text-primary-DEFAULT/80 hover:text-primary-hover dark:hover:text-primary-DEFAULT transition-colors duration-300 group">
+                                Learn More <i class="fas fa-arrow-right ml-1 transform group-hover:translate-x-1 transition-transform"></i>
+                            </a>
+                        </div>
+                        
+                        <!-- Service Card 4 -->
+                        <div class="service-card flex flex-col refined-card bg-white dark:bg-dark-card p-8 transition-all duration-300 animate-fade-in-up">
+                            <div class="flex-shrink-0 w-16 h-16 flex items-center justify-center rounded-xl bg-primary/10 text-primary mb-6">
+                                <i class="fas fa-robot text-3xl"></i>
+                            </div>
+                            <h3 class="text-2xl font-bold mb-3 text-slate-800 dark:text-white">AI & Automation</h3>
+                            <p class="text-base text-slate-600 dark:text-slate-300 mb-6 flex-grow">Leverage the power of AI. We integrate intelligent solutions to automate processes, provide data insights, and enhance productivity.</p>
+                            <!-- Updated CTA to point to the footer -->
+                            <a href="#footer" class="btn btn-secondary mt-auto inline-block text-left font-semibold text-primary-DEFAULT dark:text-primary-DEFAULT/80 hover:text-primary-hover dark:hover:text-primary-DEFAULT transition-colors duration-300 group">
+                                Learn More <i class="fas fa-arrow-right ml-1 transform group-hover:translate-x-1 transition-transform"></i>
+                            </a>
+                        </div>
+
+                        <!-- Service Card 5 -->
+                        <div class="service-card flex flex-col refined-card bg-white dark:bg-dark-card p-8 transition-all duration-300 animate-fade-in-up" style="animation-delay: 150ms;">
+                            <div class="flex-shrink-0 w-16 h-16 flex items-center justify-center rounded-xl bg-primary/10 text-primary mb-6">
+                                <i class="fas fa-headset text-3xl"></i>
+                            </div>
+                            <h3 class="text-2xl font-bold mb-3 text-slate-800 dark:text-white">IT Support & Connectivity</h3>
+                            <p class="text-base text-slate-600 dark:text-slate-300 mb-6 flex-grow">From genuine Windows installations to high-speed internet access, we provide the essential IT support to keep you productive and connected.</p>
+                            <!-- Updated CTA to point to the footer -->
+                            <a href="#footer" class="btn btn-secondary mt-auto inline-block text-left font-semibold text-primary-DEFAULT dark:text-primary-DEFAULT/80 hover:text-primary-hover dark:hover:text-primary-DEFAULT transition-colors duration-300 group">
+                                Get Support <i class="fas fa-arrow-right ml-1 transform group-hover:translate-x-1 transition-transform"></i>
+                            </a>
+                        </div>
+
+                        <!-- Service Card 6 - Internet Cafe -->
+                        <div class="service-card flex flex-col refined-card bg-white dark:bg-dark-card p-8 transition-all duration-300 animate-fade-in-up" style="animation-delay: 300ms;">
+                            <div class="flex-shrink-0 w-16 h-16 flex items-center justify-center rounded-xl bg-primary/10 text-primary mb-6">
+                                <i class="fas fa-satellite-dish text-3xl"></i>
+                            </div>
+                            <h3 class="text-2xl font-bold mb-3 text-slate-800 dark:text-white">High-Speed Internet Cafe</h3>
+                            <p class="text-base text-slate-600 dark:text-slate-300 mb-6 flex-grow">Experience lightning-fast internet powered by Starlink technology. Perfect for gaming, video calls, streaming, and remote work, with comfortable workstations and professional environment.</p>
+                            <!-- Updated CTA to point to the footer -->
+                            <a href="#footer" class="btn btn-secondary mt-auto inline-block text-left font-semibold text-primary-DEFAULT dark:text-primary-DEFAULT/80 hover:text-primary-hover dark:hover:text-primary-DEFAULT transition-colors duration-300 group">
+                                Visit Cafe <i class="fas fa-arrow-right ml-1 transform group-hover:translate-x-1 transition-transform"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonials section has been completely removed -->
+
     </main>
 
-    <footer>
-        <div class="footer-content">
-            <div class="footer-brand">
-                <div class="footer-logo">Justwise Technologies</div>
-                <p class="footer-description">Pioneering innovative and reliable technology solutions for a smarter future.</p>
-            </div>
-            <div>
-                <h3 class="footer-heading">Quick Links</h3>
-                <ul class="footer-links">
-                    <li><a href="#services"><i class="fas fa-chevron-right"></i> Services</a></li>
-                    <li><a href="#stats"><i class="fas fa-chevron-right"></i> Our Impact</a></li>
-                    <li><a href="#testimonials"><i class="fas fa-chevron-right"></i> Testimonials</a></li>
-                    <li><a href="#contact"><i class="fas fa-chevron-right"></i> Contact Us</a></li>
-                </ul>
-            </div>
-            <div>
-                <h3 class="footer-heading">Contact Info</h3>
-                <ul class="footer-links">
-                    <li><a href="tel:+263882932022"><i class="fas fa-phone"></i> Call</a></li>
-                    <li><a href="https://wa.me/263777747150"><i class="fab fa-whatsapp"></i> WhatsApp</a></li>
-                    <li><a href="mailto:info@justwisetechnologies.com"><i class="fas fa-envelope"></i> Email</a></li>
-                    <li><a href="#" target="_blank" rel="noopener noreferrer"><i class="fas fa-map-marker-alt"></i> Harare, Zimbabwe</a></li>
-                </ul>
-            </div>
-            <div class="footer-bottom">
-                <p>&copy; <span id="currentYear"></span> Justwise Technologies. All Rights Reserved.</p>
+    <!-- Simple Separator -->
+    <hr class="border-0 h-px bg-slate-200/20 dark:bg-slate-700/20 mx-auto max-w-screen-2xl">
+
+    <!-- Footer -->
+    <footer id="footer" class="py-12 bg-gradient-to-b from-slate-900 to-black text-slate-400">
+        <div class="max-w-4xl mx-auto px-4">
+            <!-- Social Media Icons -->
+            <div class="social-icons flex flex-col items-center">
+                <h3 class="footer-heading text-2xl font-semibold text-white mb-8 text-center animate-fade-in-down">Connect With Us</h3>
+                <div class="social-icons-container">
+                    <!-- Facebook -->
+                    <a href="https://facebook.com/mateyoaustin
+                       target="_blank" 
+                       rel="noopener noreferrer" 
+                       class="social-icon hover:bg-[#1877F2]/80 animate-fade-in-up"
+                       aria-label="Visit our Facebook page">
+                        <i class="fab fa-facebook-f text-white"></i>
+                    </a>
+                        
+                        <!-- Twitter -->
+                        <a href="https://x.com/mateyoaustin 
+                           target="_blank" 
+                           rel="noopener noreferrer" 
+                           class="social-icon refined-button bg-slate-700 hover:bg-blue-400 transition-all duration-300 animate-fade-in-up" style="animation-delay: 100ms;"
+                           aria-label="Follow us on Twitter">
+                            <i class="fab fa-twitter text-white text-base sm:text-lg lg:text-xl transition-colors"></i>
+                        </a>
+                        
+                        <!-- Instagram -->
+                        <a href="https://instagram.com/mateyoaustin" 
+                           target="_blank" 
+                           rel="noopener noreferrer" 
+                           class="social-icon refined-button bg-slate-700 hover:bg-gradient-to-r from-purple-500 to-pink-500 transition-all duration-300 animate-fade-in-up" style="animation-delay: 200ms;"
+                           aria-label="Follow us on Instagram">
+                            <i class="fab fa-instagram text-white text-base sm:text-lg lg:text-xl transition-colors"></i>
+                        </a>
+                        
+                        <!-- LinkedIn -->
+                        <a href="https://linkedin.com/mateyoaustin" 
+                           target="_blank" 
+                           rel="noopener noreferrer" 
+                           class="social-icon refined-button bg-slate-700 hover:bg-blue-600 transition-all duration-300 animate-fade-in-up" style="animation-delay: 300ms;"
+                           aria-label="Connect with us on LinkedIn">
+                            <i class="fab fa-linkedin-in text-white text-base sm:text-lg lg:text-xl transition-colors"></i>
+                        </a>
+                        
+                        <!-- WhatsApp -->
+                        <a href="https://wa.me/263777747150" 
+                           target="_blank" 
+                           rel="noopener noreferrer" 
+                           class="social-icon refined-button bg-slate-700 hover:bg-green-500 transition-all duration-300 animate-fade-in-up" style="animation-delay: 400ms;"
+                           aria-label="Message us on WhatsApp">
+                            <i class="fab fa-whatsapp text-white text-base sm:text-lg lg:text-xl transition-colors"></i>
+                        </a>
+                        
+                        <!-- GitHub -->
+                        <a href="https://github.com/mateyoaustin" 
+                           target="_blank" 
+                           rel="noopener noreferrer" 
+                           class="social-icon refined-button bg-slate-700 hover:bg-gray-700 transition-all duration-300 animate-fade-in-up" style="animation-delay: 500ms;"
+                           aria-label="Check out our GitHub">
+                            <i class="fab fa-github text-white text-base sm:text-lg lg:text-xl transition-colors"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Footer Bottom -->
+                <div class="footer-bottom text-center mt-10 animate-fade-in-up" style="animation-delay: 600ms;">
+                    <p class="text-slate-400/80 text-sm lg:text-base">&copy; <span id="currentYear"></span> Justwise Technologies. All Rights Reserved.</p>
+                </div>
             </div>
         </div>
     </footer>
 
-    <a href="https://wa.me/263777747150" target="_blank" rel="noopener noreferrer" class="floating-contact-button" aria-label="Contact on WhatsApp" title="Contact on WhatsApp">
-        <i class="fab fa-whatsapp"></i>
-    </a>
+    <!-- Scroll Progress Indicator -->
+    <div class="fixed top-0 left-0 w-full h-1 bg-neutral-200/20 dark:bg-neutral-800/20 z-50 backdrop-blur-sm">
+        <div id="scrollProgress" class="h-full w-0 bg-gradient-to-r from-primary-500 via-accent-400 to-secondary-500 transition-all duration-100 shadow-[0_2px_8px_rgba(0,102,255,0.3)] dark:shadow-[0_2px_8px_rgba(0,102,255,0.5)]"></div>
+    </div>
 
-    <a href="#hero" class="back-to-top" id="backToTop" aria-label="Back to top" title="Back to top">
-        <i class="fas fa-arrow-up"></i>
+    <!-- Floating Action Buttons -->
+    <a href="https://wa.me/263777747150" 
+       target="_blank" 
+       rel="noopener noreferrer" 
+       class="fixed bottom-8 right-8 w-14 h-14 md:w-16 md:h-16 bg-[#25D366] rounded-full flex items-center justify-center shadow-[0_8px_30px_rgb(37,211,102,0.3)] hover:shadow-[0_8px_35px_rgb(37,211,102,0.4)] z-40 transform hover:scale-110 transition-all duration-300" 
+       aria-label="Contact on WhatsApp" 
+       title="Contact on WhatsApp">
+        <div class="relative">
+            <i class="fab fa-whatsapp text-white text-2xl md:text-3xl"></i>
+            <span class="absolute -top-1 -right-1 w-3 h-3 bg-white rounded-full animate-ping"></span>
+            <span class="absolute -top-1 -right-1 w-3 h-3 bg-white rounded-full"></span>
+        </div>
     </a>
     
-    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
-    <script src="script.js"></script>
+    <a href="#hero" 
+       class="fixed bottom-28 right-8 w-12 h-12 md:w-14 md:h-14 bg-neutral-900/10 dark:bg-white/10 backdrop-blur-sm rounded-full flex items-center justify-center hover:bg-neutral-900/20 dark:hover:bg-white/20 z-40 opacity-0 invisible transition-all duration-300 group" 
+       id="backToTop" 
+       aria-label="Back to top" 
+       title="Back to top">
+        <i class="fas fa-arrow-up text-neutral-600 dark:text-white/70 text-lg md:text-xl group-hover:transform group-hover:-translate-y-1 transition-transform duration-300"></i>
+    </a>
+
+    <!-- JavaScript -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Premium Card Effects
+            document.addEventListener('mousemove', (e) => {
+                document.querySelectorAll('.premium-card').forEach(card => {
+                    const rect = card.getBoundingClientRect();
+                    const x = e.clientX - rect.left;
+                    const y = e.clientY - rect.top;
+
+                    card.style.setProperty('--mouse-x', `${x}px`);
+                    card.style.setProperty('--mouse-y', `${y}px`);
+
+                    const centerX = rect.width / 2;
+                    const centerY = rect.height / 2;
+                    const rotateY = -((x - centerX) / centerX) * 5;
+                    const rotateX = ((y - centerY) / centerY) * 5;
+
+                    card.style.setProperty('--rotate-x', `${rotateX}deg`);
+                    card.style.setProperty('--rotate-y', `${rotateY}deg`);
+                });
+            });
+
+            // Scroll Progress Indicator
+            const scrollProgress = document.getElementById('scrollProgress');
+            window.addEventListener('scroll', () => {
+                const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+                const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+                const scrolled = (winScroll / height) * 100;
+                if (scrollProgress) {
+                    scrollProgress.style.width = scrolled + '%';
+                }
+            });
+
+            const preloader = document.getElementById('preloader');
+            const navbar = document.querySelector('.sticky-nav');
+            const navBg = navbar.querySelector('.absolute');
+            const navLinks = navbar.querySelectorAll('.nav-items a');
+            const themeToggleBtn = document.getElementById('themeToggle');
+            const themeToggleIcon = themeToggleBtn ? themeToggleBtn.querySelector('i') : null;
+            
+            // --- MODERN PRELOADER ---
+            window.addEventListener('load', () => {
+                setTimeout(() => {
+                    if (preloader) {
+                        preloader.style.opacity = '0';
+                        preloader.style.visibility = 'hidden';
+                    }
+                }, 1500); // Show preloader for 1.5 seconds
+            });
+
+            // --- VIDEO FALLBACK HANDLING ---
+            const heroVideo = document.getElementById('hero-video');
+            const fallbackImage = document.getElementById('fallback-image');
+            
+            if (heroVideo) {
+                heroVideo.addEventListener('error', () => {
+                    // If video fails to load, show fallback image
+                    if (fallbackImage) {
+                        fallbackImage.classList.remove('hidden');
+                    }
+                });
+                
+                // Check if video can play
+                heroVideo.addEventListener('canplay', () => {
+                    // Video loaded successfully
+                    if (fallbackImage) {
+                        fallbackImage.classList.add('hidden');
+                    }
+                });
+            }
+
+            // --- THEME TOGGLE (Updated for Tailwind) ---
+            const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+            let savedTheme = localStorage.getItem('theme');
+            
+            // Set initial theme
+            if (savedTheme === 'dark' || (!savedTheme && prefersDark)) {
+                document.documentElement.classList.add('dark');
+                if (themeToggleIcon) themeToggleIcon.classList.replace('fa-moon', 'fa-sun');
+            } else {
+                document.documentElement.classList.remove('dark');
+                if (themeToggleIcon) themeToggleIcon.classList.replace('fa-sun', 'fa-moon');
+            }
+
+            // Theme toggle event listener
+            if (themeToggleBtn) {
+                themeToggleBtn.addEventListener('click', () => {
+                    if (document.documentElement.classList.contains('dark')) {
+                        document.documentElement.classList.remove('dark');
+                        localStorage.setItem('theme', 'light');
+                        if (themeToggleIcon) themeToggleIcon.classList.replace('fa-sun', 'fa-moon');
+                    } else {
+                        document.documentElement.classList.add('dark');
+                        localStorage.setItem('theme', 'dark');
+                        if (themeToggleIcon) themeToggleIcon.classList.replace('fa-moon', 'fa-sun');
+                    }
+                });
+            }
+
+            // --- STICKY NAVIGATION (Glassmorphism) ---
+            window.addEventListener('scroll', () => {
+                const scrolled = window.scrollY > 20;
+                navBg.style.opacity = scrolled ? '1' : '0.95';
+                navBg.style.backdropFilter = `blur(${scrolled ? '16px' : '12px'})`;
+                navBg.style.borderColor = scrolled ? 'rgba(0,0,0,0.1)' : 'rgba(0,0,0,0.05)';
+                
+                if (scrolled) {
+                    navbar.classList.add('h-16');
+                    navbar.classList.remove('h-20');
+                    navBg.classList.add('shadow-md');
+                } else {
+                    navbar.classList.add('h-20');
+                    navbar.classList.remove('h-16');
+                    navBg.classList.remove('shadow-md');
+                }
+            });
+
+            // --- MOBILE DROPDOWN MENU ---
+            const dropdownToggle = document.getElementById('dropdownToggle');
+            const dropdownMenu = document.getElementById('dropdownMenu');
+            if (dropdownToggle && dropdownMenu) {
+                dropdownToggle.addEventListener('click', (e) => {
+                    e.stopPropagation();
+                    dropdownMenu.classList.toggle('translate-x-full');
+                    dropdownMenu.classList.toggle('translate-x-0');
+                });
+
+                // Close menu when clicking outside
+                document.addEventListener('click', (e) => {
+                    if (!dropdownMenu.contains(e.target) && !dropdownToggle.contains(e.target) && dropdownMenu.classList.contains('translate-x-0')) {
+                        dropdownMenu.classList.add('translate-x-full');
+                        dropdownMenu.classList.remove('translate-x-0');
+                    }
+                });
+                
+                // Close menu when clicking a link
+                dropdownMenu.querySelectorAll('a').forEach(link => {
+                    link.addEventListener('click', () => {
+                        dropdownMenu.classList.add('translate-x-full');
+                        dropdownMenu.classList.remove('translate-x-0');
+                    });
+                });
+            }
+
+            // --- DYNAMIC TYPING EFFECT ---
+            const typingElement = document.getElementById('typing-effect');
+            if (typingElement) {
+                const words = ["Smart Business.", "Automation.", "Growth.", "Innovation."];
+                let wordIndex = 0, charIndex = 0, isDeleting = false;
+
+                const type = () => {
+                    const currentWord = words[wordIndex];
+                    const typeSpeed = isDeleting ? 75 : 150;
+
+                    typingElement.textContent = isDeleting 
+                        ? currentWord.substring(0, charIndex--)
+                        : currentWord.substring(0, charIndex++);
+
+                    if (!isDeleting && charIndex === currentWord.length) {
+                        setTimeout(() => isDeleting = true, 2000);
+                    } else if (isDeleting && charIndex === 0) {
+                        isDeleting = false;
+                        wordIndex = (wordIndex + 1) % words.length;
+                    }
+
+                    setTimeout(type, typeSpeed);
+                };
+                type();
+            }
+
+            // --- DYNAMIC & REALISTIC STATS CALCULATION ---
+            const updateStats = () => {
+                const startDate = new Date('2023-01-01');
+                const today = new Date();
+
+                const monthsPassed = (today.getFullYear() - startDate.getFullYear()) * 12 + (today.getMonth() - startDate.getMonth());
+                const monthFraction = today.getDate() / 30; // Approximation
+                const effectiveMonths = monthsPassed + monthFraction;
+
+                const devicesRepaired = Math.floor(20 + effectiveMonths * 10);
+                const projectsCompleted = Math.floor(10 + effectiveMonths * 4);
+                const supportCases = Math.floor(30 + effectiveMonths * 15);
+                
+                const totalWork = devicesRepaired + projectsCompleted + supportCases;
+                const satisfactionRate = 0.85 + Math.random() * 0.10;
+                const happyClients = Math.floor(totalWork * satisfactionRate);
+
+                const clientsStatEl = document.getElementById('clients-stat');
+                const devicesStatEl = document.getElementById('devices-stat');
+                const projectsStatEl = document.getElementById('projects-stat');
+                const supportStatEl = document.getElementById('support-stat');
+
+                if(clientsStatEl) clientsStatEl.dataset.target = happyClients;
+                if(devicesStatEl) devicesStatEl.dataset.target = devicesRepaired;
+                if(projectsStatEl) projectsStatEl.dataset.target = projectsCompleted;
+                if(supportStatEl) supportStatEl.dataset.target = supportCases;
+            };
+            
+            updateStats();
+
+            // --- ANIMATE ON SCROLL (INTERSECTION OBSERVER) ---
+            const scrollObserver = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('animated');
+                        scrollObserver.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.1 });
+            
+            document.querySelectorAll('.animate-on-scroll').forEach(el => scrollObserver.observe(el));
+
+            // --- STATS COUNTER ANIMATION ---
+            const statsObserver = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const counter = entry.target;
+                        const target = +counter.dataset.target;
+                        if (target === 0) return;
+                        
+                        let current = 0;
+                        const increment = target / 100;
+                        const duration = 1500; // Animate over 1.5 seconds
+                        const stepTime = duration / 100;
+
+                        const updateCounter = () => {
+                            if (current < target) {
+                                current += increment;
+                                counter.textContent = Math.ceil(current).toLocaleString();
+                                setTimeout(updateCounter, stepTime);
+                            } else {
+                                counter.textContent = target.toLocaleString();
+                            }
+                        };
+                        updateCounter();
+                        observer.unobserve(counter);
+                    }
+                });
+            }, { threshold: 0.5 });
+            
+            document.querySelectorAll('.stat-number').forEach(counter => statsObserver.observe(counter));
+
+            // --- BACK TO TOP BUTTON ---
+            const backToTop = document.getElementById('backToTop');
+            window.addEventListener('scroll', () => {
+                if (window.scrollY > 300) {
+                    backToTop.classList.remove('opacity-0', 'invisible');
+                    backToTop.classList.add('opacity-100', 'visible');
+                } else {
+                    backToTop.classList.remove('opacity-100', 'visible');
+                    backToTop.classList.add('opacity-0', 'invisible');
+                }
+            });
+
+            // --- FOOTER YEAR ---
+            const currentYearEl = document.getElementById('currentYear');
+            if (currentYearEl) {
+                currentYearEl.textContent = new Date().getFullYear();
+            }
+
+            // --- PARALLAX EFFECT ---
+            const heroBackground = document.getElementById('hero-background');
+            window.addEventListener('scroll', () => {
+                const scrolled = window.pageYOffset;
+                if (heroBackground) {
+                    heroBackground.style.transform = `translateY(${scrolled * 0.5}px)`;
+                }
+            });
+
+            // --- INITIALIZE SMOOTH SCROLL FOR ANCHOR LINKS ---
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    const targetId = this.getAttribute('href');
+                    const targetElement = document.querySelector(targetId);
+                    if (targetElement) {
+                        targetElement.scrollIntoView({
+                            behavior: 'smooth',
+                            block: 'start'
+                        });
+                    }
+                });
+            });
+
+            // --- WHATSAPP CTA HANDLER ---
+            // When a service CTA is clicked, open WhatsApp with a prefilled message containing the clicked service.
+            // IMPORTANT: replace WHATSAPP_NUMBER with your phone number in international format (no + or leading zeros), e.g. '15551234567' or '263777747150'.
+            const WHATSAPP_NUMBER = '263777747150'; // <-- change this to your number
+
+            // Select CTA buttons inside the services section. If a CTA has a data-service attribute it will be used,
+            // otherwise we fall back to the nearest .service-card h3 title.
+            document.querySelectorAll('#services .btn').forEach(btn => {
+                btn.addEventListener('click', (e) => {
+                    // If the CTA is an anchor to an internal anchor we stop the default navigation and open WhatsApp
+                    e.preventDefault();
+
+                    const serviceName = btn.dataset.service || (btn.closest('.service-card')?.querySelector('h3')?.textContent.trim()) || 'your service';
+                    const prewritten = `Hello! I'm interested in ${serviceName}. Could you share more details and pricing?`;
+                    const waUrl = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(prewritten)}`;
+
+                    // Open WhatsApp in a new tab/window. On mobile this will open the app if available.
+                    window.open(waUrl, '_blank');
+                });
+            });
+        });
+
+    </script>
 </body>
 
 </html>
-
