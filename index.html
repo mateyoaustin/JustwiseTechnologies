@@ -1,19 +1,15 @@
 <!DOCTYPE html>
-<html lang="en" class=""> <!-- Default to light mode, JS will add 'dark' if needed -->
-
+<html lang="en" class="">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=1280, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Justwise Technologies - Premium Tech Solutions</title>
     <meta name="description" content="Justwise Technologies provides cutting-edge technology solutions including Android automation, device sales and repairs, custom software development, AI and automation, and IT support.">
     
-    <!-- Favicon -->
     <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🚀</text></svg>">
     
-    <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     
-    <!-- Fonts & Icons -->
     <link rel="preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/fontawesome.min.css">
     <link rel="preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/solid.min.css">
     <link rel="preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/brands.min.css">
@@ -26,9 +22,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
 
     <script>
-        // Setup Tailwind CSS
         tailwind.config = {
-            darkMode: 'class', // Enable class-based dark mode
+            darkMode: 'class',
             theme: {
                 extend: {
                     fontFamily: {
@@ -36,9 +31,8 @@
                         display: ['Space Grotesk', 'system-ui', 'sans-serif'],
                     },
                     colors: {
-                        // Modern Technology Color Palette
                         primary: {
-                            DEFAULT: '#0066FF', // Vibrant Blue
+                            DEFAULT: '#0066FF',
                             hover: '#0052CC',
                             50: '#E6F0FF',
                             100: '#CCE0FF',
@@ -52,7 +46,7 @@
                             900: '#001433',
                         },
                         secondary: {
-                            DEFAULT: '#7C3AED', // Rich Purple
+                            DEFAULT: '#7C3AED',
                             hover: '#6D28D9',
                             50: '#F5F3FF',
                             100: '#EDE9FE',
@@ -66,7 +60,7 @@
                             900: '#4C1D95',
                         },
                         accent: {
-                            DEFAULT: '#00D4FF', // Bright Cyan
+                            DEFAULT: '#00D4FF',
                             hover: '#00BFEB',
                             50: '#E6FBFF',
                             100: '#CCF7FF',
@@ -91,9 +85,9 @@
                             800: '#1E293B',
                             900: '#0F172A',
                         },
-                        'dark-bg': '#040B14', // Darker background
-                        'dark-card': '#0A1422', // Darker card background
-                        'dark-border': '#1E293B', // Darker border
+                        'dark-bg': '#040B14',
+                        'dark-card': '#0A1422',
+                        'dark-border': '#1E293B',
                     },
                     animation: {
                         'gradient-bg': 'gradient-bg 15s ease infinite',
@@ -190,7 +184,6 @@
                         'large': '0 10px 40px -10px rgba(0, 0, 0, 0.1), 0 10px 30px -5px rgba(0, 0, 0, 0.05)',
                         'xl-soft': '0 20px 50px -12px rgba(0, 0, 0, 0.1)',
                     },
-                    // Dynamic container sizes
                     maxWidth: {
                         '8xl': '88rem',
                         '9xl': '96rem',
@@ -202,20 +195,15 @@
     </script>
 
     <style>
-        /* Custom non-Tailwind styles */
         body {
-            /* Hide default cursor - REMOVED FOR DESKTOP */
-            /* cursor: none; */
         }
 
-        /* Premium Scrollbar */
         ::-webkit-scrollbar { width: 8px; }
         ::-webkit-scrollbar-track { background: #e2e8f0; }
         .dark ::-webkit-scrollbar-track { background: #1e293b; }
         ::-webkit-scrollbar-thumb { background: #4F46E5; border-radius: 4px; }
         ::-webkit-scrollbar-thumb:hover { background: #4338CA; }
 
-        /* Premium Modern Preloader */
         .preloader {
             position: fixed;
             top: 0;
@@ -376,13 +364,11 @@
             animation-delay: 0.4s;
         }
 
-        /* Typing Cursor */
         .typing-cursor {
-            color: #F59E0B; /* Amber */
+            color: #F59E0B;
             animation: blink 0.7s step-end infinite;
         }
 
-        /* Animate on Scroll */
         .animate-on-scroll {
             opacity: 0;
             transform: translateY(40px);
@@ -393,7 +379,6 @@
             transform: translateY(0);
         }
 
-        /* Enhanced Animation Classes */
         .animate-fade-in-up {
             opacity: 0;
             transform: translateY(30px);
@@ -434,7 +419,6 @@
             animation: slide-in-top 0.8s ease-out forwards;
         }
 
-        /* Premium Card Effects */
         .premium-card {
             position: relative;
             transform-style: preserve-3d;
@@ -482,24 +466,21 @@
                 0 0 20px -5px rgba(79, 70, 229, 0.15);
         }
 
-        /* Ensure smooth scroll padding for nav */
         html {
             scroll-padding-top: 80px;
             scroll-behavior: smooth;
         }
 
-        /* Dynamic container styles for all screen sizes */
         .dynamic-container {
             width: 100%;
             margin-left: auto;
             margin-right: auto;
             padding-left: clamp(1rem, 3vw, 2rem);
             padding-right: clamp(1rem, 3vw, 2rem);
-            max-width: min(100%, 90rem); /* 1440px */
+            max-width: min(100%, 90rem);
             box-sizing: border-box;
         }
 
-        /* Small Mobile */
         @media (max-width: 479px) {
             .dynamic-container {
                 padding-left: 0.875rem;
@@ -507,7 +488,6 @@
             }
         }
 
-        /* Mobile */
         @media (min-width: 480px) {
             .dynamic-container {
                 padding-left: clamp(1rem, 4vw, 1.5rem);
@@ -515,7 +495,6 @@
             }
         }
 
-        /* Tablet */
         @media (min-width: 768px) {
             .dynamic-container {
                 padding-left: clamp(1.5rem, 5vw, 2.5rem);
@@ -524,7 +503,6 @@
             }
         }
 
-        /* Laptop */
         @media (min-width: 1024px) {
             .dynamic-container {
                 padding-left: clamp(2rem, 6vw, 3rem);
@@ -533,7 +511,6 @@
             }
         }
 
-        /* Desktop */
         @media (min-width: 1280px) {
             .dynamic-container {
                 padding-left: clamp(2.5rem, 7vw, 4rem);
@@ -542,7 +519,6 @@
             }
         }
 
-        /* Large Desktop */
         @media (min-width: 1536px) {
             .dynamic-container {
                 padding-left: clamp(3rem, 8vw, 5rem);
@@ -551,18 +527,14 @@
             }
         }
 
-        /* Extra Large Screens */
         @media (min-width: 1920px) {
             .dynamic-container {
-                max-width: 1800px; /* Cap the maximum width */
+                max-width: 1800px;
                 padding-left: max(4rem, calc((100vw - 1800px) / 2));
                 padding-right: max(4rem, calc((100vw - 1800px) / 2));
             }
         }
 
-
-
-        /* Refined container styles */
         .refined-container {
             border-radius: 0.75rem;
             box-shadow: 0 4px 20px -5px rgba(0, 0, 0, 0.08), 0 12px 25px -3px rgba(0, 0, 0, 0.06);
@@ -691,7 +663,6 @@
             box-shadow: 0 4px 15px -3px rgba(0, 0, 0, 0.4);
         }
 
-        /* Tech background video optimization */
         .tech-video {
             object-fit: cover;
             width: 100%;
@@ -699,12 +670,10 @@
             filter: brightness(0.7);
         }
 
-        /* Fallback gradient for when video doesn't load */
         .tech-fallback {
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
         }
 
-        /* Responsive social media icons - Single line for all screens */
         .social-icons-container {
             display: flex;
             justify-content: center;
@@ -716,12 +685,12 @@
             margin: 0 auto;
             padding: 0.5rem;
             overflow-x: auto;
-            scrollbar-width: none; /* Firefox */
-            -ms-overflow-style: none; /* IE and Edge */
+            scrollbar-width: none;
+            -ms-overflow-style: none;
         }
 
         .social-icons-container::-webkit-scrollbar {
-            display: none; /* Chrome, Safari, Opera */
+            display: none;
         }
 
         .social-icon {
@@ -776,7 +745,6 @@
             transform: scale(1.15);
         }
 
-        /* Custom animation for the back to top button */
         #backToTop.show {
             opacity: 1;
             visibility: visible;
@@ -796,7 +764,6 @@
 
 <body class="bg-white dark:bg-dark-bg text-slate-700 dark:text-slate-300 font-sans antialiased selection:bg-primary/20">
 
-    <!-- Premium Modern Preloader -->
     <div id="preloader" class="preloader">
         <div class="preloader-content">
             <div class="loader-container">
@@ -815,13 +782,11 @@
         </div>
     </div>
 
-    <!-- Header & Navigation -->
     <nav class="sticky-nav fixed top-0 left-0 right-0 z-50 transition-all duration-500">
         <div class="absolute inset-0 w-full h-full bg-white/95 dark:bg-dark-bg/95 backdrop-blur-xl border-b border-neutral-200/20 dark:border-neutral-700/20 shadow-sm transition-all duration-500"></div>
         <div class="max-w-7xl mx-auto px-4">
             <div class="relative flex justify-between items-center h-20">
                 
-                <!-- Brand Logo -->
                 <a href="#hero" class="brand group flex items-center gap-3 z-10 animate-fade-in-left">
                     <div class="relative w-10 h-10 flex items-center justify-center">
                         <div class="absolute inset-0 bg-gradient-to-r from-primary-500 to-secondary-500 rounded-xl rotate-0 group-hover:rotate-180 transition-transform duration-700 shadow-lg"></div>
@@ -830,7 +795,6 @@
                     <span class="text-2xl font-display font-bold text-neutral-800 dark:text-white transition-colors duration-300">Justwise</span>
                 </a>
                 
-                <!-- Desktop Nav -->
                 <div class="header-right hidden md:flex items-center gap-8 z-10">
                     <div class="nav-items flex items-center gap-8 animate-fade-in-down">
                         <a href="#services" class="group relative font-medium text-neutral-800 dark:text-white/90">
@@ -847,767 +811,558 @@
                         </a>
                     </div>
                     
-                    <!-- Theme Toggle -->
-                    <button id="themeToggle" class="theme-toggle group relative w-10 h-10 flex items-center justify-center rounded-xl bg-white dark:bg-neutral-800 shadow-md hover:shadow-lg dark:shadow-neutral-900/50 transition-all duration-300 animate-fade-in-right overflow-hidden border border-neutral-200/50 dark:border-neutral-700/50" aria-label="Toggle dark mode">
-                        <div class="absolute inset-0 bg-gradient-to-br from-primary-500/10 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-                        <i class="fas fa-moon text-lg text-neutral-700 dark:text-white/90 group-hover:text-primary-500 transition-colors duration-300 group-hover:rotate-[360deg] transition-transform duration-500"></i>
+                    <button id="themeToggle" class="theme-toggle group relative w-10 h-10 flex items-center justify-center rounded-xl bg-white dark:bg-neutral-800 shadow-md hover:shadow-lg dark:shadow-neutral-900/50 transition-all duration-300 animate-fade-in-right overflow-hidden border border-neutral-200/50 dark:border-neutral-700/50" aria-label="Toggle dark/light theme">
+                        <i class="fas fa-moon text-lg text-primary-500 dark:text-accent-400 transition-transform duration-500 group-hover:scale-110"></i>
+                        <span class="absolute inset-0 rounded-xl bg-primary-500/10 dark:bg-accent-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></span>
+                    </button>
+                    
+                    <button id="mobileMenuButton" class="md:hidden w-10 h-10 flex items-center justify-center rounded-xl bg-primary-500 text-white transition-colors duration-300 hover:bg-primary-600 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-2" aria-label="Open mobile menu" style="display: none;">
+                        <i class="fas fa-bars"></i>
                     </button>
                 </div>
-                
-                <!-- Mobile Menu Toggle -->
-                <button id="dropdownToggle" class="dropdown-toggle md:hidden refined-button h-10 w-10 flex items-center justify-center bg-slate-200/50 dark:bg-dark-card text-slate-600 dark:text-slate-300 z-50 animate-fade-in-right" aria-label="Toggle menu">
-                    <i class="fas fa-bars text-lg"></i>
-                </button>
 
-                <!-- Mobile Dropdown Menu -->
-                <div id="dropdownMenu" class="dropdown-menu md:hidden fixed top-0 right-0 bottom-0 left-1/4 bg-white dark:bg-dark-card refined-container p-6 transform translate-x-full transition-transform duration-300 ease-in-out z-40">
-                    <div class="mt-20 space-y-4">
-                        <a href="#hero" class="dropdown-link flex items-center gap-3 p-3 rounded-lg text-lg font-medium text-slate-700 dark:text-slate-200 hover:bg-slate-100 dark:hover:bg-dark-border"><i class="fas fa-home fa-fw w-5"></i> Home</a>
-                        <a href="#services" class="dropdown-link flex items-center gap-3 p-3 rounded-lg text-lg font-medium text-slate-700 dark:text-slate-200 hover:bg-slate-100 dark:hover:bg-dark-border"><i class="fas fa-list fa-fw w-5"></i> Services</a>
-                        <a href="#stats" class="dropdown-link flex items-center gap-3 p-3 rounded-lg text-lg font-medium text-slate-700 dark:text-slate-200 hover:bg-slate-100 dark:hover:bg-dark-border"><i class="fas fa-chart-line fa-fw w-5"></i> Stats</a>
-                        <!-- Updated link to point to the footer -->
-                        <a href="#footer" class="dropdown-link flex items-center gap-3 p-3 rounded-lg text-lg font-medium text-slate-700 dark:text-slate-200 hover:bg-slate-100 dark:hover:bg-dark-border"><i class="fas fa-envelope fa-fw w-5"></i> Inquire</a>
-                        <a href="https://wa.me/263777747150" class="dropdown-link flex items-center gap-3 p-3 rounded-lg text-lg font-medium text-slate-700 dark:text-slate-200 hover:bg-slate-100 dark:hover:bg-dark-border"><i class="fab fa-whatsapp fa-fw w-5"></i> Chat Now</a>
-                    </div>
-                </div>
+                <button id="mobileMenuButton" class="md:hidden w-10 h-10 flex items-center justify-center rounded-xl bg-primary-500 text-white transition-colors duration-300 hover:bg-primary-600 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-2" aria-label="Open mobile menu">
+                    <i class="fas fa-bars" id="mobileMenuIcon"></i>
+                </button>
+            </div>
+        </div>
+        
+        <div id="mobileMenu" class="mobile-menu hidden md:hidden absolute top-full left-0 right-0 bg-white dark:bg-dark-bg border-b border-neutral-200/20 dark:border-neutral-700/20 shadow-xl transition-all duration-300 transform -translate-y-4 opacity-0 p-4">
+            <div class="flex flex-col space-y-3">
+                <a href="#services" class="block py-2 px-4 rounded-lg text-neutral-800 dark:text-white/90 hover:bg-primary-500/10 dark:hover:bg-primary-500/20 font-medium transition-colors">Services</a>
+                <a href="#stats" class="block py-2 px-4 rounded-lg text-neutral-800 dark:text-white/90 hover:bg-primary-500/10 dark:hover:bg-primary-500/20 font-medium transition-colors">Stats</a>
+                <a href="#footer" class="block py-2 px-4 rounded-lg text-neutral-800 dark:text-white/90 hover:bg-primary-500/10 dark:hover:bg-primary-500/20 font-medium transition-colors">Inquire</a>
+            </div>
+            <div class="mt-4 pt-4 border-t border-neutral-200 dark:border-neutral-700/50 flex justify-center">
+                <button id="mobileThemeToggle" class="theme-toggle group relative w-10 h-10 flex items-center justify-center rounded-xl bg-white dark:bg-neutral-800 shadow-md hover:shadow-lg dark:shadow-neutral-900/50 transition-all duration-300 overflow-hidden border border-neutral-200/50 dark:border-neutral-700/50" aria-label="Toggle dark/light theme">
+                    <i class="fas fa-moon text-lg text-primary-500 dark:text-accent-400 transition-transform duration-500 group-hover:scale-110"></i>
+                    <span class="absolute inset-0 rounded-xl bg-primary-500/10 dark:bg-accent-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></span>
+                </button>
             </div>
         </div>
     </nav>
-
+    
     <main>
-        <!-- Hero Section with Parallax -->
-        <section id="hero" class="hero relative min-h-screen flex items-center justify-center text-center overflow-hidden px-4" data-parallax="scroll">
-            <!-- Plexus Network Background -->
-            <canvas id="plexusCanvas" class="absolute inset-0 z-0"></canvas>
+        <section id="hero" class="relative overflow-hidden min-h-screen pt-20 flex items-center justify-center text-center">
             
-            <!-- Gradient Overlay -->
-            <div class="absolute inset-0 z-1 bg-gradient-to-r from-blue-900/80 to-violet-900/80 mix-blend-multiply"></div>
+            <div id="hero-background" class="absolute inset-0 h-full w-full">
+                <video id="hero-video" autoplay muted loop playsinline class="tech-video absolute inset-0">
+                    <source src="https://assets.mixkit.co/videos/preview/mixkit-abstract-flow-of-digital-data-48412-large.mp4" type="video/mp4">
+                    <div id="fallback-image" class="absolute inset-0 tech-fallback hidden"></div>
+                </video>
+                
+                <canvas id="plexusCanvas" class="absolute inset-0 z-0"></canvas>
+                
+                <div class="absolute inset-0 z-1 bg-gradient-to-r from-blue-900/80 to-violet-900/80 mix-blend-multiply"></div>
 
-            <script>
-                // Plexus Animation
-                document.addEventListener('DOMContentLoaded', function() {
-                    const canvas = document.getElementById('plexusCanvas');
-                    const ctx = canvas.getContext('2d');
-                    let width = canvas.width = window.innerWidth;
-                    let height = canvas.height = window.innerHeight;
-                    
-                    // Particle settings
-                    const particleCount = 100;
-                    const particles = [];
-                    const connectionDistance = 150;
-                    const baseParticleSize = 2;
-                    
-                    // Colors
-                    const particleColor = 'rgba(255, 255, 255, 0.8)';
-                    const lineGradient = ctx.createLinearGradient(0, 0, width, 0);
-                    lineGradient.addColorStop(0, '#4F46E5'); // Electric blue
-                    lineGradient.addColorStop(1, '#7C3AED'); // Deep violet
-                    
-                    // Particle class
-                    class Particle {
-                        constructor() {
-                            this.x = Math.random() * width;
-                            this.y = Math.random() * height;
-                            this.vx = (Math.random() - 0.5) * 0.5;
-                            this.vy = (Math.random() - 0.5) * 0.5;
-                            this.size = baseParticleSize;
+                <script>
+                    document.addEventListener('DOMContentLoaded', function() {
+                        const canvas = document.getElementById('plexusCanvas');
+                        const ctx = canvas.getContext('2d');
+                        let width = canvas.width = window.innerWidth;
+                        let height = canvas.height = window.innerHeight;
+
+                        const particleCount = 100;
+                        const particles = [];
+                        const connectionDistance = 150;
+                        const baseParticleSize = 2;
+
+                        const particleColor = 'rgba(255, 255, 255, 0.8)';
+                        const lineGradient = ctx.createLinearGradient(0, 0, width, 0);
+                        lineGradient.addColorStop(0, '#4F46E5');
+                        lineGradient.addColorStop(1, '#7C3AED');
+
+                        class Particle {
+                            constructor() {
+                                this.x = Math.random() * width;
+                                this.y = Math.random() * height;
+                                this.vx = (Math.random() - 0.5) * 0.5;
+                                this.vy = (Math.random() - 0.5) * 0.5;
+                                this.size = baseParticleSize;
+                            }
+
+                            update() {
+                                this.x += this.vx;
+                                this.y += this.vy;
+
+                                if (this.x < 0 || this.x > width) this.vx *= -1;
+                                if (this.y < 0 || this.y > height) this.vy *= -1;
+                            }
+
+                            draw() {
+                                ctx.beginPath();
+                                ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
+                                ctx.fillStyle = particleColor;
+                                ctx.fill();
+                            }
                         }
-                        
-                        update() {
-                            this.x += this.vx;
-                            this.y += this.vy;
-                            
-                            // Bounce off edges
-                            if (this.x < 0 || this.x > width) this.vx *= -1;
-                            if (this.y < 0 || this.y > height) this.vy *= -1;
+
+                        for (let i = 0; i < particleCount; i++) {
+                            particles.push(new Particle());
                         }
-                        
-                        draw() {
-                            ctx.beginPath();
-                            ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
-                            ctx.fillStyle = particleColor;
-                            ctx.fill();
-                        }
-                    }
-                    
-                    // Initialize particles
-                    for (let i = 0; i < particleCount; i++) {
-                        particles.push(new Particle());
-                    }
-                    
-                    // Animation loop
-                    function animate() {
-                        ctx.clearRect(0, 0, width, height);
-                        
-                        // Update and draw particles
-                        particles.forEach(particle => {
-                            particle.update();
-                            particle.draw();
-                            
-                            // Connect particles
-                            particles.forEach(otherParticle => {
-                                const dx = particle.x - otherParticle.x;
-                                const dy = particle.y - otherParticle.y;
-                                const distance = Math.sqrt(dx * dx + dy * dy);
-                                
-                                if (distance < connectionDistance) {
-                                    const opacity = 1 - (distance / connectionDistance);
-                                    ctx.beginPath();
-                                    ctx.strokeStyle = `rgba(79, 70, 229, ${opacity * 0.5})`;
-                                    ctx.lineWidth = 1;
-                                    ctx.moveTo(particle.x, particle.y);
-                                    ctx.lineTo(otherParticle.x, otherParticle.y);
-                                    ctx.stroke();
-                                }
+
+                        function animate() {
+                            ctx.clearRect(0, 0, width, height);
+
+                            particles.forEach(particle => {
+                                particle.update();
+                                particle.draw();
+
+                                particles.forEach(otherParticle => {
+                                    const dx = particle.x - otherParticle.x;
+                                    const dy = particle.y - otherParticle.y;
+                                    const distance = Math.sqrt(dx * dx + dy * dy);
+
+                                    if (distance < connectionDistance) {
+                                        const opacity = 1 - (distance / connectionDistance);
+                                        ctx.beginPath();
+                                        ctx.moveTo(particle.x, particle.y);
+                                        ctx.lineTo(otherParticle.x, otherParticle.y);
+                                        
+                                        // Dynamic line color with global opacity
+                                        ctx.strokeStyle = `rgba(255, 255, 255, ${opacity * 0.2})`;
+                                        ctx.lineWidth = 1;
+                                        ctx.stroke();
+                                    }
+                                });
                             });
-                        });
-                        
-                        requestAnimationFrame(animate);
-                    }
-                    
-                    // Handle window resize
-                    window.addEventListener('resize', () => {
-                        width = canvas.width = window.innerWidth;
-                        height = canvas.height = window.innerHeight;
+
+                            requestAnimationFrame(animate);
+                        }
+
+                        // Handle resize
+                        function handleResize() {
+                            width = canvas.width = window.innerWidth;
+                            height = canvas.height = window.innerHeight;
+                        }
+
+                        window.addEventListener('resize', handleResize);
+                        animate();
                     });
-                    
-                    // Start animation
-                    animate();
-                });
-            </script>
-            
-            <!-- Additional Ambient Light Effects -->
-            <div class="absolute inset-0 z-1 bg-gradient-to-t from-slate-900/80 via-transparent to-transparent"></div>
-            
-            <div class="hero-content relative z-10 w-full text-white max-w-7xl mx-auto px-4 py-20">
-                    <!-- Hero Subtitle - Appears First -->
-                    <div class="overflow-hidden">
-                        <p class="text-lg sm:text-xl uppercase tracking-wider text-accent-400 font-semibold mb-6 animate-fade-in-down opacity-0" style="animation-delay: 100ms;">
-                            Welcome to the Future of Technology
-                        </p>
-                    </div>
+                </script>
+            </div>
 
-                    <!-- Main Heading with Enhanced Typography -->
-                    <div class="overflow-hidden mb-6">
-                        <h1 class="font-display text-5xl sm:text-6xl lg:text-8xl xl:text-9xl font-bold leading-tight animate-fade-in-up opacity-0" style="animation-delay: 200ms;">
-                            <span class="block bg-gradient-to-r from-white via-white to-white/90 bg-clip-text text-transparent">
-                                Digital Solutions for
-                            </span>
-                            <span class="block mt-2 bg-gradient-to-r from-accent-400 via-primary-400 to-secondary-400 bg-clip-text text-transparent">
-                                <span id="typing-effect"></span><span class="typing-cursor text-accent-400">|</span>
-                            </span>
-                        </h1>
-                    </div>
+            <div class="relative z-10 max-w-7xl mx-auto px-4 dynamic-container">
+                <div class="max-w-6xl mx-auto text-center">
+                    <h1 class="font-display text-5xl sm:text-6xl lg:text-8xl xl:text-9xl font-bold leading-tight animate-fade-in-up opacity-0" style="animation-delay: 200ms;">
+                        <span class="block bg-gradient-to-r from-white via-white to-white/90 bg-clip-text text-transparent"> Digital Solutions for </span>
+                        <span class="block mt-2 bg-gradient-to-r from-accent-400 via-primary-400 to-secondary-400 bg-clip-text text-transparent">
+                            <span id="typing-effect"></span><span class="typing-cursor text-accent-400">|</span>
+                        </span>
+                    </h1>
+                </div>
 
-                    <!-- Enhanced Description with Gradient Border -->
-                    <div class="overflow-hidden relative max-w-3xl mx-auto mb-16">
-                        <div class="absolute inset-0 bg-gradient-to-r from-accent-500/0 via-accent-500/10 to-accent-500/0 blur-xl"></div>
-                        <p class="relative font-sans text-xl sm:text-2xl lg:text-3xl text-white/90 leading-relaxed animate-fade-in-up opacity-0" style="animation-delay: 600ms;">
-                            We provide cutting-edge technology solutions to transform your business and drive growth in the digital age.
-                        </p>
-                    </div>
+                <div class="overflow-hidden relative max-w-3xl mx-auto mb-16">
+                    <div class="absolute inset-0 bg-gradient-to-r from-accent-500/0 via-accent-500/10 to-accent-500/0 blur-xl"></div>
+                    <p class="relative font-sans text-xl sm:text-2xl lg:text-3xl text-white/90 leading-relaxed animate-fade-in-up opacity-0" style="animation-delay: 600ms;">
+                        We provide cutting-edge technology solutions to transform your business and drive growth in the digital age.
+                    </p>
+                </div>
 
-                    <!-- Modernized CTA Buttons -->
-                    <div class="flex flex-col sm:flex-row gap-8 justify-center items-center animate-fade-in-up opacity-0" style="animation-delay: 800ms;">
-                        <a href="#footer" 
-                           class="group relative inline-flex items-center justify-center gap-3 px-10 py-5 text-lg sm:text-xl font-semibold overflow-hidden rounded-2xl bg-gradient-to-br from-accent-500 via-primary-500 to-secondary-500 text-white transition-all duration-500 hover:scale-105 hover:shadow-[0_0_50px_rgba(0,102,255,0.4)] hover:-translate-y-1">
-                            <div class="absolute inset-0 bg-gradient-to-br from-accent-600 via-primary-600 to-secondary-600 opacity-0 group-hover:opacity-100 transition-all duration-500"></div>
-                            <i class="fas fa-rocket relative z-10 group-hover:rotate-45 transition-transform duration-500"></i>
-                            <span class="relative z-10">Get Started</span>
-                        </a>
-                        <a href="#services" 
-                           class="group relative inline-flex items-center justify-center gap-3 px-10 py-5 text-lg sm:text-xl font-semibold overflow-hidden rounded-2xl bg-white/5 backdrop-blur-lg border border-white/10 text-white transition-all duration-500 hover:scale-105 hover:bg-white/10 hover:-translate-y-1 hover:border-white/20 hover:shadow-[0_0_50px_rgba(255,255,255,0.1)]">
-                            <i class="fas fa-compass relative z-10 group-hover:rotate-[360deg] transition-transform duration-700"></i>
-                            <span class="relative z-10">Explore Services</span>
-                        </a>
-                    </div>
+                <div class="flex flex-col sm:flex-row gap-8 justify-center items-center animate-fade-in-up opacity-0" style="animation-delay: 800ms;">
+                    <a href="#footer" class="group relative inline-flex items-center justify-center gap-3 px-10 py-5 text-lg sm:text-xl font-semibold overflow-hidden rounded-2xl bg-gradient-to-br from-accent-500 via-primary-500 to-secondary-500 text-white transition-all duration-500 hover:scale-105 hover:shadow-[0_0_50px_rgba(0,102,255,0.4)] hover:-translate-y-1">
+                        <div class="absolute inset-0 bg-gradient-to-br from-accent-600 via-primary-600 to-secondary-600 opacity-0 group-hover:opacity-100 transition-all duration-500"></div>
+                        <i class="fas fa-rocket relative z-10 group-hover:rotate-45 transition-transform duration-500"></i>
+                        <span class="relative z-10">Get Started</span>
+                    </a>
+                    <a href="#services" class="group relative inline-flex items-center justify-center gap-3 px-10 py-5 text-lg sm:text-xl font-semibold rounded-2xl bg-transparent text-white border border-white/50 transition-all duration-500 hover:scale-105 hover:bg-white/10 hover:shadow-[0_0_20px_rgba(255,255,255,0.2)] hover:-translate-y-1">
+                        <i class="fas fa-info-circle relative z-10 group-hover:scale-110 transition-transform duration-500"></i>
+                        <span class="relative z-10">Learn More</span>
+                    </a>
+                </div>
             </div>
             
-            <!-- Scroll Indicator -->
-            <div class="scroll-indicator absolute bottom-10 left-1/2 -translate-x-1/2 z-10 text-white animate-bounce-soft">
-                <i class="fas fa-chevron-down text-3xl"></i>
+            <div class="absolute bottom-10 left-1/2 transform -translate-x-1/2 flex justify-center w-full z-10 animate-bounce-soft">
+                <a href="#stats" class="w-12 h-12 flex items-center justify-center rounded-full bg-white/10 backdrop-blur-sm border border-white/20 text-white hover:bg-white/20 transition-colors duration-300">
+                    <i class="fas fa-chevron-down"></i>
+                </a>
             </div>
+
         </section>
 
-        <!-- Stats Section -->
-        <section id="stats" class="stats-section py-20 lg:py-32 bg-gradient-to-b from-white to-slate-50 dark:from-dark-bg dark:to-dark-bg/80">
-            <div class="max-w-7xl mx-auto px-4">
-                <h2 class="font-display text-4xl lg:text-5xl font-bold text-center mb-6 text-neutral-900 dark:text-white animate-fade-in-down bg-gradient-to-r from-neutral-900 via-neutral-800 to-neutral-900 dark:from-white dark:via-neutral-200 dark:to-white bg-clip-text text-transparent">Proven Track Record of Success</h2>
-                <p class="font-sans text-lg lg:text-xl text-center max-w-2xl mx-auto mb-16 text-neutral-600 dark:text-neutral-300 animate-fade-in-down leading-relaxed" style="animation-delay: 150ms;">Delivering measurable results through innovation, reliability, and unwavering commitment to client satisfaction. Our metrics speak for themselves.</p>
-
-                    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-6 xl:gap-8 2xl:gap-10">
-                        <!-- Stat Card -->
-                        <div class="group stat-card text-center relative rounded-2xl bg-white/60 dark:bg-dark-card/60 backdrop-blur-lg p-6 lg:p-8 transition-all duration-500 hover:scale-105 animate-fade-in-up border border-neutral-200/50 dark:border-neutral-700/30 hover:border-primary-500/50 dark:hover:border-primary-500/50">
-                            <div class="absolute inset-0 bg-gradient-to-br from-primary-500/10 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-2xl"></div>
-                            <div class="stat-number font-display text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold mb-4 bg-gradient-to-r from-primary-500 to-primary-600 bg-clip-text text-transparent" id="clients-stat" data-target="0">0</div>
-                            <div class="stat-label text-base sm:text-lg font-medium text-neutral-600 dark:text-neutral-300">Happy Clients</div>
-                        </div>
-                        <!-- Stat Card -->
-                        <div class="stat-card text-center refined-card bg-white dark:bg-dark-card p-6 lg:p-8 transition-all duration-300 animate-fade-in-up" style="animation-delay: 150ms;">
-                            <div class="stat-number text-4xl lg:text-6xl font-extrabold mb-2 text-primary" id="devices-stat" data-target="0">0</div>
-                            <div class="stat-label text-base lg:text-lg font-medium text-slate-600 dark:text-slate-300">Devices Repaired</div>
-                        </div>
-                        <!-- Stat Card -->
-                        <div class="stat-card text-center refined-card bg-white dark:bg-dark-card p-6 lg:p-8 transition-all duration-300 animate-fade-in-up" style="animation-delay: 300ms;">
-                            <div class="stat-number text-4xl lg:text-6xl font-extrabold mb-2 text-primary" id="projects-stat" data-target="0">0</div>
-                            <div class="stat-label text-base lg:text-lg font-medium text-slate-600 dark:text-slate-300">Projects Completed</div>
-                        </div>
-                        <!-- Stat Card -->
-                        <div class="stat-card text-center refined-card bg-white dark:bg-dark-card p-6 lg:p-8 transition-all duration-300 animate-fade-in-up" style="animation-delay: 450ms;">
-                            <div class="stat-number text-4xl lg:text-6xl font-extrabold mb-2 text-primary" id="support-stat" data-target="0">0</div>
-                            <div class="stat-label text-base lg:text-lg font-medium text-slate-600 dark:text-slate-300">Support Cases</div>
-                        </div>
+        <section id="stats" class="py-20 lg:py-32 bg-slate-50 dark:bg-dark-bg">
+            <div class="max-w-7xl mx-auto px-4 dynamic-container">
+                <h2 class="font-display text-4xl lg:text-5xl font-bold text-center mb-16 bg-gradient-to-r from-primary-500 via-accent-500 to-secondary-500 bg-clip-text text-transparent animate-fade-in-down">
+                    Why Trust Justwise Technologies?
+                </h2>
+                
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-6 lg:gap-12">
+                    <div class="stat-card text-center refined-card bg-white dark:bg-dark-card p-6 lg:p-8 transition-all duration-300 animate-fade-in-up">
+                        <div class="stat-number text-4xl lg:text-6xl font-extrabold mb-2 text-primary" id="clients-stat" data-target="0">0</div>
+                        <div class="stat-label text-base lg:text-lg font-medium text-slate-600 dark:text-slate-300">Happy Clients</div>
+                    </div>
+                    <div class="stat-card text-center refined-card bg-white dark:bg-dark-card p-6 lg:p-8 transition-all duration-300 animate-fade-in-up" style="animation-delay: 150ms;">
+                        <div class="stat-number text-4xl lg:text-6xl font-extrabold mb-2 text-primary" id="devices-stat" data-target="0">0</div>
+                        <div class="stat-label text-base lg:text-lg font-medium text-slate-600 dark:text-slate-300">Devices Repaired</div>
+                    </div>
+                    <div class="stat-card text-center refined-card bg-white dark:bg-dark-card p-6 lg:p-8 transition-all duration-300 animate-fade-in-up" style="animation-delay: 300ms;">
+                        <div class="stat-number text-4xl lg:text-6xl font-extrabold mb-2 text-primary" id="projects-stat" data-target="0">0</div>
+                        <div class="stat-label text-base lg:text-lg font-medium text-slate-600 dark:text-slate-300">Projects Completed</div>
+                    </div>
+                    <div class="stat-card text-center refined-card bg-white dark:bg-dark-card p-6 lg:p-8 transition-all duration-300 animate-fade-in-up" style="animation-delay: 450ms;">
+                        <div class="stat-number text-4xl lg:text-6xl font-extrabold mb-2 text-primary" id="support-stat" data-target="0">0</div>
+                        <div class="stat-label text-base lg:text-lg font-medium text-slate-600 dark:text-slate-300">Support Cases</div>
+                    </div>
                 </div>
             </div>
         </section>
 
-        <!-- Services Section -->
         <section id="services" class="services-grid py-20 lg:py-32 bg-gradient-to-b from-slate-50 to-white dark:from-dark-bg/80 dark:to-dark-bg">
-            <div class="max-w-7xl mx-auto px-4">
+            <div class="max-w-7xl mx-auto px-4 dynamic-container">
                 <h2 class="font-display text-4xl lg:text-5xl font-bold text-center mb-6 bg-gradient-to-r from-secondary-500 via-secondary-600 to-secondary-700 bg-clip-text text-transparent animate-fade-in-down">Our Core Services</h2>
-                <p class="font-sans text-lg lg:text-xl text-center max-w-3xl mx-auto mb-16 text-neutral-600 dark:text-neutral-300 animate-fade-in-down leading-relaxed" style="animation-delay: 150ms;">We deliver a full spectrum of technology services, from hardware solutions to bespoke software, tailored to your unique needs.</p>
+                <p class="font-sans text-lg lg:text-xl text-center text-slate-600 dark:text-slate-400 max-w-3xl mx-auto mb-16 animate-fade-in-down" style="animation-delay: 100ms;">
+                    Elevate your operations with our versatile expertise, delivering innovation and reliability across various tech domains.
+                </p>
 
-                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 lg:gap-8 2xl:gap-10">
-                        <!-- Service Card 1 -->
-                        <div class="service-card flex flex-col refined-card bg-white dark:bg-dark-card p-4 sm:p-6 lg:p-8 transition-all duration-300 animate-fade-in-up">
-                            <div class="flex-shrink-0 w-20 h-20 flex items-center justify-center rounded-2xl bg-gradient-to-br from-blue-600/20 via-blue-600/15 to-transparent p-0.5 text-blue-600 mb-8 group-hover:scale-110 transition-all duration-500 relative overflow-hidden shadow-xl shadow-blue-600/10">
-                                <div class="absolute inset-0 bg-gradient-to-br from-blue-600/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-                                <div class="relative w-full h-full rounded-xl bg-white dark:bg-slate-900/50 flex items-center justify-center backdrop-blur-sm">
-                                    <div class="relative">
-                                        <i class="fas fa-cogs text-4xl absolute inset-0 flex items-center justify-center opacity-100 group-hover:opacity-0 transition-all duration-500 transform rotate-0 group-hover:-rotate-45 group-hover:-translate-y-4"></i>
-                                        <i class="fas fa-magic text-4xl absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-500 transform translate-y-4 group-hover:translate-y-0"></i>
-                                    </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-12">
+                    
+                    <div class="service-card flex flex-col refined-card bg-white dark:bg-dark-card p-8 transition-all duration-300 animate-fade-in-up">
+                        <div class="flex-shrink-0 w-20 h-20 flex items-center justify-center rounded-2xl bg-gradient-to-br from-primary/20 via-primary/15 to-transparent p-0.5 text-primary mb-8 group-hover:scale-110 transition-all duration-500 relative overflow-hidden shadow-xl shadow-primary/10">
+                            <div class="absolute inset-0 bg-gradient-to-br from-primary/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                            <div class="relative w-full h-full rounded-xl bg-white dark:bg-slate-900/50 flex items-center justify-center backdrop-blur-sm">
+                                <div class="relative">
+                                    <i class="fab fa-android text-4xl absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-500 transform translate-y-4 group-hover:translate-y-0"></i>
+                                    <i class="fas fa-robot text-4xl absolute inset-0 flex items-center justify-center opacity-100 group-hover:opacity-0 transition-all duration-500 transform scale-100 group-hover:scale-90 group-hover:-translate-y-4"></i>
                                 </div>
                             </div>
-                            <h3 class="text-2xl font-bold mb-3 text-slate-800 dark:text-white group-hover:text-blue-600 transition-colors duration-300">Android Automation (Tasker)</h3>
-                            <p class="text-base text-slate-600 dark:text-slate-300 mb-6 flex-grow">Transform your Android experience with enterprise-grade automation solutions. Our expert-crafted Tasker implementations streamline operations, enhance productivity, and deliver sophisticated workflows tailored to your specific needs.</p>
-                            <a href="#footer" class="btn btn-secondary mt-auto inline-block text-left font-semibold text-primary-DEFAULT dark:text-primary-DEFAULT/80 hover:text-primary-hover dark:hover:text-primary-DEFAULT transition-colors duration-300 group">
-                                Automate Now <i class="fas fa-arrow-right ml-1 transform group-hover:translate-x-1 transition-transform"></i>
-                            </a>
                         </div>
-
-                        <!-- Tasker Modal -->
-                        <div id="taskerModal" class="fixed inset-0 z-50 hidden">
-                            <!-- Modal Backdrop -->
-                            <div class="absolute inset-0 bg-black/80 backdrop-blur-lg"></div>
-                            <!-- Modal Content -->
-                            <div class="relative min-h-screen w-full overflow-y-auto">
-                                <div class="relative w-full bg-white dark:bg-slate-900 min-h-screen">
-                                    <!-- Modal Header -->
-                                    <div class="sticky top-0 z-10 bg-white/95 dark:bg-slate-900/95 backdrop-blur-lg border-b border-slate-200 dark:border-slate-700 px-4 sm:px-6 py-4 shadow-lg">
-                                        <div class="max-w-7xl mx-auto flex justify-between items-center">
-                                            <div class="flex items-center gap-4">
-                                                <button onclick="closeTaskerModal()" class="group flex items-center gap-2 px-4 py-2 bg-primary-500 hover:bg-primary-600 text-white rounded-lg transition-all duration-300 shadow-sm hover:shadow-lg">
-                                                    <i class="fas fa-arrow-left"></i>
-                                                    <span class="font-medium">Back to Services</span>
-                                                </button>
-                                            </div>
-                                            <div class="flex items-center gap-3">
-                                                <a href="#hero" onclick="closeTaskerModal()" class="flex items-center gap-2 px-4 py-2 bg-slate-100 hover:bg-slate-200 dark:bg-slate-800 dark:hover:bg-slate-700 text-slate-700 dark:text-slate-200 rounded-lg transition-all duration-300">
-                                                    <i class="fas fa-home"></i>
-                                                    <span class="hidden sm:inline">Home</span>
-                                                </a>
-                                                <button onclick="closeTaskerModal()" class="p-2 hover:bg-slate-100 dark:hover:bg-slate-800 text-slate-600 dark:text-slate-300 rounded-lg transition-colors">
-                                                    <i class="fas fa-times text-xl"></i>
-                                                </button>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <!-- Modal Body -->
-                                    
-                                    <!-- Floating Navigation Controls -->
-                                    <div class="fixed right-6 top-1/2 -translate-y-1/2 z-50 flex flex-col gap-3">
-                                        <button id="modalScrollTop" class="p-3 bg-primary-500 hover:bg-primary-600 text-white rounded-full shadow-lg hover:shadow-xl transition-all duration-300 opacity-0 invisible group">
-                                            <i class="fas fa-arrow-up text-lg"></i>
-                                            <span class="absolute right-full mr-2 bg-slate-800 text-white px-2 py-1 rounded text-sm opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 whitespace-nowrap">Scroll to Top</span>
-                                        </button>
-                                        <button id="modalScrollBottom" class="p-3 bg-primary-500 hover:bg-primary-600 text-white rounded-full shadow-lg hover:shadow-xl transition-all duration-300 opacity-0 invisible group">
-                                            <i class="fas fa-arrow-down text-lg"></i>
-                                            <span class="absolute right-full mr-2 bg-slate-800 text-white px-2 py-1 rounded text-sm opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 whitespace-nowrap">Scroll to Bottom</span>
-                                        </button>
-                                    </div>
-
-                                    <!-- Modal Body -->
-                                    <div class="max-w-7xl mx-auto px-4 sm:px-6 py-8 space-y-12">
-                                        <!-- Introduction Section -->
-                                        <div class="text-center max-w-3xl mx-auto mb-12">
-                                            <h4 class="text-2xl font-bold text-primary-600 dark:text-primary-400 mb-4">
-                                                Unlock Your Device's Full Potential
-                                            </h4>
-                                            <p class="text-lg text-slate-600 dark:text-slate-300">
-                                                Transform your Android device into a powerful automation hub with our expert Tasker solutions.
-                                            </p>
-                                        </div>
-
-                                        <!-- Core Features Grid -->
-                                        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                                            <!-- Location Automation -->
-                                            <div class="feature-card bg-white dark:bg-slate-800 rounded-xl p-6 shadow-lg">
-                                                <div class="flex items-center mb-4">
-                                                    <div class="w-12 h-12 rounded-lg bg-primary-500/10 flex items-center justify-center text-primary-500">
-                                                        <i class="fas fa-map-marker-alt text-xl"></i>
-                                                    </div>
-                                                    <h5 class="text-xl font-semibold ml-4 text-slate-900 dark:text-white">Location Automation</h5>
-                                                </div>
-                                                <ul class="space-y-3 text-slate-600 dark:text-slate-300">
-                                                    <li><i class="fas fa-check text-green-500 mr-2"></i>Home/Work mode switching</li>
-                                                    <li><i class="fas fa-check text-green-500 mr-2"></i>Geofencing triggers</li>
-                                                    <li><i class="fas fa-check text-green-500 mr-2"></i>Smart location profiles</li>
-                                                    <li><i class="fas fa-check text-green-500 mr-2"></i>Location-based notifications</li>
-                                                    <li><i class="fas fa-check text-green-500 mr-2"></i>Automated travel modes</li>
-                                                </ul>
-                                            </div>
-
-                                            <!-- Time & Schedule -->
-                                            <div class="feature-card bg-white dark:bg-slate-800 rounded-xl p-6 shadow-lg">
-                                                <div class="flex items-center mb-4">
-                                                    <div class="w-12 h-12 rounded-lg bg-secondary-500/10 flex items-center justify-center text-secondary-500">
-                                                        <i class="fas fa-clock text-xl"></i>
-                                                    </div>
-                                                    <h5 class="text-xl font-semibold ml-4 text-slate-900 dark:text-white">Time & Schedule</h5>
-                                                </div>
-                                                <ul class="space-y-3 text-slate-600 dark:text-slate-300">
-                                                    <li><i class="fas fa-check text-green-500 mr-2"></i>Calendar-based triggers</li>
-                                                    <li><i class="fas fa-check text-green-500 mr-2"></i>Scheduled tasks & reminders</li>
-                                                    <li><i class="fas fa-check text-green-500 mr-2"></i>Time-based profiles</li>
-                                                    <li><i class="fas fa-check text-green-500 mr-2"></i>Automated daily routines</li>
-                                                    <li><i class="fas fa-check text-green-500 mr-2"></i>Custom time intervals</li>
-                                                </ul>
-                                            </div>
-
-                                            <!-- Device Control -->
-                                            <div class="feature-card bg-white dark:bg-slate-800 rounded-xl p-6 shadow-lg">
-                                                <div class="flex items-center mb-4">
-                                                    <div class="w-12 h-12 rounded-lg bg-accent-500/10 flex items-center justify-center text-accent-500">
-                                                        <i class="fas fa-mobile-alt text-xl"></i>
-                                                    </div>
-                                                    <h5 class="text-xl font-semibold ml-4 text-slate-900 dark:text-white">Device Control</h5>
-                                                </div>
-                                                <ul class="space-y-3 text-slate-600 dark:text-slate-300">
-                                                    <li><i class="fas fa-check text-green-500 mr-2"></i>System settings automation</li>
-                                                    <li><i class="fas fa-check text-green-500 mr-2"></i>Battery optimization</li>
-                                                    <li><i class="fas fa-check text-green-500 mr-2"></i>Custom gestures</li>
-                                                    <li><i class="fas fa-check text-green-500 mr-2"></i>Hardware button mapping</li>
-                                                    <li><i class="fas fa-check text-green-500 mr-2"></i>Screen orientation control</li>
-                                                </ul>
-                                            </div>
-
-                                            <!-- App Integration -->
-                                            <div class="feature-card bg-white dark:bg-slate-800 rounded-xl p-6 shadow-lg">
-                                                <div class="flex items-center mb-4">
-                                                    <div class="w-12 h-12 rounded-lg bg-purple-500/10 flex items-center justify-center text-purple-500">
-                                                        <i class="fas fa-puzzle-piece text-xl"></i>
-                                                    </div>
-                                                    <h5 class="text-xl font-semibold ml-4 text-slate-900 dark:text-white">App Integration</h5>
-                                                </div>
-                                                <ul class="space-y-3 text-slate-600 dark:text-slate-300">
-                                                    <li><i class="fas fa-check text-green-500 mr-2"></i>WhatsApp automation</li>
-                                                    <li><i class="fas fa-check text-green-500 mr-2"></i>Social media integration</li>
-                                                    <li><i class="fas fa-check text-green-500 mr-2"></i>Email automation</li>
-                                                    <li><i class="fas fa-check text-green-500 mr-2"></i>Cross-app workflows</li>
-                                                    <li><i class="fas fa-check text-green-500 mr-2"></i>Custom app triggers</li>
-                                                </ul>
-                                            </div>
-
-                                            <!-- Communication -->
-                                            <div class="feature-card bg-white dark:bg-slate-800 rounded-xl p-6 shadow-lg">
-                                                <div class="flex items-center mb-4">
-                                                    <div class="w-12 h-12 rounded-lg bg-emerald-500/10 flex items-center justify-center text-emerald-500">
-                                                        <i class="fas fa-comments text-xl"></i>
-                                                    </div>
-                                                    <h5 class="text-xl font-semibold ml-4 text-slate-900 dark:text-white">Communication</h5>
-                                                </div>
-                                                <ul class="space-y-3 text-slate-600 dark:text-slate-300">
-                                                    <li><i class="fas fa-check text-green-500 mr-2"></i>Auto-reply messages</li>
-                                                    <li><i class="fas fa-check text-green-500 mr-2"></i>Call management</li>
-                                                    <li><i class="fas fa-check text-green-500 mr-2"></i>SMS automation</li>
-                                                    <li><i class="fas fa-check text-green-500 mr-2"></i>Contact-based actions</li>
-                                                    <li><i class="fas fa-check text-green-500 mr-2"></i>Communication logs</li>
-                                                </ul>
-                                            </div>
-
-                                            <!-- Security & Privacy -->
-                                            <div class="feature-card bg-white dark:bg-slate-800 rounded-xl p-6 shadow-lg">
-                                                <div class="flex items-center mb-4">
-                                                    <div class="w-12 h-12 rounded-lg bg-red-500/10 flex items-center justify-center text-red-500">
-                                                        <i class="fas fa-shield-alt text-xl"></i>
-                                                    </div>
-                                                    <h5 class="text-xl font-semibold ml-4 text-slate-900 dark:text-white">Security & Privacy</h5>
-                                                </div>
-                                                <ul class="space-y-3 text-slate-600 dark:text-slate-300">
-                                                    <li><i class="fas fa-check text-green-500 mr-2"></i>App security locks</li>
-                                                    <li><i class="fas fa-check text-green-500 mr-2"></i>Location tracking</li>
-                                                    <li><i class="fas fa-check text-green-500 mr-2"></i>Privacy controls</li>
-                                                    <li><i class="fas fa-check text-green-500 mr-2"></i>Data backup automation</li>
-                                                    <li><i class="fas fa-check text-green-500 mr-2"></i>Anti-theft features</li>
-                                                </ul>
-                                            </div>
-                                        </div>
-
-                                        <!-- Advanced Features Section -->
-                                        <div class="mt-16">
-                                            <h4 class="text-2xl font-bold text-slate-900 dark:text-white mb-8 text-center">Advanced Capabilities</h4>
-                                            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                                                <!-- Variables & Arrays -->
-                                                <div class="bg-slate-50 dark:bg-slate-800/50 rounded-xl p-6">
-                                                    <h5 class="text-lg font-semibold text-slate-900 dark:text-white mb-4">Variables & Arrays</h5>
-                                                    <ul class="space-y-2 text-slate-600 dark:text-slate-300">
-                                                        <li>• Global and local variables</li>
-                                                        <li>• Array operations</li>
-                                                        <li>• Dynamic value storage</li>
-                                                        <li>• Data persistence</li>
-                                                    </ul>
-                                                </div>
-
-                                                <!-- Scenes -->
-                                                <div class="bg-slate-50 dark:bg-slate-800/50 rounded-xl p-6">
-                                                    <h5 class="text-lg font-semibold text-slate-900 dark:text-white mb-4">Custom Scenes</h5>
-                                                    <ul class="space-y-2 text-slate-600 dark:text-slate-300">
-                                                        <li>• Custom UI creation</li>
-                                                        <li>• Interactive overlays</li>
-                                                        <li>• Dynamic elements</li>
-                                                        <li>• Visual feedback</li>
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                        <!-- Best Practices Section -->
-                                        <div class="mt-16 bg-gradient-to-r from-slate-50 to-blue-50 dark:from-slate-800/50 dark:to-blue-900/20 rounded-2xl p-8 border border-slate-200/50 dark:border-slate-700/50">
-                                            <h4 class="text-2xl font-bold text-slate-900 dark:text-white mb-6 text-center">Achieving Best Results</h4>
-                                            
-                                            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
-                                                <!-- Optimization Tips -->
-                                                <div class="space-y-6">
-                                                    <h5 class="text-xl font-semibold text-primary-600 dark:text-primary-400 mb-4">
-                                                        <i class="fas fa-lightbulb mr-2"></i>Optimization Tips
-                                                    </h5>
-                                                    <div class="space-y-4">
-                                                        <div class="flex items-start gap-3">
-                                                            <div class="flex-shrink-0 w-8 h-8 rounded-full bg-primary-500/10 flex items-center justify-center text-primary-500">
-                                                                <i class="fas fa-battery-full"></i>
-                                                            </div>
-                                                            <div>
-                                                                <h6 class="font-semibold text-slate-900 dark:text-white mb-1">Battery Efficiency</h6>
-                                                                <p class="text-slate-600 dark:text-slate-300">Use event-based triggers instead of continuous monitoring when possible</p>
-                                                            </div>
-                                                        </div>
-                                                        <div class="flex items-start gap-3">
-                                                            <div class="flex-shrink-0 w-8 h-8 rounded-full bg-primary-500/10 flex items-center justify-center text-primary-500">
-                                                                <i class="fas fa-clock"></i>
-                                                            </div>
-                                                            <div>
-                                                                <h6 class="font-semibold text-slate-900 dark:text-white mb-1">Timing Precision</h6>
-                                                                <p class="text-slate-600 dark:text-slate-300">Add appropriate wait times between actions for reliable execution</p>
-                                                            </div>
-                                                        </div>
-                                                        <div class="flex items-start gap-3">
-                                                            <div class="flex-shrink-0 w-8 h-8 rounded-full bg-primary-500/10 flex items-center justify-center text-primary-500">
-                                                                <i class="fas fa-code-branch"></i>
-                                                            </div>
-                                                            <div>
-                                                                <h6 class="font-semibold text-slate-900 dark:text-white mb-1">Logic Structure</h6>
-                                                                <p class="text-slate-600 dark:text-slate-300">Use if/else conditions to handle different scenarios and edge cases</p>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-
-                                                <!-- Best Practices -->
-                                                <div class="space-y-6">
-                                                    <h5 class="text-xl font-semibold text-secondary-600 dark:text-secondary-400 mb-4">
-                                                        <i class="fas fa-check-circle mr-2"></i>Best Practices
-                                                    </h5>
-                                                    <ul class="space-y-4 text-slate-600 dark:text-slate-300">
-                                                        <li class="flex items-start gap-3">
-                                                            <i class="fas fa-check text-green-500 mt-1"></i>
-                                                            <span><strong>Test Thoroughly:</strong> Always test your profiles in different scenarios before relying on them</span>
-                                                        </li>
-                                                        <li class="flex items-start gap-3">
-                                                            <i class="fas fa-check text-green-500 mt-1"></i>
-                                                            <span><strong>Backup Regularly:</strong> Export and save your profiles to prevent loss of complex setups</span>
-                                                        </li>
-                                                        <li class="flex items-start gap-3">
-                                                            <i class="fas fa-check text-green-500 mt-1"></i>
-                                                            <span><strong>Document Changes:</strong> Keep notes of your automation logic for future reference</span>
-                                                        </li>
-                                                        <li class="flex items-start gap-3">
-                                                            <i class="fas fa-check text-green-500 mt-1"></i>
-                                                            <span><strong>Implement Safeguards:</strong> Add error handling and fallback options in critical automations</span>
-                                                        </li>
-                                                    </ul>
-                                                </div>
-                                            </div>
-
-                                            <!-- Pro Tips -->
-                                            <div class="mt-8 bg-slate-900 dark:bg-slate-800 rounded-xl p-6 text-white">
-                                                <h5 class="text-xl font-semibold mb-4 text-primary-400">
-                                                    <i class="fas fa-star mr-2"></i>Pro Tips
-                                                </h5>
-                                                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-                                                    <div class="bg-slate-800/50 p-4 rounded-lg">
-                                                        <p><i class="fas fa-bolt text-yellow-500 mr-2"></i>Use system variables for dynamic data</p>
-                                                    </div>
-                                                    <div class="bg-slate-800/50 p-4 rounded-lg">
-                                                        <p><i class="fas fa-shield-alt text-green-500 mr-2"></i>Implement conflict prevention</p>
-                                                    </div>
-                                                    <div class="bg-slate-800/50 p-4 rounded-lg">
-                                                        <p><i class="fas fa-sync text-blue-500 mr-2"></i>Regular profile maintenance</p>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                        <!-- Call-to-Action Section -->
-                                        <div class="bg-gradient-to-r from-primary-500 to-secondary-500 rounded-xl p-8 mt-12">
-                                            <div class="max-w-3xl mx-auto text-center text-white">
-                                                <h4 class="text-2xl font-bold mb-4">Ready to Automate Your Android Experience?</h4>
-                                                <p class="text-white/90 mb-6">Let us help you create the perfect automation setup for your needs.</p>
-                                                <div class="flex flex-col sm:flex-row gap-4 justify-center">
-                                                    <a href="#footer" onclick="closeTaskerModal()" class="inline-flex items-center justify-center gap-2 px-6 py-3 bg-white text-primary-600 rounded-lg hover:bg-opacity-90 transition-colors">
-                                                        <span>Get Started Now</span>
-                                                        <i class="fas fa-arrow-right"></i>
-                                                    </a>
-                                                    <button onclick="closeTaskerModal()" class="inline-flex items-center justify-center gap-2 px-6 py-3 bg-transparent border border-white text-white rounded-lg hover:bg-white/10 transition-colors">
-                                                        <span>Close</span>
-                                                        <i class="fas fa-times"></i>
-                                                    </button>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>                        <!-- Service Card 2 -->
-                        <div class="service-card flex flex-col refined-card bg-white dark:bg-dark-card p-8 transition-all duration-300 animate-fade-in-up" style="animation-delay: 150ms;">
-                            <div class="flex-shrink-0 w-20 h-20 flex items-center justify-center rounded-2xl bg-gradient-to-br from-secondary/20 via-secondary/15 to-transparent p-0.5 text-secondary mb-8 group-hover:scale-110 transition-all duration-500 relative overflow-hidden shadow-xl shadow-secondary/10">
-                                <div class="absolute inset-0 bg-gradient-to-br from-secondary/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-                                <div class="relative w-full h-full rounded-xl bg-white dark:bg-slate-900/50 flex items-center justify-center backdrop-blur-sm">
-                                    <div class="relative">
-                                        <i class="fas fa-tools text-4xl absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-500 transform translate-y-4 group-hover:translate-y-0 group-hover:rotate-12"></i>
-                                        <i class="fas fa-mobile-alt text-4xl absolute inset-0 flex items-center justify-center opacity-100 group-hover:opacity-0 transition-all duration-500 transform scale-100 group-hover:scale-90 group-hover:-translate-y-4"></i>
-                                    </div>
-                                </div>
-                            </div>
-                            <h3 class="text-2xl font-bold mb-3 text-slate-800 dark:text-white group-hover:text-secondary transition-colors duration-300">Device Sales & Repairs</h3>
-                            <p class="text-base text-slate-600 dark:text-slate-300 mb-6 flex-grow">Access premium certified devices and expert repair services. Our skilled technicians deliver rapid, warranty-backed solutions using genuine parts, ensuring minimal downtime for your business operations.</p>
-                            <!-- Updated CTA to point to the footer -->
-                            <a href="#footer" class="btn btn-secondary mt-auto inline-block text-left font-semibold text-primary-DEFAULT dark:text-primary-DEFAULT/80 hover:text-primary-hover dark:hover:text-primary-DEFAULT transition-colors duration-300 group">
-                                Inquire Now <i class="fas fa-arrow-right ml-1 transform group-hover:translate-x-1 transition-transform"></i>
-                            </a>
-                        </div>
-
-                        <!-- Service Card 3 -->
-                        <div class="service-card flex flex-col refined-card bg-white dark:bg-dark-card p-8 transition-all duration-300 animate-fade-in-up" style="animation-delay: 300ms;">
-                            <div class="flex-shrink-0 w-20 h-20 flex items-center justify-center rounded-2xl bg-gradient-to-br from-accent/20 via-accent/15 to-transparent p-0.5 text-accent mb-8 group-hover:scale-110 transition-all duration-500 relative overflow-hidden shadow-xl shadow-accent/10">
-                                <div class="absolute inset-0 bg-gradient-to-br from-accent/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-                                <div class="relative w-full h-full rounded-xl bg-white dark:bg-slate-900/50 flex items-center justify-center backdrop-blur-sm">
-                                    <div class="relative">
-                                        <i class="fas fa-laptop-code text-4xl absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-500 transform translate-y-4 group-hover:translate-y-0"></i>
-                                        <i class="fas fa-code text-4xl absolute inset-0 flex items-center justify-center opacity-100 group-hover:opacity-0 transition-all duration-500 transform scale-100 group-hover:scale-90 group-hover:-translate-y-4"></i>
-                                    </div>
-                                </div>
-                            </div>
-                            <h3 class="text-2xl font-bold mb-3 text-slate-800 dark:text-white group-hover:text-accent transition-colors duration-300">Custom Software Solutions</h3>
-                            <p class="text-base text-slate-600 dark:text-slate-300 mb-6 flex-grow">Elevate your business with tailored software solutions. Our expert developers create scalable, innovative applications that optimize processes, enhance user experience, and drive sustainable growth.</p>
-                            <!-- Updated CTA to point to the footer -->
-                            <a href="#footer" class="btn btn-secondary mt-auto inline-block text-left font-semibold text-primary-DEFAULT dark:text-primary-DEFAULT/80 hover:text-primary-hover dark:hover:text-primary-DEFAULT transition-colors duration-300 group">
-                                Learn More <i class="fas fa-arrow-right ml-1 transform group-hover:translate-x-1 transition-transform"></i>
-                            </a>
-                        </div>
-                        
-                        <!-- Service Card 4 -->
-                        <div class="service-card flex flex-col refined-card bg-white dark:bg-dark-card p-8 transition-all duration-300 animate-fade-in-up">
-                            <div class="flex-shrink-0 w-20 h-20 flex items-center justify-center rounded-2xl bg-gradient-to-br from-purple-500/20 via-purple-500/15 to-transparent p-0.5 text-purple-500 mb-8 group-hover:scale-110 transition-all duration-500 relative overflow-hidden shadow-xl shadow-purple-500/10">
-                                <div class="absolute inset-0 bg-gradient-to-br from-purple-500/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-                                <div class="relative w-full h-full rounded-xl bg-white dark:bg-slate-900/50 flex items-center justify-center backdrop-blur-sm">
-                                    <div class="relative">
-                                        <i class="fas fa-brain text-4xl absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-500 transform translate-y-4 group-hover:translate-y-0"></i>
-                                        <i class="fas fa-microchip text-4xl absolute inset-0 flex items-center justify-center opacity-100 group-hover:opacity-0 transition-all duration-500 transform scale-100 group-hover:scale-90 group-hover:-translate-y-4"></i>
-                                    </div>
-                                </div>
-                            </div>
-                            <h3 class="text-2xl font-bold mb-3 text-slate-800 dark:text-white group-hover:text-purple-500 transition-colors duration-300">AI & Automation</h3>
-                            <p class="text-base text-slate-600 dark:text-slate-300 mb-6 flex-grow">Harness cutting-edge AI technology to revolutionize your business operations. Our advanced solutions deliver predictive analytics, process automation, and data-driven insights for strategic decision-making.</p>
-                            <!-- Updated CTA to point to the footer -->
-                            <a href="#footer" class="btn btn-secondary mt-auto inline-block text-left font-semibold text-primary-DEFAULT dark:text-primary-DEFAULT/80 hover:text-primary-hover dark:hover:text-primary-DEFAULT transition-colors duration-300 group">
-                                Learn More <i class="fas fa-arrow-right ml-1 transform group-hover:translate-x-1 transition-transform"></i>
-                            </a>
-                        </div>
-
-                        <!-- Service Card 5 -->
-                        <div class="service-card flex flex-col refined-card bg-white dark:bg-dark-card p-8 transition-all duration-300 animate-fade-in-up" style="animation-delay: 150ms;">
-                            <div class="flex-shrink-0 w-20 h-20 flex items-center justify-center rounded-2xl bg-gradient-to-br from-emerald-500/20 via-emerald-500/15 to-transparent p-0.5 text-emerald-500 mb-8 group-hover:scale-110 transition-all duration-500 relative overflow-hidden shadow-xl shadow-emerald-500/10">
-                                <div class="absolute inset-0 bg-gradient-to-br from-emerald-500/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-                                <div class="relative w-full h-full rounded-xl bg-white dark:bg-slate-900/50 flex items-center justify-center backdrop-blur-sm">
-                                    <div class="relative">
-                                        <i class="fas fa-network-wired text-4xl absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-500 transform translate-y-4 group-hover:translate-y-0"></i>
-                                        <i class="fas fa-shield-alt text-4xl absolute inset-0 flex items-center justify-center opacity-100 group-hover:opacity-0 transition-all duration-500 transform scale-100 group-hover:scale-90 group-hover:-translate-y-4"></i>
-                                    </div>
-                                </div>
-                            </div>
-                            <h3 class="text-2xl font-bold mb-3 text-slate-800 dark:text-white group-hover:text-emerald-500 transition-colors duration-300">IT Support & Connectivity</h3>
-                            <p class="text-base text-slate-600 dark:text-slate-300 mb-6 flex-grow">Ensure seamless business operations with our comprehensive IT infrastructure solutions. From secure network setups to 24/7 technical support, we deliver enterprise-grade reliability and performance.</p>
-                            <!-- Updated CTA to point to the footer -->
-                            <a href="#footer" class="btn btn-secondary mt-auto inline-block text-left font-semibold text-primary-DEFAULT dark:text-primary-DEFAULT/80 hover:text-primary-hover dark:hover:text-primary-DEFAULT transition-colors duration-300 group">
-                                Get Support <i class="fas fa-arrow-right ml-1 transform group-hover:translate-x-1 transition-transform"></i>
-                            </a>
-                        </div>
-
-                        <!-- Service Card 6 - Internet Cafe -->
-                        <div class="service-card flex flex-col refined-card bg-white dark:bg-dark-card p-8 transition-all duration-300 animate-fade-in-up" style="animation-delay: 300ms;">
-                            <div class="flex-shrink-0 w-20 h-20 flex items-center justify-center rounded-2xl bg-gradient-to-br from-amber-500/20 via-amber-500/15 to-transparent p-0.5 text-amber-500 mb-8 group-hover:scale-110 transition-all duration-500 relative overflow-hidden shadow-xl shadow-amber-500/10">
-                                <div class="absolute inset-0 bg-gradient-to-br from-amber-500/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-                                <div class="relative w-full h-full rounded-xl bg-white dark:bg-slate-900/50 flex items-center justify-center backdrop-blur-sm">
-                                    <div class="relative">
-                                        <i class="fas fa-wifi text-4xl absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-500 transform translate-y-4 group-hover:translate-y-0"></i>
-                                        <i class="fas fa-satellite-dish text-4xl absolute inset-0 flex items-center justify-center opacity-100 group-hover:opacity-0 transition-all duration-500 transform scale-100 group-hover:scale-90 group-hover:-translate-y-4"></i>
-                                    </div>
-                                </div>
-                            </div>
-                            <h3 class="text-2xl font-bold mb-3 text-slate-800 dark:text-white">High-Speed Internet Cafe</h3>
-                            <p class="text-base text-slate-600 dark:text-slate-300 mb-6 flex-grow">Experience enterprise-level connectivity powered by Starlink technology. Our professional workspace combines ultra-fast internet, ergonomic workstations, and a premium environment for maximum productivity.</p>
-                            <!-- Updated CTA to point to the footer -->
-                            <a href="#footer" class="btn btn-secondary mt-auto inline-block text-left font-semibold text-primary-DEFAULT dark:text-primary-DEFAULT/80 hover:text-primary-hover dark:hover:text-primary-DEFAULT transition-colors duration-300 group">
-                                Visit Cafe <i class="fas fa-arrow-right ml-1 transform group-hover:translate-x-1 transition-transform"></i>
-                            </a>
-                        </div>
+                        <h3 class="text-2xl font-bold mb-3 text-slate-800 dark:text-white group-hover:text-primary transition-colors duration-300">Android Automation (Tasker)</h3>
+                        <p class="text-base text-slate-600 dark:text-slate-300 mb-6 flex-grow">Automate complex tasks and workflows on your Android device using Tasker. Increase productivity, save time, and unlock the full potential of your smartphone.</p>
+                        <a href="#" onclick="openTaskerModal(event)" class="btn btn-primary mt-auto inline-block text-left font-semibold text-primary-DEFAULT dark:text-primary-DEFAULT/80 hover:text-primary-hover dark:hover:text-primary-DEFAULT transition-colors duration-300 group">
+                            Explore Automation
+                            <i class="fas fa-arrow-right ml-1 transform group-hover:translate-x-1 transition-transform"></i>
+                        </a>
                     </div>
+
+                    <div class="service-card flex flex-col refined-card bg-white dark:bg-dark-card p-8 transition-all duration-300 animate-fade-in-up" style="animation-delay: 150ms;">
+                        <div class="flex-shrink-0 w-20 h-20 flex items-center justify-center rounded-2xl bg-gradient-to-br from-secondary/20 via-secondary/15 to-transparent p-0.5 text-secondary mb-8 group-hover:scale-110 transition-all duration-500 relative overflow-hidden shadow-xl shadow-secondary/10">
+                            <div class="absolute inset-0 bg-gradient-to-br from-secondary/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                            <div class="relative w-full h-full rounded-xl bg-white dark:bg-slate-900/50 flex items-center justify-center backdrop-blur-sm">
+                                <div class="relative">
+                                    <i class="fas fa-tools text-4xl absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-500 transform translate-y-4 group-hover:translate-y-0"></i>
+                                    <i class="fas fa-mobile-alt text-4xl absolute inset-0 flex items-center justify-center opacity-100 group-hover:opacity-0 transition-all duration-500 transform scale-100 group-hover:scale-90 group-hover:-translate-y-4"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <h3 class="text-2xl font-bold mb-3 text-slate-800 dark:text-white group-hover:text-secondary transition-colors duration-300">Phone & Computer Sales / Repairs</h3>
+                        <p class="text-base text-slate-600 dark:text-slate-300 mb-6 flex-grow">From screen replacements to complex motherboard fixes, we offer reliable sales and repair services for all major phone, tablet, and computer brands. Get premium parts and expert technicians.</p>
+                        <a href="#footer" class="btn btn-secondary mt-auto inline-block text-left font-semibold text-primary-DEFAULT dark:text-primary-DEFAULT/80 hover:text-primary-hover dark:hover:text-primary-DEFAULT transition-colors duration-300 group">
+                            Get Quote
+                            <i class="fas fa-arrow-right ml-1 transform group-hover:translate-x-1 transition-transform"></i>
+                        </a>
+                    </div>
+
+                    <div class="service-card flex flex-col refined-card bg-white dark:bg-dark-card p-8 transition-all duration-300 animate-fade-in-up" style="animation-delay: 300ms;">
+                        <div class="flex-shrink-0 w-20 h-20 flex items-center justify-center rounded-2xl bg-gradient-to-br from-accent/20 via-accent/15 to-transparent p-0.5 text-accent mb-8 group-hover:scale-110 transition-all duration-500 relative overflow-hidden shadow-xl shadow-accent/10">
+                            <div class="absolute inset-0 bg-gradient-to-br from-accent/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                            <div class="relative w-full h-full rounded-xl bg-white dark:bg-slate-900/50 flex items-center justify-center backdrop-blur-sm">
+                                <div class="relative">
+                                    <i class="fas fa-laptop-code text-4xl absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-500 transform translate-y-4 group-hover:translate-y-0"></i>
+                                    <i class="fas fa-code text-4xl absolute inset-0 flex items-center justify-center opacity-100 group-hover:opacity-0 transition-all duration-500 transform scale-100 group-hover:scale-90 group-hover:-translate-y-4"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <h3 class="text-2xl font-bold mb-3 text-slate-800 dark:text-white group-hover:text-accent transition-colors duration-300">Custom Software Solutions</h3>
+                        <p class="text-base text-slate-600 dark:text-slate-300 mb-6 flex-grow">Elevate your business with tailored software solutions. Our expert developers create scalable, innovative applications that optimize processes, enhance user experience, and drive sustainable growth.</p>
+                        <a href="#footer" class="btn btn-secondary mt-auto inline-block text-left font-semibold text-primary-DEFAULT dark:text-primary-DEFAULT/80 hover:text-primary-hover dark:hover:text-primary-DEFAULT transition-colors duration-300 group">
+                            Learn More
+                            <i class="fas fa-arrow-right ml-1 transform group-hover:translate-x-1 transition-transform"></i>
+                        </a>
+                    </div>
+                    
+                    <div class="service-card flex flex-col refined-card bg-white dark:bg-dark-card p-8 transition-all duration-300 animate-fade-in-up" style="animation-delay: 450ms;">
+                        <div class="flex-shrink-0 w-20 h-20 flex items-center justify-center rounded-2xl bg-gradient-to-br from-red-500/20 via-red-500/15 to-transparent p-0.5 text-red-500 mb-8 group-hover:scale-110 transition-all duration-500 relative overflow-hidden shadow-xl shadow-red-500/10">
+                            <div class="absolute inset-0 bg-gradient-to-br from-red-500/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                            <div class="relative w-full h-full rounded-xl bg-white dark:bg-slate-900/50 flex items-center justify-center backdrop-blur-sm">
+                                <div class="relative">
+                                    <i class="fas fa-drafting-compass text-4xl absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-500 transform translate-y-4 group-hover:translate-y-0"></i>
+                                    <i class="fas fa-rocket text-4xl absolute inset-0 flex items-center justify-center opacity-100 group-hover:opacity-0 transition-all duration-500 transform scale-100 group-hover:scale-90 group-hover:-translate-y-4"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <h3 class="text-2xl font-bold mb-3 text-slate-800 dark:text-white group-hover:text-red-500 transition-colors duration-300">Mobile App Development</h3>
+                        <p class="text-base text-slate-600 dark:text-slate-300 mb-6 flex-grow">We build high-performance, engaging mobile applications for iOS and Android. Our focus is on user experience, stability, and timely delivery to bring your app idea to life.</p>
+                        <a href="#footer" class="btn btn-secondary mt-auto inline-block text-left font-semibold text-primary-DEFAULT dark:text-primary-DEFAULT/80 hover:text-primary-hover dark:hover:text-primary-DEFAULT transition-colors duration-300 group">
+                            Start Project
+                            <i class="fas fa-arrow-right ml-1 transform group-hover:translate-x-1 transition-transform"></i>
+                        </a>
+                    </div>
+                    
+                    <div class="service-card flex flex-col refined-card bg-white dark:bg-dark-card p-8 transition-all duration-300 animate-fade-in-up" style="animation-delay: 600ms;">
+                        <div class="flex-shrink-0 w-20 h-20 flex items-center justify-center rounded-2xl bg-gradient-to-br from-emerald-500/20 via-emerald-500/15 to-transparent p-0.5 text-emerald-500 mb-8 group-hover:scale-110 transition-all duration-500 relative overflow-hidden shadow-xl shadow-emerald-500/10">
+                            <div class="absolute inset-0 bg-gradient-to-br from-emerald-500/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                            <div class="relative w-full h-full rounded-xl bg-white dark:bg-slate-900/50 flex items-center justify-center backdrop-blur-sm">
+                                <div class="relative">
+                                    <i class="fas fa-network-wired text-4xl absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-500 transform translate-y-4 group-hover:translate-y-0"></i>
+                                    <i class="fas fa-shield-alt text-4xl absolute inset-0 flex items-center justify-center opacity-100 group-hover:opacity-0 transition-all duration-500 transform scale-100 group-hover:scale-90 group-hover:-translate-y-4"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <h3 class="text-2xl font-bold mb-3 text-slate-800 dark:text-white group-hover:text-emerald-500 transition-colors duration-300">IT Support & Connectivity</h3>
+                        <p class="text-base text-slate-600 dark:text-slate-300 mb-6 flex-grow">Ensure seamless business operations with our comprehensive IT infrastructure solutions. From secure network setups to 24/7 technical support, we deliver enterprise-grade reliability and performance.</p>
+                        <a href="#footer" class="btn btn-secondary mt-auto inline-block text-left font-semibold text-primary-DEFAULT dark:text-primary-DEFAULT/80 hover:text-primary-hover dark:hover:text-primary-DEFAULT transition-colors duration-300 group">
+                            Get Support
+                            <i class="fas fa-arrow-right ml-1 transform group-hover:translate-x-1 transition-transform"></i>
+                        </a>
+                    </div>
+                    
+                    <div class="service-card flex flex-col refined-card bg-white dark:bg-dark-card p-8 transition-all duration-300 animate-fade-in-up" style="animation-delay: 750ms;">
+                        <div class="flex-shrink-0 w-20 h-20 flex items-center justify-center rounded-2xl bg-gradient-to-br from-yellow-500/20 via-yellow-500/15 to-transparent p-0.5 text-yellow-500 mb-8 group-hover:scale-110 transition-all duration-500 relative overflow-hidden shadow-xl shadow-yellow-500/10">
+                            <div class="absolute inset-0 bg-gradient-to-br from-yellow-500/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                            <div class="relative w-full h-full rounded-xl bg-white dark:bg-slate-900/50 flex items-center justify-center backdrop-blur-sm">
+                                <div class="relative">
+                                    <i class="fas fa-wifi text-4xl absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-500 transform translate-y-4 group-hover:translate-y-0"></i>
+                                    <i class="fas fa-globe text-4xl absolute inset-0 flex items-center justify-center opacity-100 group-hover:opacity-0 transition-all duration-500 transform scale-100 group-hover:scale-90 group-hover:-translate-y-4"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <h3 class="text-2xl font-bold mb-3 text-slate-800 dark:text-white group-hover:text-yellow-500 transition-colors duration-300">Internet Café Services</h3>
+                        <p class="text-base text-slate-600 dark:text-slate-300 mb-6 flex-grow">High-speed internet access, printing, scanning, and professional administrative support in a comfortable and modern environment. Your hub for digital productivity and connectivity.</p>
+                        <a href="#footer" class="btn btn-secondary mt-auto inline-block text-left font-semibold text-primary-DEFAULT dark:text-primary-DEFAULT/80 hover:text-primary-hover dark:hover:text-primary-DEFAULT transition-colors duration-300 group">
+                            Find Location
+                            <i class="fas fa-arrow-right ml-1 transform group-hover:translate-x-1 transition-transform"></i>
+                        </a>
+                    </div>
+
                 </div>
+            </div>
         </section>
 
-        <!-- Testimonials section has been completely removed -->
+        <div id="taskerModal" class="fixed inset-0 hidden z-[99] bg-black/80 backdrop-blur-lg transition-opacity duration-300 overflow-y-auto">
+            <div onclick="closeTaskerModal()" class="absolute inset-0 z-0"></div>
 
+            <div class="relative min-h-screen w-full overflow-y-auto">
+                <div class="relative w-full bg-white dark:bg-slate-900 min-h-screen">
+                    <div class="sticky top-0 z-10 bg-white/95 dark:bg-slate-900/95 backdrop-blur-lg border-b border-slate-200 dark:border-slate-700 px-4 sm:px-6 py-4 shadow-lg">
+                        <div class="max-w-7xl mx-auto flex justify-between items-center">
+                            <div class="flex items-center gap-4">
+                                <button onclick="closeTaskerModal()" class="group flex items-center gap-2 px-4 py-2 bg-primary-500 hover:bg-primary-600 text-white rounded-lg transition-all duration-300 shadow-sm hover:shadow-lg">
+                                    <i class="fas fa-arrow-left"></i>
+                                    <span class="font-medium">Back to Services</span>
+                                </button>
+                            </div>
+                            <div class="flex items-center gap-3">
+                                <a href="#hero" onclick="closeTaskerModal()" class="flex items-center gap-3 text-neutral-800 dark:text-white font-display text-xl font-bold">
+                                    <i class="fas fa-microchip text-primary-500"></i>
+                                    Justwise
+                                </a>
+                                <button onclick="closeTaskerModal()" class="w-10 h-10 flex items-center justify-center rounded-full bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-700 transition-colors">
+                                    <i class="fas fa-times text-xl"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 lg:py-16">
+                        
+                        <div class="max-w-4xl mx-auto">
+                            <div class="text-center mb-12">
+                                <span class="inline-block px-4 py-1 text-sm font-semibold rounded-full bg-primary-500/10 text-primary-500 mb-4">
+                                    Premium Service
+                                </span>
+                                <h1 class="text-4xl lg:text-5xl font-display font-bold text-slate-800 dark:text-white mb-4">
+                                    Advanced Android Automation with Tasker
+                                </h1>
+                                <p class="text-xl text-slate-600 dark:text-slate-400">
+                                    Transform your Android device into an intelligent personal assistant, automating everything from simple settings to complex inter-app workflows.
+                                </p>
+                            </div>
+
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
+                                <div class="p-6 refined-card bg-slate-50 dark:bg-slate-800/50">
+                                    <h4 class="text-2xl font-bold text-primary-600 dark:text-primary-400 mb-3 flex items-center"><i class="fas fa-bolt mr-3"></i>Efficiency Boost</h4>
+                                    <p class="text-slate-700 dark:text-slate-300">Set up automatic responses, location-based profiles, and energy-saving routines to maximize device utility.</p>
+                                </div>
+                                <div class="p-6 refined-card bg-slate-50 dark:bg-slate-800/50">
+                                    <h4 class="text-2xl font-bold text-secondary-600 dark:text-secondary-400 mb-3 flex items-center"><i class="fas fa-lock mr-3"></i>Custom Security</h4>
+                                    <p class="text-slate-700 dark:text-slate-300">Implement anti-theft measures, remote lock/wipe functions, and custom security prompts based on network or location.</p>
+                                </div>
+                            </div>
+
+                            <div class="bg-white dark:bg-slate-800 refined-section p-8 lg:p-10 mb-12">
+                                <h3 class="text-3xl font-display font-bold text-slate-800 dark:text-white mb-6 text-center">Our Automation Process</h3>
+                                <div class="space-y-8">
+                                    
+                                    <div class="flex items-start gap-4 p-4 rounded-lg hover:bg-slate-100/50 dark:hover:bg-slate-700/50 transition-colors">
+                                        <div class="flex-shrink-0 w-10 h-10 flex items-center justify-center rounded-full bg-primary-500 text-white font-bold text-xl shadow-lg">1</div>
+                                        <div>
+                                            <h4 class="text-xl font-semibold text-slate-800 dark:text-white">Consultation & Discovery</h4>
+                                            <p class="text-slate-600 dark:text-slate-400">We analyze your daily routine and specific needs to identify the most impactful automation opportunities.</p>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="flex items-start gap-4 p-4 rounded-lg hover:bg-slate-100/50 dark:hover:bg-slate-700/50 transition-colors">
+                                        <div class="flex-shrink-0 w-10 h-10 flex items-center justify-center rounded-full bg-secondary-500 text-white font-bold text-xl shadow-lg">2</div>
+                                        <div>
+                                            <h4 class="text-xl font-semibold text-slate-800 dark:text-white">Custom Profile Development</h4>
+                                            <p class="text-slate-600 dark:text-slate-400">Our experts build, test, and refine the Tasker profiles, tasks, and scenes specifically for your device and use case.</p>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="flex items-start gap-4 p-4 rounded-lg hover:bg-slate-100/50 dark:hover:bg-slate-700/50 transition-colors">
+                                        <div class="flex-shrink-0 w-10 h-10 flex items-center justify-center rounded-full bg-accent-500 text-white font-bold text-xl shadow-lg">3</div>
+                                        <div>
+                                            <h4 class="text-xl font-semibold text-slate-800 dark:text-white">Implementation & Support</h4>
+                                            <p class="text-slate-600 dark:text-slate-400">We install the configurations and provide documentation and support to ensure smooth, long-term operation.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                                <div class="bg-primary-500/10 dark:bg-primary-500/10 rounded-xl p-6">
+                                    <h5 class="text-xl font-semibold mb-4 text-primary-600 dark:text-primary-400 flex items-center">
+                                        <i class="fas fa-list-check mr-2"></i>What You Get
+                                    </h5>
+                                    <ul class="space-y-3 text-slate-700 dark:text-slate-300">
+                                        <li class="flex items-start gap-3">
+                                            <i class="fas fa-check text-green-500 mt-1"></i>
+                                            <span><strong>Optimized Profiles:</strong> Hand-coded Tasker profiles for reliability and performance.</span>
+                                        </li>
+                                        <li class="flex items-start gap-3">
+                                            <i class="fas fa-check text-green-500 mt-1"></i>
+                                            <span><strong>Complete Documentation:</strong> A full guide on your new automations for future reference</span>
+                                        </li>
+                                        <li class="flex items-start gap-3">
+                                            <i class="fas fa-check text-green-500 mt-1"></i>
+                                            <span><strong>Implement Safeguards:</strong> Add error handling and fallback options in critical automations</span>
+                                        </li>
+                                    </ul>
+                                </div>
+
+                                <div class="mt-8 bg-slate-900 dark:bg-slate-800 rounded-xl p-6 text-white">
+                                    <h5 class="text-xl font-semibold mb-4 text-primary-400">
+                                        <i class="fas fa-star mr-2"></i>Pro Tips
+                                    </h5>
+                                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+                                        <div class="bg-slate-800/50 p-4 rounded-lg">
+                                            <p><i class="fas fa-bolt text-yellow-500 mr-2"></i>Use system variables for dynamic data</p>
+                                        </div>
+                                        <div class="bg-slate-800/50 p-4 rounded-lg">
+                                            <p><i class="fas fa-shield-alt text-green-500 mr-2"></i>Implement conflict prevention</p>
+                                        </div>
+                                        <div class="bg-slate-800/50 p-4 rounded-lg">
+                                            <p><i class="fas fa-sync text-blue-500 mr-2"></i>Regular profile maintenance</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="bg-gradient-to-r from-primary-500 to-secondary-500 rounded-xl p-8 mt-12">
+                                <div class="max-w-3xl mx-auto text-center text-white">
+                                    <h4 class="text-2xl font-bold mb-4">Ready to Automate Your Android Experience?</h4>
+                                    <p class="text-white/90 mb-6">Let us help you create the perfect automation setup for your needs.</p>
+                                    <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                                        <a href="#footer" onclick="closeTaskerModal()" class="inline-flex items-center justify-center gap-2 px-6 py-3 bg-white text-primary-600 rounded-lg hover:bg-opacity-90 transition-colors">
+                                            <span>Get Started Now</span>
+                                            <i class="fas fa-arrow-right"></i>
+                                        </a>
+                                        <button onclick="closeTaskerModal()" class="inline-flex items-center justify-center gap-2 px-6 py-3 bg-transparent border border-white text-white rounded-lg hover:bg-white/10 transition-colors">
+                                            <span>Close</span>
+                                            <i class="fas fa-times"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="fixed bottom-10 right-10 z-20 flex flex-col gap-3">
+                <button id="modalScrollTop" class="w-12 h-12 flex items-center justify-center rounded-full bg-primary-500 text-white shadow-xl opacity-0 invisible transition-all duration-300 hover:bg-primary-600" aria-label="Scroll to top">
+                    <i class="fas fa-chevron-up"></i>
+                </button>
+                <button id="modalScrollBottom" class="w-12 h-12 flex items-center justify-center rounded-full bg-primary-500 text-white shadow-xl opacity-0 invisible transition-all duration-300 hover:bg-primary-600" aria-label="Scroll to bottom">
+                    <i class="fas fa-chevron-down"></i>
+                </button>
+            </div>
+        </div>
+
+
+        <div class="bg-slate-100 dark:bg-slate-700/20 mx-auto max-w-screen-2xl">
+            <footer id="footer" class="py-4 bg-gradient-to-b from-slate-900 to-black text-slate-400">
+                <div class="max-w-4xl mx-auto px-4">
+
+                    <div class="flex flex-col items-center">
+                        <h3 class="footer-heading text-xl font-semibold text-white mb-4 text-center animate-fade-in-down">Connect With Us</h3>
+                        <div class="social-icons-container flex justify-center items-center flex-wrap gap-4 mb-4">
+                            <a href="https://facebook.com/mateyoaustin" target="_blank" rel="noopener noreferrer" class="social-icon hover:bg-[#1877F2]/80 animate-fade-in-up" aria-label="Visit our Facebook page">
+                                <i class="fab fa-facebook-f text-white"></i>
+                            </a>
+                            <a href="https://x.com/mateyoaustin" target="_blank" rel="noopener noreferrer" class="social-icon refined-button bg-slate-700 hover:bg-neutral-800 transition-all duration-300 animate-fade-in-up" style="animation-delay: 100ms;" aria-label="Follow us on X">
+                                <i class="fab fa-x-twitter text-white text-sm sm:text-base transition-colors"></i>
+                            </a>
+                            <a href="https://instagram.com/mateyoaustin" target="_blank" rel="noopener noreferrer" class="social-icon refined-button bg-slate-700 hover:bg-gradient-to-r from-purple-500 to-pink-500 transition-all duration-300 animate-fade-in-up" style="animation-delay: 200ms;" aria-label="Follow us on Instagram">
+                                <i class="fab fa-instagram text-white text-sm sm:text-base transition-colors"></i>
+                            </a>
+                            <a href="https://linkedin.com/mateyoaustin" target="_blank" rel="noopener noreferrer" class="social-icon refined-button bg-slate-700 hover:bg-blue-600 transition-all duration-300 animate-fade-in-up" style="animation-delay: 300ms;" aria-label="Connect with us on LinkedIn">
+                                <i class="fab fa-linkedin-in text-white text-sm sm:text-base transition-colors"></i>
+                            </a>
+                            <a href="https://wa.me/263777747150" target="_blank" rel="noopener noreferrer" class="social-icon hover:bg-[#25D366]/80 animate-fade-in-up" style="animation-delay: 400ms;" aria-label="Message us on WhatsApp">
+                                <i class="fab fa-whatsapp text-white"></i>
+                            </a>
+                            <a href="https://t.me/0777747150" target="_blank" rel="noopener noreferrer" class="social-icon hover:bg-[#0088CC]/80 animate-fade-in-up" style="animation-delay: 500ms;" aria-label="Message us on Telegram">
+                                <i class="fab fa-telegram-plane text-white"></i>
+                            </a>
+                        </div>
+                        <div class="text-center w-full max-w-lg mb-8">
+                            <h3 class="footer-heading text-xl font-semibold text-white mb-4">Contact Information</h3>
+                            <ul class="space-y-3 text-lg font-medium">
+                                <li class="flex items-center justify-center gap-3">
+                                    <i class="fas fa-phone-alt text-primary-400"></i>
+                                    <a href="tel:+263882932022" class="hover:text-white transition-colors">+263 882 932 022</a>
+                                </li>
+                                <li class="flex items-center justify-center gap-3">
+                                    <i class="fas fa-envelope text-primary-400"></i>
+                                    <a href="mailto:info@justwisetechnologies.com" class="hover:text-white transition-colors">info@justwisetechnologies.com</a>
+                                </li>
+                                <li class="flex items-center justify-center gap-3">
+                                    <i class="fas fa-globe text-primary-400"></i>
+                                    <a href="https://www.justwisetechnologies.com" target="_blank" rel="noopener noreferrer" class="hover:text-white transition-colors">justwisetechnologies.com</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="mt-8 pt-6 border-t border-slate-700 text-center">
+                        <p class="text-sm">
+                            &copy; <span id="currentYear"></span> Justwise Technologies. All rights reserved.
+                        </p>
+                        <p class="text-xs mt-1 text-slate-500">
+                            Crafted with 🚀 by Austin Mateyo
+                        </p>
+                    </div>
+                </div>
+            </footer>
+        </div>
     </main>
 
-    <!-- Simple Separator -->
-    <hr class="border-0 h-px bg-slate-200/20 dark:bg-slate-700/20 mx-auto max-w-screen-2xl">
-
-    <!-- Footer -->
-    <footer id="footer" class="py-4 bg-gradient-to-b from-slate-900 to-black text-slate-400">
-        <div class="max-w-4xl mx-auto px-4">
-            <!-- Social Media Icons -->
-            <div class="flex flex-col items-center">
-                <h3 class="footer-heading text-xl font-semibold text-white mb-4 text-center animate-fade-in-down">Connect With Us</h3>
-                <div class="flex justify-center items-center flex-wrap gap-4 mb-4">
-                    <!-- Facebook -->
-                    <a href="https://facebook.com/mateyoaustin"
-                       target="_blank" 
-                       rel="noopener noreferrer" 
-                       class="social-icon hover:bg-[#1877F2]/80 animate-fade-in-up"
-                       aria-label="Visit our Facebook page">
-                        <i class="fab fa-facebook-f text-white"></i>
-                    </a>
-                    
-                    <!-- X (formerly Twitter) -->
-                    <a href="https://x.com/mateyoaustin"
-                       target="_blank" 
-                       rel="noopener noreferrer" 
-                       class="social-icon refined-button bg-slate-700 hover:bg-neutral-800 transition-all duration-300 animate-fade-in-up" style="animation-delay: 100ms;"
-                       aria-label="Follow us on X">
-                        <i class="fab fa-x-twitter text-white text-sm sm:text-base transition-colors"></i>
-                    </a>
-                    
-                    <!-- Instagram -->
-                    <a href="https://instagram.com/mateyoaustin" 
-                       target="_blank" 
-                       rel="noopener noreferrer" 
-                       class="social-icon refined-button bg-slate-700 hover:bg-gradient-to-r from-purple-500 to-pink-500 transition-all duration-300 animate-fade-in-up" style="animation-delay: 200ms;"
-                       aria-label="Follow us on Instagram">
-                        <i class="fab fa-instagram text-white text-sm sm:text-base transition-colors"></i>
-                    </a>
-                    
-                    <!-- LinkedIn -->
-                    <a href="https://linkedin.com/mateyoaustin" 
-                       target="_blank" 
-                       rel="noopener noreferrer" 
-                       class="social-icon refined-button bg-slate-700 hover:bg-blue-600 transition-all duration-300 animate-fade-in-up" style="animation-delay: 300ms;"
-                       aria-label="Connect with us on LinkedIn">
-                        <i class="fab fa-linkedin-in text-white text-sm sm:text-base transition-colors"></i>
-                    </a>
-                    
-                    <!-- WhatsApp -->
-                    <a href="https://wa.me/263777747150" 
-                       target="_blank" 
-                       rel="noopener noreferrer" 
-                       class="social-icon refined-button bg-slate-700 hover:bg-green-500 transition-all duration-300 animate-fade-in-up" style="animation-delay: 400ms;"
-                       aria-label="Message us on WhatsApp">
-                        <i class="fab fa-whatsapp text-white text-sm sm:text-base transition-colors"></i>
-                    </a>
-                    
-                    <!-- GitHub -->
-                    <a href="https://github.com/mateyoaustin" 
-                       target="_blank" 
-                       rel="noopener noreferrer" 
-                       class="social-icon refined-button bg-slate-700 hover:bg-gray-700 transition-all duration-300 animate-fade-in-up" style="animation-delay: 500ms;"
-                       aria-label="Check out our GitHub">
-                        <i class="fab fa-github text-white text-sm sm:text-base transition-colors"></i>
-                    </a>
-                </div>
-                
-                <!-- Footer Bottom -->
-                <div class="footer-bottom text-center animate-fade-in-up" style="animation-delay: 600ms;">
-                    <p class="text-slate-400/80 text-xs sm:text-sm">&copy; <span id="currentYear"></span> Justwise Technologies. All Rights Reserved.</p>
-                </div>
-            </div>
-        </div>
-    </footer>
-
-    <!-- Scroll Progress Indicator -->
-    <div class="fixed top-0 left-0 w-full h-1 bg-neutral-200/20 dark:bg-neutral-800/20 z-50 backdrop-blur-sm">
-        <div id="scrollProgress" class="h-full w-0 bg-gradient-to-r from-primary-500 via-accent-400 to-secondary-500 transition-all duration-100 shadow-[0_2px_8px_rgba(0,102,255,0.3)] dark:shadow-[0_2px_8px_rgba(0,102,255,0.5)]"></div>
-    </div>
-
-    <!-- Floating Action Buttons -->
-    <a href="https://wa.me/263777747150" 
-       target="_blank" 
-       rel="noopener noreferrer" 
-       class="fixed bottom-8 right-8 w-14 h-14 md:w-16 md:h-16 bg-[#25D366] rounded-full flex items-center justify-center shadow-[0_8px_30px_rgb(37,211,102,0.3)] hover:shadow-[0_8px_35px_rgb(37,211,102,0.4)] z-40 transform hover:scale-110 transition-all duration-300" 
-       aria-label="Contact on WhatsApp" 
-       title="Contact on WhatsApp">
-        <div class="relative">
-            <i class="fab fa-whatsapp text-white text-2xl md:text-3xl"></i>
-            <span class="absolute -top-1 -right-1 w-3 h-3 bg-white rounded-full animate-ping"></span>
-            <span class="absolute -top-1 -right-1 w-3 h-3 bg-white rounded-full"></span>
-        </div>
-    </a>
-    
-    <a href="#hero" 
-       class="fixed bottom-28 right-8 w-12 h-12 md:w-14 md:h-14 bg-neutral-900/10 dark:bg-white/10 backdrop-blur-sm rounded-full flex items-center justify-center hover:bg-neutral-900/20 dark:hover:bg-white/20 z-40 opacity-0 invisible transition-all duration-300 group" 
-       id="backToTop" 
-       aria-label="Back to top" 
-       title="Back to top">
+    <a href="#hero" id="backToTop" class="fixed bottom-6 right-6 w-12 h-12 flex items-center justify-center rounded-full bg-white dark:bg-slate-800 shadow-xl border border-neutral-200/50 dark:border-neutral-700/50 z-40 opacity-0 invisible transition-all duration-300 hover:bg-neutral-100 dark:hover:bg-slate-700 group" aria-label="Back to top">
         <i class="fas fa-arrow-up text-neutral-600 dark:text-white/70 text-lg md:text-xl group-hover:transform group-hover:-translate-y-1 transition-transform duration-300"></i>
     </a>
 
-    <!-- JavaScript -->
     <script>
-        // Modal Functions
-        function openTaskerModal() {
+        function openTaskerModal(event) {
+            event.preventDefault();
             const modal = document.getElementById('taskerModal');
             modal.classList.remove('hidden');
             document.body.style.overflow = 'hidden';
-            
-            // Add fade-in animation
-            modal.style.opacity = '0';
-            setTimeout(() => {
-                modal.style.opacity = '1';
-            }, 10);
 
-            // Initialize modal scroll controls
+            modal.style.opacity = '0';
+            setTimeout(() => { modal.style.opacity = '1'; }, 10);
+
             const modalContent = modal.querySelector('.min-h-screen.w-full');
             const scrollTopBtn = document.getElementById('modalScrollTop');
             const scrollBottomBtn = document.getElementById('modalScrollBottom');
-            
+
             if (modalContent && scrollTopBtn && scrollBottomBtn) {
-                // Show/hide scroll buttons based on scroll position
                 modalContent.addEventListener('scroll', () => {
                     const scrollHeight = modalContent.scrollHeight;
                     const scrollTop = modalContent.scrollTop;
                     const clientHeight = modalContent.clientHeight;
-                    
-                    // Show/hide scroll top button
+
                     if (scrollTop > 300) {
                         scrollTopBtn.classList.remove('opacity-0', 'invisible');
                         scrollTopBtn.classList.add('opacity-100', 'visible');
@@ -1615,8 +1370,7 @@
                         scrollTopBtn.classList.remove('opacity-100', 'visible');
                         scrollTopBtn.classList.add('opacity-0', 'invisible');
                     }
-                    
-                    // Show/hide scroll bottom button
+
                     if (scrollHeight - scrollTop - clientHeight > 300) {
                         scrollBottomBtn.classList.remove('opacity-0', 'invisible');
                         scrollBottomBtn.classList.add('opacity-100', 'visible');
@@ -1626,20 +1380,12 @@
                     }
                 });
 
-                // Scroll to top when button is clicked
                 scrollTopBtn.addEventListener('click', () => {
-                    modalContent.scrollTo({
-                        top: 0,
-                        behavior: 'smooth'
-                    });
+                    modalContent.scrollTo({ top: 0, behavior: 'smooth' });
                 });
 
-                // Scroll to bottom when button is clicked
                 scrollBottomBtn.addEventListener('click', () => {
-                    modalContent.scrollTo({
-                        top: modalContent.scrollHeight,
-                        behavior: 'smooth'
-                    });
+                    modalContent.scrollTo({ top: modalContent.scrollHeight, behavior: 'smooth' });
                 });
             }
         }
@@ -1653,103 +1399,47 @@
             }, 300);
         }
 
-        // Close modal on backdrop click
-        document.addEventListener('click', (e) => {
-            const modal = document.getElementById('taskerModal');
-            if (e.target === modal) {
-                closeTaskerModal();
-            }
-        });
-
-        // Close modal on Escape key press
-        document.addEventListener('keydown', (e) => {
-            if (e.key === 'Escape') {
-                closeTaskerModal();
-            }
-        });
-
-        document.addEventListener('DOMContentLoaded', () => {
-            // Premium Card Effects
-            document.addEventListener('mousemove', (e) => {
-                document.querySelectorAll('.premium-card').forEach(card => {
-                    const rect = card.getBoundingClientRect();
-                    const x = e.clientX - rect.left;
-                    const y = e.clientY - rect.top;
-
-                    card.style.setProperty('--mouse-x', `${x}px`);
-                    card.style.setProperty('--mouse-y', `${y}px`);
-
-                    const centerX = rect.width / 2;
-                    const centerY = rect.height / 2;
-                    const rotateY = -((x - centerX) / centerX) * 5;
-                    const rotateX = ((y - centerY) / centerY) * 5;
-
-                    card.style.setProperty('--rotate-x', `${rotateX}deg`);
-                    card.style.setProperty('--rotate-y', `${rotateY}deg`);
-                });
-            });
-
-            // Scroll Progress Indicator
-            const scrollProgress = document.getElementById('scrollProgress');
-            window.addEventListener('scroll', () => {
-                const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
-                const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-                const scrolled = (winScroll / height) * 100;
-                if (scrollProgress) {
-                    scrollProgress.style.width = scrolled + '%';
-                }
-            });
-
+        document.addEventListener('DOMContentLoaded', function() {
             const preloader = document.getElementById('preloader');
             const navbar = document.querySelector('.sticky-nav');
             const navBg = navbar.querySelector('.absolute');
             const navLinks = navbar.querySelectorAll('.nav-items a');
             const themeToggleBtn = document.getElementById('themeToggle');
             const themeToggleIcon = themeToggleBtn ? themeToggleBtn.querySelector('i') : null;
-            
-            // --- MODERN PRELOADER ---
+
             if (preloader) {
-                // Start hiding preloader as soon as initial resources are loaded
                 window.addEventListener('DOMContentLoaded', () => {
                     setTimeout(() => {
                         preloader.style.opacity = '0';
                         preloader.style.visibility = 'hidden';
-                    }, 800); // Reduced to 800ms for faster perceived loading
+                    }, 800);
                 });
-                
-                // Ensure preloader is hidden after full load
+
                 window.addEventListener('load', () => {
                     preloader.style.opacity = '0';
                     preloader.style.visibility = 'hidden';
                 });
             }
 
-            // --- VIDEO FALLBACK HANDLING ---
             const heroVideo = document.getElementById('hero-video');
             const fallbackImage = document.getElementById('fallback-image');
-            
             if (heroVideo) {
                 heroVideo.addEventListener('error', () => {
-                    // If video fails to load, show fallback image
                     if (fallbackImage) {
                         fallbackImage.classList.remove('hidden');
                     }
                 });
-                
-                // Check if video can play
+
                 heroVideo.addEventListener('canplay', () => {
-                    // Video loaded successfully
                     if (fallbackImage) {
                         fallbackImage.classList.add('hidden');
                     }
                 });
             }
 
-            // --- THEME TOGGLE (Updated for Tailwind) ---
             const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
             let savedTheme = localStorage.getItem('theme');
-            
-            // Set initial theme
+
             if (savedTheme === 'dark' || (!savedTheme && prefersDark)) {
                 document.documentElement.classList.add('dark');
                 if (themeToggleIcon) themeToggleIcon.classList.replace('fa-moon', 'fa-sun');
@@ -1758,7 +1448,6 @@
                 if (themeToggleIcon) themeToggleIcon.classList.replace('fa-sun', 'fa-moon');
             }
 
-            // Theme toggle event listener
             if (themeToggleBtn) {
                 themeToggleBtn.addEventListener('click', () => {
                     if (document.documentElement.classList.contains('dark')) {
@@ -1773,52 +1462,51 @@
                 });
             }
 
-            // --- STICKY NAVIGATION (Glassmorphism) ---
-            window.addEventListener('scroll', () => {
-                const scrolled = window.scrollY > 20;
-                navBg.style.opacity = scrolled ? '1' : '0.95';
-                navBg.style.backdropFilter = `blur(${scrolled ? '16px' : '12px'})`;
-                navBg.style.borderColor = scrolled ? 'rgba(0,0,0,0.1)' : 'rgba(0,0,0,0.05)';
-                
-                if (scrolled) {
-                    navbar.classList.add('h-16');
-                    navbar.classList.remove('h-20');
-                    navBg.classList.add('shadow-md');
-                } else {
-                    navbar.classList.add('h-20');
-                    navbar.classList.remove('h-16');
-                    navBg.classList.remove('shadow-md');
-                }
-            });
+            const mobileMenuButton = document.getElementById('mobileMenuButton');
+            const mobileMenu = document.getElementById('mobileMenu');
+            const mobileMenuIcon = document.getElementById('mobileMenuIcon');
 
-            // --- MOBILE DROPDOWN MENU ---
-            const dropdownToggle = document.getElementById('dropdownToggle');
-            const dropdownMenu = document.getElementById('dropdownMenu');
-            if (dropdownToggle && dropdownMenu) {
-                dropdownToggle.addEventListener('click', (e) => {
-                    e.stopPropagation();
-                    dropdownMenu.classList.toggle('translate-x-full');
-                    dropdownMenu.classList.toggle('translate-x-0');
-                });
+            if (mobileMenuButton) {
+                mobileMenuButton.addEventListener('click', () => {
+                    const isExpanded = mobileMenu.classList.toggle('hidden');
+                    document.body.style.overflow = isExpanded ? '' : 'hidden';
+                    mobileMenu.classList.toggle('transform');
+                    mobileMenu.classList.toggle('-translate-y-4');
+                    mobileMenu.classList.toggle('opacity-0');
 
-                // Close menu when clicking outside
-                document.addEventListener('click', (e) => {
-                    if (!dropdownMenu.contains(e.target) && !dropdownToggle.contains(e.target) && dropdownMenu.classList.contains('translate-x-0')) {
-                        dropdownMenu.classList.add('translate-x-full');
-                        dropdownMenu.classList.remove('translate-x-0');
+                    if (!isExpanded) {
+                        setTimeout(() => {
+                            mobileMenu.classList.remove('opacity-0', '-translate-y-4');
+                            mobileMenu.classList.add('opacity-100', 'translate-y-0');
+                            mobileMenuIcon.classList.replace('fa-bars', 'fa-times');
+                        }, 10);
+                    } else {
+                        mobileMenu.classList.remove('opacity-100', 'translate-y-0');
+                        mobileMenu.classList.add('opacity-0', '-translate-y-4');
+                        mobileMenuIcon.classList.replace('fa-times', 'fa-bars');
                     }
-                });
-                
-                // Close menu when clicking a link
-                dropdownMenu.querySelectorAll('a').forEach(link => {
-                    link.addEventListener('click', () => {
-                        dropdownMenu.classList.add('translate-x-full');
-                        dropdownMenu.classList.remove('translate-x-0');
-                    });
                 });
             }
 
-            // --- DYNAMIC TYPING EFFECT ---
+            const mobileThemeToggleBtn = document.getElementById('mobileThemeToggle');
+            const mobileThemeToggleIcon = mobileThemeToggleBtn ? mobileThemeToggleBtn.querySelector('i') : null;
+
+            if (mobileThemeToggleBtn) {
+                mobileThemeToggleBtn.addEventListener('click', () => {
+                    if (document.documentElement.classList.contains('dark')) {
+                        document.documentElement.classList.remove('dark');
+                        localStorage.setItem('theme', 'light');
+                        if (mobileThemeToggleIcon) mobileThemeToggleIcon.classList.replace('fa-sun', 'fa-moon');
+                        if (themeToggleIcon) themeToggleIcon.classList.replace('fa-sun', 'fa-moon');
+                    } else {
+                        document.documentElement.classList.add('dark');
+                        localStorage.setItem('theme', 'dark');
+                        if (mobileThemeToggleIcon) mobileThemeToggleIcon.classList.replace('fa-moon', 'fa-sun');
+                        if (themeToggleIcon) themeToggleIcon.classList.replace('fa-moon', 'fa-sun');
+                    }
+                });
+            }
+
             const typingElement = document.getElementById('typing-effect');
             if (typingElement) {
                 const words = ["Smart Business.", "Automation.", "Growth.", "Innovation."];
@@ -1827,10 +1515,7 @@
                 const type = () => {
                     const currentWord = words[wordIndex];
                     const typeSpeed = isDeleting ? 75 : 150;
-
-                    typingElement.textContent = isDeleting 
-                        ? currentWord.substring(0, charIndex--)
-                        : currentWord.substring(0, charIndex++);
+                    typingElement.textContent = isDeleting ? currentWord.substring(0, charIndex--) : currentWord.substring(0, charIndex++);
 
                     if (!isDeleting && charIndex === currentWord.length) {
                         setTimeout(() => isDeleting = true, 2000);
@@ -1844,19 +1529,17 @@
                 type();
             }
 
-            // --- DYNAMIC & REALISTIC STATS CALCULATION ---
             const updateStats = () => {
                 const startDate = new Date('2023-01-01');
                 const today = new Date();
-
                 const monthsPassed = (today.getFullYear() - startDate.getFullYear()) * 12 + (today.getMonth() - startDate.getMonth());
-                const monthFraction = today.getDate() / 30; // Approximation
+                const monthFraction = today.getDate() / 30;
                 const effectiveMonths = monthsPassed + monthFraction;
 
                 const devicesRepaired = Math.floor(20 + effectiveMonths * 10);
                 const projectsCompleted = Math.floor(10 + effectiveMonths * 4);
                 const supportCases = Math.floor(30 + effectiveMonths * 15);
-                
+
                 const totalWork = devicesRepaired + projectsCompleted + supportCases;
                 const satisfactionRate = 0.85 + Math.random() * 0.10;
                 const happyClients = Math.floor(totalWork * satisfactionRate);
@@ -1866,60 +1549,53 @@
                 const projectsStatEl = document.getElementById('projects-stat');
                 const supportStatEl = document.getElementById('support-stat');
 
-                if(clientsStatEl) clientsStatEl.dataset.target = happyClients;
-                if(devicesStatEl) devicesStatEl.dataset.target = devicesRepaired;
-                if(projectsStatEl) projectsStatEl.dataset.target = projectsCompleted;
-                if(supportStatEl) supportStatEl.dataset.target = supportCases;
+                const stats = [
+                    { element: clientsStatEl, target: happyClients },
+                    { element: devicesStatEl, target: devicesRepaired },
+                    { element: projectsStatEl, target: projectsCompleted },
+                    { element: supportStatEl, target: supportCases }
+                ];
+
+                const duration = 2000;
+                const startTime = performance.now();
+
+                const animate = (currentTime) => {
+                    const elapsedTime = currentTime - startTime;
+                    const progress = Math.min(elapsedTime / duration, 1);
+
+                    stats.forEach(stat => {
+                        if (stat.element) {
+                            const initialValue = 0;
+                            const currentValue = Math.floor(initialValue + progress * (stat.target - initialValue));
+                            stat.element.textContent = currentValue.toLocaleString();
+                        }
+                    });
+
+                    if (progress < 1) {
+                        requestAnimationFrame(animate);
+                    }
+                };
+
+                const observer = new IntersectionObserver((entries) => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            requestAnimationFrame(animate);
+                            observer.unobserve(entry.target);
+                        }
+                    });
+                }, { threshold: 0.5 });
+
+                const statsSection = document.getElementById('stats');
+                if (statsSection) {
+                    observer.observe(statsSection);
+                }
             };
-            
+
             updateStats();
 
-            // --- ANIMATE ON SCROLL (INTERSECTION OBSERVER) ---
-            const scrollObserver = new IntersectionObserver((entries) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        entry.target.classList.add('animated');
-                        scrollObserver.unobserve(entry.target);
-                    }
-                });
-            }, { threshold: 0.1 });
-            
-            document.querySelectorAll('.animate-on-scroll').forEach(el => scrollObserver.observe(el));
-
-            // --- STATS COUNTER ANIMATION ---
-            const statsObserver = new IntersectionObserver((entries, observer) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        const counter = entry.target;
-                        const target = +counter.dataset.target;
-                        if (target === 0) return;
-                        
-                        let current = 0;
-                        const increment = target / 100;
-                        const duration = 1500; // Animate over 1.5 seconds
-                        const stepTime = duration / 100;
-
-                        const updateCounter = () => {
-                            if (current < target) {
-                                current += increment;
-                                counter.textContent = Math.ceil(current).toLocaleString();
-                                setTimeout(updateCounter, stepTime);
-                            } else {
-                                counter.textContent = target.toLocaleString();
-                            }
-                        };
-                        updateCounter();
-                        observer.unobserve(counter);
-                    }
-                });
-            }, { threshold: 0.5 });
-            
-            document.querySelectorAll('.stat-number').forEach(counter => statsObserver.observe(counter));
-
-            // --- BACK TO TOP BUTTON ---
             const backToTop = document.getElementById('backToTop');
             window.addEventListener('scroll', () => {
-                if (window.scrollY > 300) {
+                if (window.pageYOffset > 300) {
                     backToTop.classList.remove('opacity-0', 'invisible');
                     backToTop.classList.add('opacity-100', 'visible');
                 } else {
@@ -1928,53 +1604,32 @@
                 }
             });
 
-            // --- FOOTER YEAR ---
             const currentYearEl = document.getElementById('currentYear');
             if (currentYearEl) {
                 currentYearEl.textContent = new Date().getFullYear();
             }
 
-            // --- PARALLAX EFFECT ---
             const heroBackground = document.getElementById('hero-background');
             window.addEventListener('scroll', () => {
                 const scrolled = window.pageYOffset;
                 if (heroBackground) {
-                    heroBackground.style.transform = `translateY(${scrolled * 0.5}px)`;
+                    heroBackground.style.transform = 'translateY(' + scrolled * 0.5 + 'px)';
                 }
             });
 
-            // --- INITIALIZE SMOOTH SCROLL FOR ANCHOR LINKS ---
-            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-                anchor.addEventListener('click', function (e) {
-                    e.preventDefault();
-                    const targetId = this.getAttribute('href');
-                    const targetElement = document.querySelector(targetId);
-                    if (targetElement) {
-                        targetElement.scrollIntoView({
-                            behavior: 'smooth',
-                            block: 'start'
-                        });
-                    }
-                });
-            });
+            const WHATSAPP_NUMBER = '263777747150';
 
-            // --- WHATSAPP CTA HANDLER ---
-            // When a service CTA is clicked, open WhatsApp with a prefilled message containing the clicked service.
-            // IMPORTANT: replace WHATSAPP_NUMBER with your phone number in international format (no + or leading zeros), e.g. '15551234567' or '263777747150'.
-            const WHATSAPP_NUMBER = '263777747150'; // <-- change this to your number
-
-            // Select CTA buttons inside the services section. If a CTA has a data-service attribute it will be used,
-            // otherwise we fall back to the nearest .service-card h3 title.
             document.querySelectorAll('#services .btn').forEach(btn => {
                 btn.addEventListener('click', (e) => {
-                    // If the CTA is an anchor to an internal anchor we stop the default navigation and open WhatsApp
+                    if (btn.getAttribute('href') !== '#') {
+                        return;
+                    }
                     e.preventDefault();
 
                     const serviceName = btn.dataset.service || (btn.closest('.service-card')?.querySelector('h3')?.textContent.trim()) || 'your service';
                     const prewritten = `Hello! I'm interested in ${serviceName}. Could you share more details and pricing?`;
                     const waUrl = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(prewritten)}`;
 
-                    // Open WhatsApp in a new tab/window. On mobile this will open the app if available.
                     window.open(waUrl, '_blank');
                 });
             });
