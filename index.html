@@ -933,7 +933,23 @@
     </div>
 
     <!-- Header & Navigation -->
-    <nav class="sticky-nav fixed top-0 left-0 right-0 z-50 transition-all duration-500">
+    
+<style>
+nav {
+    width: 100vw !important;
+    margin-left: calc(50% - 50vw) !important;
+    margin-right: calc(50% - 50vw) !important;
+}
+nav > div {
+    max-width: 100% !important;
+    width: 100% !important;
+    padding-left: 1rem !important;
+    padding-right: 1rem !important;
+}
+html, body { overflow-x: hidden !important; }
+</style>
+
+<nav class="sticky-nav fixed top-0 left-0 right-0 z-50 transition-all duration-500">
         <div class="absolute inset-0 w-full h-full bg-white/95 dark:bg-dark-bg/95 backdrop-blur-xl border-b border-neutral-200/20 dark:border-neutral-700/20 shadow-sm transition-all duration-500"></div>
         <div class="dynamic-container">
             <div class="relative flex justify-between items-center h-16 md:h-20">
@@ -1008,7 +1024,31 @@
 
     <main>
         <!-- Hero Section with Parallax -->
-        <section id="hero" class="hero relative min-h-screen flex items-center justify-center text-center overflow-hidden dynamic-container" data-parallax="scroll">
+        
+<style>
+/* Force hero to break out of all containers */
+#hero {
+    width: 100vw !important;
+    margin-left: calc(50% - 50vw) !important;
+    margin-right: calc(50% - 50vw) !important;
+    max-width: 100vw !important;
+    overflow: hidden !important;
+}
+
+/* Ensure hero background touches edges */
+.hero-bg {
+    width: 100vw !important;
+    left: calc(50% - 50vw) !important;
+    right: calc(50% - 50vw) !important;
+}
+
+/* Prevent horizontal scrolling */
+html, body {
+    overflow-x: hidden !important;
+}
+</style>
+
+<section id="hero" class="hero relative min-h-screen flex items-center justify-center text-center overflow-hidden dynamic-container" data-parallax="scroll">
             <!-- Plexus Network Background -->
             <canvas id="plexusCanvas" class="absolute inset-0 z-0"></canvas>
             
