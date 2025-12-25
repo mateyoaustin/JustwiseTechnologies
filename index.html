@@ -121,7 +121,9 @@
     </div>
 
     <!-- Scroll Progress Bar -->
-    <div id="scroll-progress-bar" style="position:fixed;top:0;left:0;width:0;height:4px;background:#00bfff;z-index:9999;transition:width 0.2s;"></div>
+    <div class="scroll-progress-container">
+        <div id="scroll-progress-bar" class="scroll-progress-bar"></div>
+    </div>
     <!-- Navigation Bar -->
     <nav class="navbar" role="navigation" aria-label="Main">
         <div class="nav-container">
@@ -132,35 +134,35 @@
                         <a href="#" class="nav-link dropdown-toggle" aria-haspopup="true" aria-expanded="false">Services <i class="fas fa-chevron-down"></i></a>
                         <div class="dropdown-menu" role="menu">
                             <div class="dropdown-header">Core Services</div>
-                            <a href="#internet-cafe" class="dropdown-item" role="menuitem" tabindex="0">
+                            <a href="internet-cafe" class="dropdown-item service-link" role="menuitem" tabindex="0" data-target="internet-cafe">
                                 <i class="fas fa-wifi"></i> 
                                 <span>High-Speed Internet Cafe</span>
                             </a>
-                            <a href="#device-repairs" class="dropdown-item" role="menuitem" tabindex="0">
+                            <a href="device-repairs" class="dropdown-item service-link" role="menuitem" tabindex="0" data-target="device-repairs">
                                 <i class="fas fa-tools"></i> 
                                 <span>Device Sales & Expert Repairs</span>
                             </a>
-                            <a href="#android-automation" class="dropdown-item" role="menuitem" tabindex="0">
+                            <a href="android-automation" class="dropdown-item service-link" role="menuitem" tabindex="0" data-target="android-automation">
                                 <i class="fas fa-bolt"></i> 
                                 <span>Android Automation Solutions</span>
                             </a>
                             <hr class="dropdown-divider">
                             <div class="dropdown-header">Development Services</div>
-                            <a href="#custom-apps" class="dropdown-item" role="menuitem" tabindex="0">
+                            <a href="custom-apps" class="dropdown-item service-link" role="menuitem" tabindex="0" data-target="custom-apps">
                                 <i class="fas fa-mobile-alt"></i> 
                                 <span>Custom Application Development</span>
                             </a>
-                            <a href="#web-dev" class="dropdown-item" role="menuitem" tabindex="0">
+                            <a href="web-dev" class="dropdown-item service-link" role="menuitem" tabindex="0" data-target="web-dev">
                                 <i class="fas fa-code"></i> 
                                 <span>Professional Web Development</span>
                             </a>
                             <hr class="dropdown-divider">
                             <div class="dropdown-header">Enterprise Solutions</div>
-                            <a href="#device-automation" class="dropdown-item" role="menuitem" tabindex="0">
+                            <a href="device-automation" class="dropdown-item service-link" role="menuitem" tabindex="0" data-target="device-automation">
                                 <i class="fas fa-robot"></i> 
                                 <span>Managed Devices & IT Automation</span>
                             </a>
-                            <a href="#data-ai" class="dropdown-item" role="menuitem" tabindex="0">
+                            <a href="data-ai" class="dropdown-item service-link" role="menuitem" tabindex="0" data-target="data-ai">
                                 <i class="fas fa-brain"></i> 
                                 <span>Data Analytics & AI Solutions</span>
                             </a>
@@ -483,20 +485,40 @@
     <script>
         // Auto-update copyright year
         document.getElementById('year').textContent = new Date().getFullYear();
+        
+        // Service dropdown links navigation
+        document.querySelectorAll('.service-link').forEach(function(link) {
+            link.addEventListener('click', function(e) {
+                e.preventDefault();
+                e.stopPropagation();
+                
+                var targetId = this.getAttribute('data-target');
+                var targetElement = document.getElementById(targetId);
+                
+                if (targetElement) {
+                    // Close all dropdowns
+                    document.querySelectorAll('.dropdown').forEach(function(d) {
+                        d.classList.remove('show');
+                    });
+                    
+                    // Close mobile menu
+                    var navLinks = document.querySelector('.nav-links');
+                    if (navLinks) navLinks.classList.remove('active');
+                    
+                    var hamburger = document.querySelector('.hamburger');
+                    if (hamburger) hamburger.classList.remove('active');
+                    
+                    // Scroll to target
+                    targetElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+            });
+        });
     </script>
 
     <!-- WhatsApp Floating Button -->
     <a href="https://wa.me/263777747150" class="whatsapp-float" target="_blank" rel="noopener noreferrer">
         <img src="https://static.cdnlogo.com/logos/w/29/whatsapp-icon.svg" alt="WhatsApp">
     </a>
-
-    <!-- Back to Top Button with Progress -->
-    <button class="back-to-top" aria-label="Back to top" title="Back to top">
-        <svg class="progress-ring" width="50" height="50">
-            <circle class="progress-ring__circle" stroke="#FFC107" stroke-width="2" fill="transparent" r="22" cx="25" cy="25"/>
-        </svg>
-        <i class="fas fa-arrow-up"></i>
-    </button>
 
     <!-- Toast Notification Container -->
     <div class="toast-container" aria-live="polite" aria-atomic="true"></div>

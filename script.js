@@ -35,9 +35,17 @@ class AnimatedBackground {
 
         // Handle resize with debounce for performance
         let resizeTimeout;
-        window.addEventListener('resize', () => {
+        const handleResizeDebounced = () => {
             clearTimeout(resizeTimeout);
             resizeTimeout = setTimeout(() => this.handleResize(), 150);
+        };
+        
+        window.addEventListener('resize', handleResizeDebounced, { passive: true });
+        
+        // Handle orientation change for mobile devices
+        window.addEventListener('orientationchange', () => {
+            // Slight delay to allow viewport to update after orientation change
+            setTimeout(() => this.handleResize(), 100);
         }, { passive: true });
 
         // Handle visibility change to pause when tab not active
@@ -58,15 +66,19 @@ class AnimatedBackground {
     }
 
     setupCanvas() {
+        // Get the actual viewport dimensions (accounts for mobile browser UI)
+        const viewportWidth = window.visualViewport?.width || window.innerWidth;
+        const viewportHeight = window.visualViewport?.height || window.innerHeight;
+        
         // Set canvas to viewport size with device pixel ratio for crisp rendering
         const dpr = Math.min(window.devicePixelRatio || 1, 2);
-        this.canvas.width = window.innerWidth * dpr;
-        this.canvas.height = window.innerHeight * dpr;
+        this.canvas.width = viewportWidth * dpr;
+        this.canvas.height = viewportHeight * dpr;
         this.ctx.scale(dpr, dpr);
         
-        // Set display size
-        this.canvas.style.width = window.innerWidth + 'px';
-        this.canvas.style.height = window.innerHeight + 'px';
+        // Set display size to cover full viewport
+        this.canvas.style.width = '100%';
+        this.canvas.style.height = '100%';
     }
 
     createNodes() {
@@ -325,15 +337,45 @@ document.addEventListener('DOMContentLoaded', function () {
     }
     type();
 });
-// Scroll progress bar logic
-window.addEventListener('scroll', function () {
+// Scroll progress bar logic (Enhanced)
+(function() {
     const bar = document.getElementById('scroll-progress-bar');
     if (!bar) return;
-    const scrollTop = window.scrollY || document.documentElement.scrollTop;
-    const docHeight = document.documentElement.scrollHeight - window.innerHeight;
-    const scrolled = docHeight > 0 ? (scrollTop / docHeight) * 100 : 0;
-    bar.style.width = scrolled + '%';
-});
+    
+    let ticking = false;
+    let lastScrollY = 0;
+    
+    const updateProgressBar = () => {
+        const scrollTop = window.scrollY || document.documentElement.scrollTop;
+        const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+        const scrolled = docHeight > 0 ? (scrollTop / docHeight) * 100 : 0;
+        
+        bar.style.width = scrolled + '%';
+        
+        // Add active class when scrolling
+        if (scrollTop > lastScrollY || scrollTop < lastScrollY) {
+            bar.classList.add('active');
+        }
+        
+        // Remove active class when at top or bottom
+        if (scrolled <= 0 || scrolled >= 100) {
+            bar.classList.remove('active');
+        }
+        
+        lastScrollY = scrollTop;
+        ticking = false;
+    };
+    
+    window.addEventListener('scroll', function() {
+        if (!ticking) {
+            requestAnimationFrame(updateProgressBar);
+            ticking = true;
+        }
+    }, { passive: true });
+    
+    // Initial update
+    updateProgressBar();
+})();
 // Advanced Justwise Technologies Homepage Enhancement
 class JustwiseNav {
     constructor() {
@@ -352,6 +394,35 @@ class JustwiseNav {
         this.setupOutsideClick();
         this.setupKeyboardNavigation();
         this.setupActiveLinks();
+        this.setupDropdownItemNavigation();
+    }
+
+    // Global event delegation for dropdown item navigation
+    setupDropdownItemNavigation() {
+        document.addEventListener('click', (e) => {
+            const dropdownItem = e.target.closest('.dropdown-item');
+            if (!dropdownItem) return;
+            
+            const href = dropdownItem.getAttribute('href');
+            if (href && href.startsWith('#') && href !== '#') {
+                e.preventDefault();
+                e.stopPropagation();
+                
+                const target = document.querySelector(href);
+                if (target) {
+                    // Close dropdown and mobile menu
+                    this.closeAllDropdowns();
+                    this.closeMobileMenu();
+                    
+                    // Smooth scroll to target with offset for navbar
+                    const offsetTop = target.getBoundingClientRect().top + window.pageYOffset - 80;
+                    window.scrollTo({
+                        top: offsetTop,
+                        behavior: 'smooth'
+                    });
+                }
+            }
+        }, true); // Use capture phase to ensure this runs first
     }
 
     setupHamburger() {
@@ -848,49 +919,6 @@ class ButtonEffects {
 
 
 
-// Back to Top with Progress
-class BackToTop {
-    constructor() {
-        this.button = document.querySelector('.back-to-top');
-        this.progressCircle = document.querySelector('.progress-ring__circle');
-        this.radius = this.progressCircle?.r.baseVal.value || 22;
-        this.circumference = 2 * Math.PI * this.radius;
-        this.init();
-    }
-
-    init() {
-        if (!this.button || !this.progressCircle) return;
-
-        this.progressCircle.style.strokeDasharray = `${this.circumference} ${this.circumference}`;
-        this.progressCircle.style.strokeDashoffset = this.circumference;
-
-        window.addEventListener('scroll', () => this.updateProgress());
-        this.button.addEventListener('click', () => this.scrollToTop());
-    }
-
-    updateProgress() {
-        const scrollTop = window.scrollY || document.documentElement.scrollTop;
-        const docHeight = document.documentElement.scrollHeight - window.innerHeight;
-        const scrollPercent = (scrollTop / docHeight) * 100;
-
-        if (scrollTop > 300) {
-            this.button.classList.add('visible');
-        } else {
-            this.button.classList.remove('visible');
-        }
-
-        const offset = this.circumference - (scrollPercent / 100) * this.circumference;
-        this.progressCircle.style.strokeDashoffset = offset;
-    }
-
-    scrollToTop() {
-        window.scrollTo({
-            top: 0,
-            behavior: 'smooth'
-        });
-    }
-}
-
 // Toast Notification System
 class ToastManager {
     constructor() {
@@ -952,8 +980,6 @@ document.addEventListener('DOMContentLoaded', () => {
     new ParallaxEffect();
 
     new ButtonEffects();
-
-    new BackToTop();
 
     new ParallaxImages();
 
@@ -1104,3 +1130,47 @@ function setupImageSlider() {
         startAutoSlide();
     });
 }
+
+/**
+ * Back to Top Button with Progress Ring
+ * Shows scroll progress and enables smooth scroll to top
+ */
+document.addEventListener('DOMContentLoaded', () => {
+    const backToTopBtn = document.querySelector('.back-to-top');
+    const progressCircle = document.querySelector('.progress-ring__circle');
+    
+    if (backToTopBtn && progressCircle) {
+        // Calculate the circumference of the circle (2 * PI * Radius)
+        const radius = progressCircle.r.baseVal.value;
+        const circumference = 2 * Math.PI * radius;
+        
+        // Initialize the circle stroke
+        progressCircle.style.strokeDasharray = `${circumference} ${circumference}`;
+        progressCircle.style.strokeDashoffset = circumference;
+
+        window.addEventListener('scroll', () => {
+            // 1. Show button after scrolling down 300px
+            if (window.scrollY > 300) {
+                backToTopBtn.classList.add('visible');
+            } else {
+                backToTopBtn.classList.remove('visible');
+            }
+
+            // 2. Calculate scroll percentage
+            const scrollHeight = document.documentElement.scrollHeight - window.innerHeight;
+            const scrollProgress = window.scrollY / scrollHeight;
+            
+            // 3. Update the ring offset
+            const offset = circumference - (scrollProgress * circumference);
+            progressCircle.style.strokeDashoffset = offset;
+        }, { passive: true });
+
+        // 4. Smooth scroll to top on click
+        backToTopBtn.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+    }
+});
