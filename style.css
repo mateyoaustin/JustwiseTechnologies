@@ -33,11 +33,27 @@
     padding: 0;
 }
 
-html, body {
-    width: 100%;
-    height: auto;
+html {
+    font-size: 16px;
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
 }
 
+/* Fluid typography for all screen sizes */
+@media (min-width: 320px) {
+    html { font-size: calc(14px + 2 * ((100vw - 320px) / 1080)); }
+}
+@media (min-width: 1400px) {
+    html { font-size: 16px; }
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
 
 body {
     font-family: 'Poppins', Arial, Helvetica, sans-serif;
@@ -45,7 +61,8 @@ body {
     background: var(--primary-dark);
     color: var(--text-dark);
     position: relative;
-    overflow-x: hidden;
+    min-height: 100vh;
+    min-height: -webkit-fill-available;
 }
 
 /* 3D Technology Background Canvas Styles */
@@ -93,7 +110,7 @@ body {
 .nav-container {
     max-width: 1400px;
     margin: 0 auto;
-    padding: 0 40px;
+    padding: 0 clamp(16px, 4vw, 40px);
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -489,10 +506,11 @@ body {
 }
 
 .btn {
-    padding: 0.75rem 1.5rem;
+    padding: clamp(0.65rem, 2vw, 0.75rem) clamp(1.25rem, 3vw, 1.5rem);
     border-radius: 28px;
     text-decoration: none;
     font-weight: 600;
+    font-size: clamp(0.9rem, 1.5vw, 1rem);
     display: inline-flex;
     align-items: center;
     gap: 8px;
@@ -555,7 +573,7 @@ body {
 .hero {
     background: transparent;
     color: var(--primary-light);
-    padding: 60px 40px;
+    padding: clamp(40px, 8vh, 60px) clamp(16px, 4vw, 40px);
     text-align: center;
     min-height: 100vh;
     display: flex;
@@ -572,16 +590,17 @@ body {
 }
 
 .hero h1 {
-    font-size: 3.5rem;
+    font-size: clamp(1.75rem, 5vw + 1rem, 3.5rem);
     font-weight: 900;
     margin-bottom: 1rem;
     line-height: 1.2;
 }
 
 .hero p {
-    font-size: 1.2rem;
+    font-size: clamp(1rem, 2vw, 1.2rem);
     margin-bottom: 1.5rem;
     opacity: 0.95;
+    max-width: min(800px, 90vw);
 }
 
 .hero-buttons {
@@ -772,7 +791,7 @@ main {
 }
 
 .feature-text h2 {
-    font-size: 2.5rem;
+    font-size: clamp(1.5rem, 4vw, 2.5rem);
     font-weight: 700;
     color: var(--text-dark);
     margin-bottom: 0.75rem;
@@ -784,11 +803,11 @@ main {
 }
 
 .feature-text p {
-    font-size: 1.05rem;
+    font-size: clamp(0.95rem, 1.5vw, 1.05rem);
     color: #72767d;
     position: relative;
     overflow: hidden;
-    line-height: 1.5;
+    line-height: 1.6;
     margin-bottom: 0.5rem;
 }
 
@@ -964,6 +983,14 @@ main {
     margin: 0 auto;
 }
 
+.copyright-text {
+    white-space: nowrap !important;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    padding: 0 10px;
+    font-size: clamp(0.75rem, 2vw, 0.95rem) !important;
+}
+
 .footer-content h2 {
     display: none;
 }
@@ -1033,6 +1060,48 @@ main {
     background: radial-gradient(circle, rgba(255, 255, 255, 0.35) 0%, rgba(255, 255, 255, 0.05) 60%, transparent 70%);
     pointer-events: none;
     opacity: 0.8;
+}
+
+/* Tablet and medium screens */
+@media (max-width: 1024px) and (min-width: 769px) {
+    .nav-container {
+        padding: 0 24px;
+    }
+    
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+    
+    .feature-grid {
+        gap: 40px;
+    }
+}
+
+/* Small tablets and large phones - 481px to 768px */
+@media (max-width: 768px) and (min-width: 481px) {
+    .feature-grid {
+        grid-template-columns: 1fr;
+        gap: 32px;
+    }
+    
+    .nav-links-main {
+        gap: 1.5rem;
+    }
+}
+
+/* Large tablets - 769px to 1024px */
+@media (max-width: 1024px) and (min-width: 769px) {
+    .nav-container {
+        padding: 0 24px;
+    }
+    
+    .feature-grid {
+        gap: 40px;
+    }
+    
+    .dropdown-menu {
+        min-width: 280px;
+    }
 }
 
 @media (max-width: 1024px) {
