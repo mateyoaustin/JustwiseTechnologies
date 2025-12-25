@@ -20,7 +20,7 @@
       "url": "https://justwisetechnologies.com",
       "description": "Enterprise Solutions for Modern Business - Custom Application Development, Data & AI Solutions, Managed Services",
       "telephone": "+263777747150",
-      "email": "info@justwisetechnologies.com",
+      "email": "justwisezw@gmail.com",
       "address": {
         "@type": "PostalAddress",
         "addressCountry": "ZW"
@@ -72,6 +72,9 @@
     </script>
 </head>
 <body>
+    <!-- 4K Animated Background Canvas -->
+    <canvas id="bg-canvas" class="bg-canvas" aria-hidden="true"></canvas>
+    
     <div class="preloader" role="status" aria-label="Loading">
         <div class="svg-frame">
         	<svg style="--i:0;--j:0;">
@@ -126,28 +129,58 @@
             <div class="nav-links">
                 <ul class="nav-links-main">
                     <li class="nav-item dropdown">
-                        <a href="#" class="nav-link dropdown-toggle">Services <i class="fas fa-chevron-down"></i></a>
-                        <div class="dropdown-menu">
-                            <a href="#internet-cafe" class="dropdown-item"><i class="fas fa-wifi"></i> High-Speed Internet Cafe</a>
-                            <a href="#device-repairs" class="dropdown-item"><i class="fas fa-tools"></i> Device Sales & Repairs</a>
-                            <a href="#android-automation" class="dropdown-item"><i class="fas fa-bolt"></i> Android Automation</a>
-                            <a href="#custom-apps" class="dropdown-item"><i class="fas fa-mobile-alt"></i> Custom Application Development</a>
-                            <a href="#web-dev" class="dropdown-item"><i class="fas fa-code"></i> Web Development Services</a>
-                            <a href="#device-automation" class="dropdown-item"><i class="fas fa-robot"></i> Managed Device & Automation</a>
-                            <a href="#data-ai" class="dropdown-item"><i class="fas fa-brain"></i> Data & AI Solutions</a>
+                        <a href="#" class="nav-link dropdown-toggle" aria-haspopup="true" aria-expanded="false">Services <i class="fas fa-chevron-down"></i></a>
+                        <div class="dropdown-menu" role="menu">
+                            <div class="dropdown-header">Core Services</div>
+                            <a href="#internet-cafe" class="dropdown-item" role="menuitem" tabindex="0">
+                                <i class="fas fa-wifi"></i> 
+                                <span>High-Speed Internet Cafe</span>
+                            </a>
+                            <a href="#device-repairs" class="dropdown-item" role="menuitem" tabindex="0">
+                                <i class="fas fa-tools"></i> 
+                                <span>Device Sales & Expert Repairs</span>
+                            </a>
+                            <a href="#android-automation" class="dropdown-item" role="menuitem" tabindex="0">
+                                <i class="fas fa-bolt"></i> 
+                                <span>Android Automation Solutions</span>
+                            </a>
+                            <hr class="dropdown-divider">
+                            <div class="dropdown-header">Development Services</div>
+                            <a href="#custom-apps" class="dropdown-item" role="menuitem" tabindex="0">
+                                <i class="fas fa-mobile-alt"></i> 
+                                <span>Custom Application Development</span>
+                            </a>
+                            <a href="#web-dev" class="dropdown-item" role="menuitem" tabindex="0">
+                                <i class="fas fa-code"></i> 
+                                <span>Professional Web Development</span>
+                            </a>
+                            <hr class="dropdown-divider">
+                            <div class="dropdown-header">Enterprise Solutions</div>
+                            <a href="#device-automation" class="dropdown-item" role="menuitem" tabindex="0">
+                                <i class="fas fa-robot"></i> 
+                                <span>Managed Devices & IT Automation</span>
+                            </a>
+                            <a href="#data-ai" class="dropdown-item" role="menuitem" tabindex="0">
+                                <i class="fas fa-brain"></i> 
+                                <span>Data Analytics & AI Solutions</span>
+                            </a>
                         </div>
                     </li>
                     <li class="nav-item dropdown">
-                        <a href="#" class="nav-link dropdown-toggle">Support <i class="fas fa-chevron-down"></i></a>
-                        <div class="dropdown-menu">
-                            <a href="mailto:info@justwisetechnologies.com" class="dropdown-item">
-                                <i class="fas fa-envelope"></i> Email Support
+                        <a href="#" class="nav-link dropdown-toggle" aria-haspopup="true" aria-expanded="false">Support <i class="fas fa-chevron-down"></i></a>
+                        <div class="dropdown-menu" role="menu">
+                            <a href="mailto:justwisezw@gmail.com" class="dropdown-item" role="menuitem" tabindex="0">
+                                <i class="fas fa-envelope"></i> 
+                                <span>Email Support</span>
                             </a>
-                            <a href="#" class="dropdown-item">
-                                <i class="fas fa-question-circle"></i> Help Center
+                            <a href="tel:+263882932022" class="dropdown-item" role="menuitem" tabindex="0">
+                                <i class="fas fa-phone"></i> 
+                                <span>Call Centre</span>
                             </a>
-                            <a href="#" class="dropdown-item">
-                                <i class="fas fa-bug"></i> Report a Bug
+                            <hr class="dropdown-divider">
+                            <a href="https://wa.me/263777747150" class="dropdown-item" role="menuitem" tabindex="0" target="_blank" rel="noopener noreferrer">
+                                <i class="fab fa-whatsapp"></i> 
+                                <span>WhatsApp Chat</span>
                             </a>
                         </div>
                     </li>
@@ -168,8 +201,11 @@
     <!-- Hero Section -->
     <header class="hero">
         <div class="hero-content">
-            <h1 id="typewriter-heading">AI Analytics, Automation, Enterprise Security</h1>
-            <p>Justwise Technologies empowers businesses with AI-driven analytics, intelligent automation, and enterprise-grade security. Transform operations, accelerate innovation, and scale with confidence across every industry.</p>
+            <h1 id="typewriter-heading">Technology Solutions for Modern Business</h1>
+            <p>High-Speed Internet Cafe | Device Sales & Expert Repairs | Android Automation Solutions | Custom Application Development | Professional Web Development | Managed Devices & IT Automation | Data Analytics & AI Solutions</p>
+        </div>
+        <div class="scroll-indicator">
+            <i class="fas fa-chevron-down"></i>
         </div>
     </header>
 
@@ -177,13 +213,13 @@
     <main>
 
 
-        <!-- Service 1: High-Speed Internet Cafe -->
+        <!-- Service 1: Enterprise Connectivity Hub -->
         <section class="feature-section alt-bg" id="internet-cafe">
             <div class="feature-grid">
                 <div class="feature-text">
                     <h2>High-Speed Internet Cafe</h2>
-                    <p><strong>Blazing-Fast Connectivity:</strong> Experience enterprise-level internet speeds in our modern and comfortable internet cafe, powered by Starlink.</p>
-                    <p><strong>Productive Environment:</strong> A perfect space for professionals and teams to work, collaborate, or simply enjoy a reliable, high-speed connection.</p>
+                    <p><strong>Starlink-Powered Internet:</strong> Lightning-fast, reliable internet powered by Starlink satellite technology. Experience consistent gigabit speeds perfect for video calls, cloud work, downloads, and streaming without interruption.</p>
+                    <p><strong>Professional Workspace:</strong> Comfortable, modern workspace with ergonomic seating, climate control, and quiet zones. Ideal for remote work, meetings, studying, or getting things done with reliable connectivity.</p>
                     <a href="https://wa.me/263777747150?text=Hi%2C%20I%27d%20like%20to%20inquire%20about%20your%20High-Speed%20Internet%20Cafe.%20What%20are%20the%20rates%20and%20availability%3F" class="btn btn-gold" target="_blank" rel="noopener noreferrer">
                         <i class="fab fa-whatsapp"></i> Check Availability
                     </a>
@@ -223,13 +259,13 @@
             </div>
         </section>
 
-        <!-- Service 2: Device Sales & Repairs -->
+        <!-- Service 2: Enterprise Device Lifecycle Management -->
         <section class="feature-section" id="device-repairs">
             <div class="feature-grid reverse">
                 <div class="feature-text">
-                    <h2>Device Sales & Repairs</h2>
-                    <p><strong>Certified Sales:</strong> We offer a range of certified new and refurbished computers and mobile devices to meet your business needs.</p>
-                    <p><strong>Expert Repairs:</strong> Our technicians provide expert repairs for a wide range of devices, using only genuine parts to ensure quality and longevity.</p>
+                    <h2>Device Sales & Expert Repairs</h2>
+                    <p><strong>Quality Devices:</strong> New and certified refurbished computers, laptops, and smartphones at competitive prices. All devices come with warranty coverage and quality guarantees for reliable performance.</p>
+                    <p><strong>Professional Repairs:</strong> Expert repair services for all major brands using genuine OEM parts. Fast turnaround times, thorough diagnostics, and transparent pricing. Same-day service available for urgent business needs.</p>
                     <a href="https://wa.me/263777747150?text=Hello%2C%20I%27m%20interested%20in%20your%20Device%20Sales%20%26%20Repairs%20services.%20Can%20you%20help%20me%20with%20a%20device%20issue%20or%20purchase%3F" class="btn btn-gold" target="_blank" rel="noopener noreferrer">
                         <i class="fab fa-whatsapp"></i> Contact Us
                     </a>
@@ -269,47 +305,28 @@
             </div>
         </section>
 
-        <!-- Service 3: Android Automation (Tasker) -->
+        <!-- Service 3: Intelligent Mobile Workflow Automation -->
         <section class="feature-section" id="android-automation">
             <div class="feature-grid">
                 <div class="feature-text">
-                    <h2>Android Automation</h2>
-                    <p><strong>Custom Android Workflows:</strong> We build Tasker (Android-only) automation that orchestrates device actions, app integrations, and context-aware triggers to streamline field and office operations.</p>
+                    <h2>Android Automation Solutions</h2>
+                    <p><strong>Smart Mobile Automation:</strong> Custom Android automation using Tasker to streamline your mobile workflows. Automate repetitive tasks, trigger actions based on location or time, and connect your apps seamlessly to save time and boost productivity.</p>
                     <div class="capability-card">
-                        <details open>
-                            <summary aria-label="Show advanced Tasker capabilities and examples">Advanced capabilities & top automations</summary>
-                            <div class="capability-tabs" role="tablist" aria-label="Tasker capabilities and automations">
-                                <button class="capability-tab is-active" role="tab" aria-selected="true" aria-controls="capabilities-panel" id="capabilities-tab">Capabilities</button>
-                                <button class="capability-tab" role="tab" aria-selected="false" aria-controls="automations-panel" id="automations-tab">Top 10 automations</button>
-                            </div>
+                        <details>
+                            <summary aria-label="Show automation capabilities">Automation Capabilities</summary>
                             <div class="capability-panels">
-                                <div class="capability-panel is-active" role="tabpanel" id="capabilities-panel" aria-labelledby="capabilities-tab">
-                                    <p class="capability-intro">What we build for high-reliability Tasker (Android) deployments:</p>
+                                <div class="capability-panel" role="tabpanel" id="capabilities-panel">
+                                    <p class="capability-intro">Technical Capabilities:</p>
                                     <ul>
-                                        <li>Context-aware triggers (location, Wi-Fi, sensors, schedules)</li>
-                                        <li>Cross-app orchestration with secure data handoff</li>
-                                        <li>Role-based variants and lock-safe run profiles</li>
-                                        <li>Audit-ready logging plus documented handover</li>
-                                        <li>Webhook/API calls to trigger business systems</li>
-                                        <li>Secret handling for tokens/keys with scoped access</li>
-                                        <li>Offline-safe fallbacks and retry queues</li>
-                                        <li>Multi-profile deployment packs for teams/devices</li>
+                                        <li>Location-based triggers and geofencing (automatic actions when entering/leaving specific areas)</li>
+                                        <li>Secure credential storage and API key management for safe authentication</li>
+                                        <li>Webhook integration to connect with web services, databases, and business tools</li>
+                                        <li>Comprehensive logging and audit trails for tracking and compliance</li>
+                                        <li>Multi-device deployment with remote configuration and updates</li>
+                                        <li>Offline-capable automations with intelligent sync when reconnected</li>
+                                        <li>User profiles with role-based permissions and access control</li>
+                                        <li>Integration with popular apps and enterprise systems via plugins and APIs</li>
                                     </ul>
-                                </div>
-                                <div class="capability-panel" role="tabpanel" id="automations-panel" aria-labelledby="automations-tab" hidden>
-                                    <p class="capability-intro">Signature automations that showcase Tasker depth:</p>
-                                    <ol class="capability-list">
-                                        <li>Context-aware silent mode with calendar/location and smart auto-replies.</li>
-                                        <li>Advanced battery/charging management with fast-charge toggles and alerts.</li>
-                                        <li>Smart driving dashboard: nav, music, read-aloud, and auto-reply while driving.</li>
-                                        <li>Location-based IoT: lights/AC/garage via MQTT/IFTTT/AutoRemote.</li>
-                                        <li>Automated backups of photos/docs to Drive/Dropbox/NAS on Wi-Fi or schedule.</li>
-                                        <li>Auto app management: close drainers; launch context apps (e.g., Spotify on headphones).</li>
-                                        <li>Emergency/SOS: gesture/button to send GPS + optional photo to trusted contacts.</li>
-                                        <li>Notification automation: auto-clear/priority rules; read aloud when hands-free.</li>
-                                        <li>Home/vehicle arrival notices and shared location alerts.</li>
-                                        <li>Full UI customization: Tasker Scenes, theming, wallpaper/dark-mode automation.</li>
-                                    </ol>
                                 </div>
                             </div>
                         </details>
@@ -320,8 +337,8 @@
                 </div>
                 <div class="feature-image">
                     <img
-                        src="https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?auto=format&fit=crop&q=80&w=900"
-                        srcset="https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?auto=format&fit=crop&q=80&w=600 600w, https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?auto=format&fit=crop&q=80&w=900 900w, https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?auto=format&fit=crop&q=80&w=1400 1400w"
+                        src="https://images.unsplash.com/photo-1607252650355-f7fd0460ccdb?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8YW5kcm9pZCUyMHBob25lfGVufDB8fDB8fHww"
+                        srcset="https://images.unsplash.com/photo-1607252650355-f7fd0460ccdb?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8YW5kcm9pZCUyMHBob25lfGVufDB8fDB8fHww 600w, https://images.unsplash.com/photo-1607252650355-f7fd0460ccdb?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8YW5kcm9pZCUyMHBob25lfGVufDB8fDB8fHww 900w, https://images.unsplash.com/photo-1607252650355-f7fd0460ccdb?w=1400&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8YW5kcm9pZCUyMHBob25lfGVufDB8fDB8fHww 1400w"
                         sizes="(max-width: 768px) 100vw, 50vw"
                         loading="lazy"
                         decoding="async"
@@ -332,13 +349,13 @@
             </div>
         </section>
 
-        <!-- Service 4: Custom Application Development -->
+        <!-- Service 4: Bespoke Application Engineering -->
         <section class="feature-section alt-bg" id="custom-apps">
             <div class="feature-grid reverse">
                 <div class="feature-text">
                     <h2>Custom Application Development</h2>
-                    <p><strong>Bespoke Software & Web Development:</strong> Our team architects and develops tailored, high-performance software and web applications that align perfectly with your unique business processes and strategic goals.</p>
-                    <p><strong>Integrated AI Features:</strong> We embed intelligent automation and predictive capabilities directly into your applications, transforming them into powerful tools for data-driven decision-making.</p>
+                    <p><strong>Tailored Software Solutions:</strong> We build custom applications designed specifically for your business needs. From desktop software to mobile apps, we create scalable, user-friendly solutions using modern development frameworks and best practices.</p>
+                    <p><strong>AI-Powered Features:</strong> Add intelligent capabilities to your applications with machine learning and AI. Automate decision-making, analyze data patterns, generate insights, and build smarter tools that adapt to your users and business requirements.</p>
                     <a href="https://wa.me/263777747150?text=Hi%2C%20I%27m%20interested%20in%20learning%20more%20about%20your%20Custom%20Application%20Development%20services.%20Could%20you%20provide%20more%20details%3F" class="btn btn-gold" target="_blank" rel="noopener noreferrer">
                         <i class="fab fa-whatsapp"></i> Get Started
                     </a>
@@ -357,13 +374,13 @@
             </div>
         </section>
 
-        <!-- Service 5: Web Development Services -->
+        <!-- Service 5: Premium Digital Experience Development -->
         <section class="feature-section" id="web-dev">
             <div class="feature-grid">
                 <div class="feature-text">
-                    <h2>Web Development Services</h2>
-                    <p><strong>Custom Web Applications:</strong> From corporate websites to complex web applications, our team builds solutions that drive business results.</p>
-                    <p><strong>Modern Technologies:</strong> We utilize the latest web technologies to create fast, responsive, and secure websites that work flawlessly on all devices.</p>
+                    <h2>Professional Web Development</h2>
+                    <p><strong>Modern Websites & Web Apps:</strong> Build fast, responsive websites and web applications that work perfectly on all devices. From business websites and e-commerce to custom dashboards and portals—delivered with clean code and best practices.</p>
+                    <p><strong>Latest Technologies:</strong> We use proven modern technologies like TypeScript, Next.js, and cloud platforms to build secure, high-performance websites. Includes automated deployment, monitoring, SEO optimization, and ongoing support.</p>
                     <a href="https://wa.me/263777747150?text=Hi%2C%20I%27d%20like%20to%20discuss%20a%20Web%20Development%20project.%20Can%20we%20schedule%20a%20consultation%3F" class="btn btn-gold" target="_blank" rel="noopener noreferrer">
                         <i class="fab fa-whatsapp"></i> Start Your Project
                     </a>
@@ -382,13 +399,13 @@
             </div>
         </section>
 
-        <!-- Service 6: Managed Device & Automation Services -->
+        <!-- Service 6: Enterprise Mobility & Infrastructure Management -->
         <section class="feature-section alt-bg" id="device-automation">
             <div class="feature-grid reverse">
                 <div class="feature-text">
-                    <h2>Managed Device & Automation</h2>
-                    <p><strong>Enterprise Mobility Management:</strong> We provide comprehensive solutions for managing and securing your corporate device ecosystem, including enterprise-grade automation workflows.</p>
-                    <p><strong>Hardware Lifecycle Management:</strong> From procurement and sales of certified devices to expert computer and device repairs with genuine parts, we manage the entire lifecycle of your business hardware.</p>
+                    <h2>Managed Devices & IT Automation</h2>
+                    <p><strong>Device Management Solutions:</strong> Manage and secure your company's phones, tablets, and computers from one place. Control apps, enforce security policies, remotely manage devices, and ensure compliance across iOS, Android, and Windows.</p>
+                    <p><strong>Complete Hardware Support:</strong> From helping you choose and purchase the right devices to ongoing maintenance and repairs—we handle your entire IT hardware lifecycle. Genuine parts, extended warranties, and priority support included.</p>
                     <a href="https://wa.me/263777747150?text=Hello%2C%20I%27d%20like%20to%20know%20more%20about%20your%20Managed%20Device%20%26%20Automation%20services%20for%20my%20organization." class="btn btn-gold" target="_blank" rel="noopener noreferrer">
                         <i class="fab fa-whatsapp"></i> Learn More
                     </a>
@@ -396,7 +413,7 @@
                 <div class="feature-image">
                     <img
                         src="assets/images/device automation.jpg"
-                        srcset="assets/images/device automation.jpg 400w, assets/images/device automation.jpg 800w, assets/images/device automation.jpg 1200w"
+                        srcset="assets/images/device%20automation.jpg 400w, assets/images/device%20automation.jpg 800w, assets/images/device%20automation.jpg 1200w"
                         sizes="(max-width: 768px) 100vw, 50vw"
                         loading="lazy"
                         decoding="async"
@@ -407,26 +424,26 @@
             </div>
         </section>
 
-        <!-- Service 7: Data & AI Solutions -->
+        <!-- Service 7: Advanced Analytics & AI Solutions -->
         <section class="feature-section" id="data-ai">
             <div class="feature-grid">
                 <div class="feature-text">
-                    <h2>Data & AI Solutions</h2>
-                    <p><strong>Advanced Business Intelligence:</strong> Unlock the strategic value of your data. We transform raw information into actionable insights through sophisticated BI platforms and interactive visualizations.</p>
-                    <p><strong>Predictive Analytics & Modeling:</strong> Utilize the power of machine learning to forecast market trends, optimize operations, and gain a decisive competitive advantage.</p>
+                    <h2>Data Analytics & AI Solutions</h2>
+                    <p><strong>Business Intelligence & Dashboards:</strong> Turn your data into clear, actionable insights. We build custom dashboards, reports, and analytics tools that help you track KPIs, spot trends, and make data-driven decisions with confidence.</p>
+                    <p><strong>Machine Learning & Predictions:</strong> Use AI to forecast sales, understand customer behavior, detect patterns, and automate complex tasks. We build practical ML solutions that deliver real results—from demand forecasting to smart recommendations and process automation.</p>
                     <a href="https://wa.me/263777747150?text=Hi%2C%20I%27m%20interested%20in%20your%20Data%20%26%20AI%20Solutions.%20I%27d%20like%20to%20discuss%20how%20you%20can%20help%20with%20business%20intelligence%20and%20predictive%20analytics." class="btn btn-gold" target="_blank" rel="noopener noreferrer">
                         <i class="fab fa-whatsapp"></i> Request Consultation
                     </a>
                 </div>
                 <div class="feature-image">
                     <img
-                        src="assets/images/ai.jpg"
-                        srcset="assets/images/ai.jpg 400w, assets/images/ai.jpg 800w, assets/images/ai.jpg 1200w"
+                        src="https://images.unsplash.com/photo-1716436329476-fd6cbaa1fc71?auto=format&fit=crop&q=80&w=900"
+                        srcset="https://images.unsplash.com/photo-1716436329476-fd6cbaa1fc71?auto=format&fit=crop&q=80&w=600 600w, https://images.unsplash.com/photo-1716436329476-fd6cbaa1fc71?auto=format&fit=crop&q=80&w=900 900w, https://images.unsplash.com/photo-1716436329476-fd6cbaa1fc71?auto=format&fit=crop&q=80&w=1400 1400w"
                         sizes="(max-width: 768px) 100vw, 50vw"
                         loading="lazy"
                         decoding="async"
                         title="Data & AI Solutions"
-                        alt="Data analytics and business intelligence dashboards"
+                        alt="AI and data analytics technology interface"
 >
                 </div>
             </div>
@@ -448,16 +465,16 @@
                 <a href="https://linkedin.com/in/mateyoaustin" target="_blank" rel="noopener noreferrer" class="social-icon linkedin" aria-label="LinkedIn" title="LinkedIn">
                     <i class="fa-brands fa-linkedin-in" style="font-size: 24px; vertical-align: middle;"></i>
                 </a>
-                <a href="https://discord.com/invite/yourdiscord" target="_blank" rel="noopener noreferrer" class="social-icon discord" aria-label="Discord" title="Discord">
-                    <i class="fa-brands fa-discord" style="font-size: 24px; vertical-align: middle;"></i>
+                <a href="https://t.me/mateyoaustin" target="_blank" rel="noopener noreferrer" class="social-icon telegram" aria-label="Telegram" title="Telegram">
+                    <i class="fa-brands fa-telegram" style="font-size: 24px; vertical-align: middle;"></i>
                 </a>
                 <a href="https://wa.me/1234567890" target="_blank" rel="noopener noreferrer" class="social-icon whatsapp" aria-label="WhatsApp" title="WhatsApp">
                     <i class="fa-brands fa-whatsapp" style="font-size: 24px; vertical-align: middle;"></i>
                 </a>
             </div>
             </div>
-            <div style="font-size: 0.95rem; color: #ffffff; margin-top: 0.25rem;">
-                &copy; <span id="year"></span> Justwise Technologies. All rights reserved.
+            <div style="font-family: 'Poppins', sans-serif; font-size: 0.95rem; color: #000000; margin-top: 0.25rem;">
+                &copy; <span id="year"></span> Justwise Technologies. Developed by <a href="#" style="color: #FFC107; text-decoration: none; font-weight: 600;">Zerofive</a>
             </div>
         </div>
     </footer>
